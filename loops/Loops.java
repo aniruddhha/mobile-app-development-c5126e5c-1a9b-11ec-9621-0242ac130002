@@ -12,7 +12,21 @@ public class Loops {
         }
     }
 
+    public static void forColDemo() {
+        int[] nums = { 13, 89, 12, 96, 36 };
+
+        // element of array
+        for (int el : nums) {
+            System.out.println(" Element = " + el);
+        }
+    }
+
     public static void main(String[] args) {
-        forDemo(); // function call
+
+        System.out.println("---- Loops ----");
+
+        // forDemo(); // function call
+
+        forColDemo();
     }
 }

@@ -2,7 +2,7 @@ package loops;
 
 public class Loops {
 
-    public static void forDemo() {
+    public static void forDemo() { // function defination
 
         int[] nums = { 13, 89, 12, 96, 36 };
 
@@ -13,6 +13,6 @@ public class Loops {
     }
 
     public static void main(String[] args) {
-        forDemo();
+        forDemo(); // function call
     }
 }

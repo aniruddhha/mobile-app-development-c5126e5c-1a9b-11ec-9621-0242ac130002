@@ -6,7 +6,8 @@ public class Loops {
 
         int[] nums = { 13, 89, 12, 96, 36 };
 
-        for (int i = 0; i < nums.length; i++) {
+        // init ; condition ; steps
+        for (int i = 0; i < nums.length; i = i + 1) {
             System.out.println(" Position " + i + " Element " + nums[i]);
         }
     }

@@ -1,6 +1,4 @@
-package variables;
 public class Variables {
-
     public static void main(String[] args) {
         int age = 20; // variable
         age = 30;
@@ -14,4 +12,5 @@ public class Variables {
         System.out.println("Price " + price);
         System.out.println("Char is " + ch);
     }
+
 }

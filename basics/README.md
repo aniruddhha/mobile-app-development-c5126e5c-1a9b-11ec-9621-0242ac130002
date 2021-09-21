@@ -4,10 +4,10 @@
 ## Run
 `java Main`
 
-## Variables and Datatypes
+# Variables and Datatypes
 
-# Compile 
+## Compile 
 `javac Variables.java`
 
-# Run
+## Run
 `java Variables`

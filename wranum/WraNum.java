@@ -2,6 +2,7 @@ package wranum;
 
 import java.util.Date;
 import java.util.List;
+import java.util.ArrayList;
 
 public class WraNum {
 
@@ -16,6 +17,7 @@ public class WraNum {
         int nm2 = Integer.parseInt(num2);
 
         // wrapper classes
+        int a = 10;
         Integer ph = 50; // boxing
 
         int dt = ph; // unboxing
@@ -26,7 +28,7 @@ public class WraNum {
 
         Date d = new Date();
 
-        // List<Integer> nums = new ArrayList<Integer>();
+        List<MyInt> nums = new ArrayList<MyInt>();
 
         System.out.println("Multiplication is " + (nm1 * nm2));
     }

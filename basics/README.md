@@ -3,3 +3,11 @@
 
 ## Run
 `java Main`
+
+## Variables and Datatypes
+
+# Compile 
+`javac Variables.java`
+
+# Run
+`java Variables`

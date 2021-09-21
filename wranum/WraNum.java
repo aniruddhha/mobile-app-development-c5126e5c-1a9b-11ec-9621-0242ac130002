@@ -26,6 +26,8 @@ public class WraNum {
 
         Date d = new Date();
 
+        // List<Integer> nums = new ArrayList<Integer>();
+
         System.out.println("Multiplication is " + (nm1 * nm2));
     }
 }

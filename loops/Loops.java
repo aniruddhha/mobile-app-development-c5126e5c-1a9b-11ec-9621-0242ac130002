@@ -21,12 +21,36 @@ public class Loops {
         }
     }
 
+    public static void whileDemo() {
+        int[] nums = { 13, 89, 12, 96, 36 };
+
+        int i = 0;
+        while (i < nums.length) { // conditional
+            System.out.println("Element = " + nums[i]);
+            i++;
+        }
+    }
+
+    public static void doWhileDemo() {
+        int[] nums = { 13, 89, 12, 96, 36 };
+
+        int i = 0;
+        do {
+            System.out.println("Element = " + nums[i]);
+            i++;
+        } while (i < nums.length); // conditional
+    }
+
     public static void main(String[] args) {
 
         System.out.println("---- Loops ----");
 
         // forDemo(); // function call
 
-        forColDemo();
+        // forColDemo();
+
+        whileDemo();
+
+        doWhileDemo();
     }
 }

@@ -12,20 +12,20 @@ public class AlgoEff {
         for (int i = 1; i < n; i *= 2) { // i = 1 * 2 = 2
                                          // i = 2 * 2 = 4
                                          // i = 8 * 2
-            System.out.println("Checking Logarithmc Time");
+            System.out.println("Checking Logarithmc Time " + i);
         } // o(n) = O(log n)
     }
 
-    public static void linearTime(int n) {
-        for (int i = 0; i < n; i++) {
-            System.out.println("Linear Time");
-        }
+    public static void linearTime(int n) { // n = 100
+        for (int i = 0; i < n; i++) { // n
+            System.out.println("Linear Time"); // n
+        } // o(n) = n = O(n)
     }
 
     public static void main(String[] args) {
-        constantTime();
+        // constantTime();
         logarithmicTime(100);
-        linearTime(1000);
-        linearTime(10);
+        // linearTime(1000);
+        // linearTime(10);
     }
 }

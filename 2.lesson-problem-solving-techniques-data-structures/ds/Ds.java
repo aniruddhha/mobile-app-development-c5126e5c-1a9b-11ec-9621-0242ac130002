@@ -36,6 +36,8 @@ public class Ds {
         que.add(10);
         que.add(23);
         que.add(2);
+        que.add(2);
+        que.add(2);
         que.add(45);
         que.add(4);
 
@@ -44,6 +46,7 @@ public class Ds {
         System.out.println(" Removed " + que.remove());
         System.out.println(que.toString()); // print the que
         que.add(566);
+        que.add(null);
         System.out.println(que.toString()); // print the que
     }
 

@@ -5,7 +5,7 @@ import java.io.FileOutputStream;
 
 public class Fl { // bad class name
 
-    public static void write() {
+    public static void write() { // there is huge scope for optimzation, but that is not our concern now
         try {
             File file = new File("./my.txt"); // referred the file
             FileOutputStream fos = new FileOutputStream(file); // open for writting

@@ -75,16 +75,14 @@ public class Ds {
     }
 
     public static void treeDemo() {
-
         TreeMap<Integer, String> mp = new TreeMap<>();
         mp.put(1, "android");
-        mp.put(2, "ios");
-        mp.put(3, "linux");
-        mp.put(4, "windows");
+        mp.put(56, "ios");
+        mp.put(9, "linux");
+        mp.put(12, "windows");
 
         System.out.println(mp.toString());
         System.out.println("Element At 1 " + mp.get(1));
-
     }
 
     public static void main(String[] args) {

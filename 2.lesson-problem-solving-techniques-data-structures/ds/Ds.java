@@ -1,5 +1,7 @@
 package ds;
 
+import java.util.LinkedList;
+import java.util.Queue;
 import java.util.Stack;
 
 public class Ds {
@@ -28,7 +30,24 @@ public class Ds {
         }
     }
 
+    public static void queue() {
+
+        Queue<Integer> que = new LinkedList<>();
+        que.add(10);
+        que.add(23);
+        que.add(2);
+        que.add(45);
+        que.add(4);
+
+        System.out.println(que.toString()); // print the que
+        System.out.println(" Removed " + que.remove());
+        System.out.println(" Removed " + que.remove());
+        System.out.println(que.toString()); // print the que
+        que.add(566);
+        System.out.println(que.toString()); // print the que
+    }
+
     public static void main(String[] args) {
-        stack();
+        queue();
     }
 }

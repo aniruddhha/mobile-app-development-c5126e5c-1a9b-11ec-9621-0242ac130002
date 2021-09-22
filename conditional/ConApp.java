@@ -16,7 +16,27 @@ public class ConApp {
         }
     }
 
+    public static void switchCaseDemo() {
+        int day = 2;
+
+        switch (day) {
+            case 1: {
+                System.out.println("Its monday");
+                break;
+            }
+            case 2: {
+                System.out.println("Its tuesday");
+                break;
+            }
+            default: {
+                System.out.println("Invalid Day");
+            }
+        }
+    }
+
     public static void main(String[] args) {
         ifElseDemo();
+
+        switchCaseDemo();
     }
 }

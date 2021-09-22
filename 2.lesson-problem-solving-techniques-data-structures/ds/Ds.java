@@ -3,6 +3,7 @@ package ds;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Stack;
+import java.util.TreeMap;
 
 public class Ds {
 
@@ -73,7 +74,20 @@ public class Ds {
         System.out.println(lst.toString());
     }
 
+    public static void treeDemo() {
+
+        TreeMap<Integer, String> mp = new TreeMap<>();
+        mp.put(1, "android");
+        mp.put(2, "ios");
+        mp.put(3, "linux");
+        mp.put(4, "windows");
+
+        System.out.println(mp.toString());
+        System.out.println("Element At 1 " + mp.get(1));
+
+    }
+
     public static void main(String[] args) {
-        linkedList();
+        treeDemo();
     }
 }

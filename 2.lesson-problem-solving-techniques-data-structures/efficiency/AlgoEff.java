@@ -27,7 +27,15 @@ public class AlgoEff {
             for (int j = 1; j < n; j *= 2) { // O(log n)
                 System.out.println(" i = " + i + " j = " + j);
             }
-        } // O(n log n)
+        } // O(n log n) -> bad
+    }
+
+    public static void quadratic(int n) {
+        for (int i = 1; i < n; i++) { // n
+            for (int j = 1; j < n; j++) { // n
+                System.out.println(" i = " + i + " j = " + j);
+            }
+        } // o(n) = n * n = n2 = O(n2) -> bad
     }
 
     public static void main(String[] args) {

@@ -38,6 +38,12 @@ public class AlgoEff {
         } // o(n) = n * n = n2 = O(n2) -> bad
     }
 
+    public static void exponential(int n) {
+        for (int i = 0; i < Math.pow(2, n); i++) {
+            System.out.println("Exponential"); // 2 ^ n
+        } // o(n) = 2 ^ n = O(2 ^ n) -> bad
+    }
+
     public static void main(String[] args) {
         // constantTime();
         // logarithmicTime(100);

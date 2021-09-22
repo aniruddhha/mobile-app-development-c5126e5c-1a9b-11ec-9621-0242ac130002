@@ -34,9 +34,29 @@ public class ConApp {
         }
     }
 
+    public static void switchCaseCondition() {
+        Days day = Days.FRIDAY;
+
+        switch (day) {
+            case MONDAY: {
+                System.out.println("Its Monday");
+                break;
+            }
+            case FRIDAY: {
+                System.out.println("Its Friday");
+                break;
+            }
+            default: {
+                System.out.println("Invalid Days");
+            }
+        }
+    }
+
     public static void main(String[] args) {
         ifElseDemo();
 
         switchCaseDemo();
+
+        switchCaseCondition();
     }
 }

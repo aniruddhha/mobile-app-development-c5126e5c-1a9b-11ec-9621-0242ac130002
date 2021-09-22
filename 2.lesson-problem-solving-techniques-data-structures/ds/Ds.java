@@ -50,7 +50,28 @@ public class Ds {
         System.out.println(que.toString()); // print the que
     }
 
+    public static void linkedList() {
+
+        LinkedList<String> lst = new LinkedList<>();
+        lst.add("android");
+        lst.add("ios");
+        lst.add("linux");
+        lst.add("linux");
+        lst.add(null);
+        lst.add("linux");
+        lst.add("windows");
+
+        System.out.println(lst.toString());
+        System.out.println(" Element At 2nd Pos " + lst.get(2));
+        System.out.println(" Check Availabilty " + lst.contains("ios"));
+        System.out.println(" Check Availabilty " + lst.contains("linux"));
+        System.out.println(" Remove " + lst.remove("ios"));
+        System.out.println(lst.toString());
+        lst.add(4, "data");
+        System.out.println(lst.toString());
+    }
+
     public static void main(String[] args) {
-        queue();
+        linkedList();
     }
 }

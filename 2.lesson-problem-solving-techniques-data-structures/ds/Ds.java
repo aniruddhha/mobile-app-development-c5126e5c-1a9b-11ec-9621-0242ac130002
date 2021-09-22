@@ -1,9 +1,13 @@
 package ds;
 
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Stack;
 import java.util.TreeMap;
+import java.util.TreeSet;
 
 public class Ds {
 
@@ -85,7 +89,20 @@ public class Ds {
         System.out.println("Element At 1 " + mp.get(1));
     }
 
+    public static void sortedSet() {
+
+        int[] arr = { 32, 99, 91, 15, 66, 38, 21, 63, 34, 48, 5, 51, 32, 43, 41, 49, 98, 75, 78, 93, 67, 81, 84, 0, 33,
+                79, 54, 79, 18, 14, 87, 51, 36, 17, 71, 9, 28, 51, 13, 86, 27, 37 };
+
+        TreeSet<Integer> set = new TreeSet<>();
+
+        for (int i : arr) {
+            set.add(i);
+        }
+        System.out.println(set.toString());
+    }
+
     public static void main(String[] args) {
-        treeDemo();
+        sortedSet();
     }
 }

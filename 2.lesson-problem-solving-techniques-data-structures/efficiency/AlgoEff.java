@@ -16,8 +16,16 @@ public class AlgoEff {
         } // o(n) = O(log n)
     }
 
+    public static void linearTime(int n) {
+        for (int i = 0; i < n; i++) {
+            System.out.println("Linear Time");
+        }
+    }
+
     public static void main(String[] args) {
         constantTime();
         logarithmicTime(100);
+        linearTime(1000);
+        linearTime(10);
     }
 }

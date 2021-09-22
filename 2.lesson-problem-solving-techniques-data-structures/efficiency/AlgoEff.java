@@ -8,6 +8,14 @@ public class AlgoEff {
         } // o(n) = o(100) = o(1)
     }
 
+    public void logarithmicTime(int n) { // n = 100
+        for (int i = 1; i < n; i *= 2) { // i = 1 * 2 = 2
+                                         // i = 2 * 2 = 4
+                                         // i = 8 * 2
+            System.out.println("Checking Logarithmc Time");
+        } // o(n) = O(log n)
+    }
+
     public static void main(String[] args) {
         System.out.println();
     }

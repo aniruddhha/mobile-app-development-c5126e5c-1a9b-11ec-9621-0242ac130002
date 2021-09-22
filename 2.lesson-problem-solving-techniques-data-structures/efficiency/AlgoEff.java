@@ -22,10 +22,19 @@ public class AlgoEff {
         } // o(n) = n = O(n)
     }
 
+    public static void linearithmic(int n) {
+        for (int i = 1; i < n; i++) { // O(n)
+            for (int j = 1; j < n; j *= 2) { // O(log n)
+                System.out.println(" i = " + i + " j = " + j);
+            }
+        } // O(n log n)
+    }
+
     public static void main(String[] args) {
         // constantTime();
-        logarithmicTime(100);
+        // logarithmicTime(100);
         // linearTime(1000);
         // linearTime(10);
+        linearithmic(100);
     }
 }

@@ -21,8 +21,10 @@ public class Calc {
         try {
             // res = num2 / num1; // logical error - bug
             sts = "" + (num1 / num2);// i think this line can break executioin
-        } catch (Exception e) {
+        } catch (ArithmeticException e) {
             sts = "you are dividing by zero";
+        } catch (Exception e) {
+            sts = "Unknown Error";
         }
 
         return sts;

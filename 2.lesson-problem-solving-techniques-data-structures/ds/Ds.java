@@ -69,6 +69,8 @@ public class Ds {
         System.out.println(lst.toString());
         lst.add(4, "data");
         System.out.println(lst.toString());
+        lst.set(4, "helios");
+        System.out.println(lst.toString());
     }
 
     public static void main(String[] args) {

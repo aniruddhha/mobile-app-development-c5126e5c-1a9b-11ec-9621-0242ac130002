@@ -13,9 +13,9 @@ public class Main {
         Random rn = new Random();
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Your Id is - " + rn.nextLong());
-        System.out.println("Enter Your Name - " + sc.next());
-        System.out.println("Enter Your Age - " + sc.nextInt());
+        System.out.println("Your Id is - " + rn.nextLong()); // it will generate random long
+        System.out.println("Enter Your Name - " + sc.next()); // it will read string from user
+        System.out.println("Enter Your Age - " + sc.nextInt()); // it will read integer from user
 
     }
 }

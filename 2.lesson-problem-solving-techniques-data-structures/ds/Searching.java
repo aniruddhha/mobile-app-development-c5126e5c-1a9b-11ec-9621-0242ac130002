@@ -39,4 +39,5 @@ public class Searching {
 
         binarySearch(36);
     }
+
 }

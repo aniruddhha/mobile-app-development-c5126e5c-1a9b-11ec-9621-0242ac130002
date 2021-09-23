@@ -51,7 +51,20 @@ public class MenuHelper {
     }
 
     private void login() {
-        System.out.println(" you selected login ");
+        System.out.println("--- \n \n Login --- \n \n");
+
+        System.out.println("Enter Your Name : ");
+        String name = sc.next();
+
+        for (User us : database) {
+            if (name.equals(us.getName())) {
+                System.out.println("--- \n \n Found The User  --- \n \n");
+                System.out
+                        .println("Id : " + us.getId() + " Name : " + us.getName() + " Age : " + us.getAge() + " \n \n");
+                return;
+            }
+        }
+        System.out.println("--- \n \n User Not Found  --- \n \n");
     }
 
     private void showRegisteredUsers() {

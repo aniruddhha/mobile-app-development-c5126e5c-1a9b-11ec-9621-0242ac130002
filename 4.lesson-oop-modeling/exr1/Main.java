@@ -7,5 +7,6 @@ public class Main {
         helper.showStartMenu();
         helper.performOperation(1);
         helper.performOperation(3);
+        helper.performOperation(2);
     }
 }

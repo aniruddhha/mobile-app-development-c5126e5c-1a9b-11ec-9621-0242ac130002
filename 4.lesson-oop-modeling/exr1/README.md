@@ -8,12 +8,11 @@
 > - Add Required code in login method
 
 > Find Users With Age Greater Than 50 
-
-> `
->    private void findUsersWithAgeGreterThanFifty() {
->        // write your code here
->    }
-> `
+`
+    private void findUsersWithAgeGreterThanFifty() {
+        // write your code here
+    }
+`
 
 > Find Users Whos Name Start With A
 

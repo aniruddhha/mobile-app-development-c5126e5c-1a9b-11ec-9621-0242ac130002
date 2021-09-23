@@ -7,22 +7,23 @@
 > - Add Required code in choices method
 > - Add Required code in login method
 
-> Find Users With Age Greater Than 50 
+> #### Find Users With Age Greater Than 50 
+
 `
     private void findUsersWithAgeGreterThanFifty() {
         // write your code here
     }
 `
 
-> Find Users Whos Name Start With A
+> #### Find Users Whos Name Start With A
 
-`
+``
     private void findTheUserWhoNameStartWithA() {
         // write your code here
     }
-`
+``
 
-> Find Users Whos Age is between 35 to 60
+> #### Find Users Whos Age is between 35 to 60
 
 `
     private void findTheUsersWhoAgeBetween35To60() {

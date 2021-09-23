@@ -14,6 +14,9 @@ public class MenuHelper {
     private int choice;
 
     private void showStartMenu() {
+
+        // add choices also
+
         String dispStr = "\n \n ----- Welcome To User Management ----- \n \n 1. Register " + "\n 2. Login "
                 + "\n 3. Show Users" + " \n \n ";
         System.out.println(dispStr);
@@ -47,11 +50,13 @@ public class MenuHelper {
     private void register() {
         System.out.println("--- \n \n For Registering Enter Following Deatils --- \n \n");
 
+        // at time of registration ask for password
+
         System.out.println("Enter Your Name : ");
-        String name = sc.next();
+        String name = sc.next(); // give text from name input box
 
         System.out.println("Enter Your Age : ");
-        Integer age = sc.nextInt();
+        Integer age = sc.nextInt(); // give text from age input box
 
         User user = new User();
         user.setName(name);
@@ -68,7 +73,7 @@ public class MenuHelper {
         String name = sc.next();
 
         for (User us : database) { // foreach
-            if (name.equals(us.getName())) {
+            if (name.equals(us.getName())) { // and at the time of login check user name and password
                 System.out.println("\n \n ---  Found The User  --- \n \n");
                 System.out
                         .println("Id : " + us.getId() + " Name : " + us.getName() + " Age : " + us.getAge() + " \n \n");
@@ -85,5 +90,17 @@ public class MenuHelper {
             User us = database.get(i);
             System.out.println("Id : " + us.getId() + " Name : " + us.getName() + " Age : " + us.getAge() + " \n \n");
         }
+    }
+
+    private void findUsersWithAgeGreterThanFifty() {
+        // write your code here
+    }
+
+    private void findTheUserWhoNameStartWithA() {
+        // write your code here
+    }
+
+    private void findTheUsersWhoAgeBetween35To60() {
+        // write your code here
     }
 }

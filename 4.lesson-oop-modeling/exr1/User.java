@@ -2,6 +2,7 @@ package exr1;
 
 public class User {
 
+    // add password field here
     private Long id;
     private String name;
     private Integer age;

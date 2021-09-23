@@ -2,6 +2,8 @@ package clsobj;
 
 public class Cat extends Animal {
 
+    private Jungle jungle; // this can can found in only one jungle
+
     private double jump;
 
     public void walk() {

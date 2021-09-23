@@ -4,6 +4,8 @@ import java.util.LinkedList;
 import java.util.Random;
 import java.util.Scanner;
 
+import org.graalvm.compiler.lir.LIRInstruction.Use;
+
 public class MenuHelper {
 
     private Random rn = new Random();
@@ -56,7 +58,7 @@ public class MenuHelper {
         System.out.println("Enter Your Name : ");
         String name = sc.next();
 
-        for (User us : database) {
+        for (User us : database) { // foreach
             if (name.equals(us.getName())) {
                 System.out.println("--- \n \n Found The User  --- \n \n");
                 System.out
@@ -70,7 +72,8 @@ public class MenuHelper {
     private void showRegisteredUsers() {
         System.out.println("\n \n --- Registered Users Are --- \n \n");
 
-        for (User us : database) {
+        for (int i = 0; i < database.size(); i++) {
+            User us = database.get(i);
             System.out.println("Id : " + us.getId() + " Name : " + us.getName() + " Age : " + us.getAge() + " \n \n");
         }
     }

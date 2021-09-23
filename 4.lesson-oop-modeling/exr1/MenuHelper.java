@@ -1,8 +1,13 @@
 package exr1;
 
 import java.util.LinkedList;
+import java.util.Random;
+import java.util.Scanner;
 
 public class MenuHelper {
+
+    private Random rn = new Random();
+    private Scanner sc = new Scanner(System.in);
 
     private LinkedList<User> database = new LinkedList<>();
 
@@ -29,7 +34,20 @@ public class MenuHelper {
     }
 
     private void register() {
-        System.out.println(" you selected registration ");
+        System.out.println("--- \n \n For Registering Enter Following Deatils --- \n \n");
+
+        System.out.println("Enter Your Name : ");
+        String name = sc.next();
+
+        System.out.println("Enter Your Age : ");
+        Integer age = sc.nextInt();
+
+        User user = new User();
+        user.setName(name);
+        user.setAge(age);
+        user.setId(rn.nextLong());
+
+        database.add(user);
     }
 
     private void login() {
@@ -37,6 +55,10 @@ public class MenuHelper {
     }
 
     private void showRegisteredUsers() {
-        System.out.println(" you selected show user ");
+        System.out.println("\n \n --- Registered Users Are --- \n \n");
+
+        for (User us : database) {
+            System.out.println("Id : " + us.getId() + " Name : " + us.getName() + " Age : " + us.getAge() + " \n \n");
+        }
     }
 }

@@ -7,8 +7,6 @@
 > - Add Required code in choices method
 > - Add Required code in login method
 
-
-
 > Find Users With Age Greater Than 50 
 
 `

@@ -2,6 +2,8 @@ package clsobj;
 
 public class Calculator {
 
+    public static int math = 0;
+
     private int num1; // state -> filed -> properties -> data
     private int num2;
 
@@ -26,5 +28,11 @@ public class Calculator {
 
     public void division() {
         System.out.println("Division Of Two Numbers is " + (num1 / num2));
+        // math = 10;
+    }
+
+    public static void pi() {
+        math = 10;
+        // num1 = 10;
     }
 }

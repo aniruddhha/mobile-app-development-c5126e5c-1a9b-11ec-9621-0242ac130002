@@ -34,9 +34,21 @@ public class Main {
         Jungle jng = new Jungle();
 
         Calculator cl = new Calculator(10, 10);
-        cl.addition();
+        cl.addition(); // instance methods
         cl.division();
         cl.substraction();
         cl.multiplication();
+
+        // -> num1 and num2 will be created everytime
+        new Calculator(145, 3);
+        // -> num1 and num2 will be created everytime
+        new Calculator(146, 54);
+        // -> num1 and num2 will be created everytime
+        new Calculator(105, 5);
+        // -> num1 and num2 will be created everytime
+        new Calculator(1056, 164);
+
+        Calculator.pi(); // class methods
+        Calculator.math = 50; // math will be created only once
     }
 }

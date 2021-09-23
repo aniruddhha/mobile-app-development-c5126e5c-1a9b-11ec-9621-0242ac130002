@@ -1,6 +1,10 @@
 package exr1;
 
+import java.util.LinkedList;
+
 public class MenuHelper {
+
+    private LinkedList<User> database = new LinkedList<>();
 
     private int choice;
 

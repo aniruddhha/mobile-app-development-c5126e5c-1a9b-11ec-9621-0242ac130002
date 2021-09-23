@@ -4,8 +4,6 @@ import java.util.LinkedList;
 import java.util.Random;
 import java.util.Scanner;
 
-import org.graalvm.compiler.lir.LIRInstruction.Use;
-
 public class MenuHelper {
 
     private Random rn = new Random();
@@ -15,23 +13,34 @@ public class MenuHelper {
 
     private int choice;
 
-    public void showStartMenu() {
-        String dispStr = "\n ----- Welcome To User Management ----- \n \n 1. Register " + "\n 2. Login "
+    private void showStartMenu() {
+        String dispStr = "\n \n ----- Welcome To User Management ----- \n \n 1. Register " + "\n 2. Login "
                 + "\n 3. Show Users" + " \n \n ";
         System.out.println(dispStr);
     }
 
-    public void performOperation(int ch) {
-        choice = ch;
+    public void askChoice() {
 
-        if (ch == 1) {
+        while (true) {
+            showStartMenu();
+
+            System.out.println("--- \n \n Enter Your Choice --- \n \n");
+            choice = sc.nextInt();
+            performOperation();
+        }
+    }
+
+    private void performOperation() {
+
+        if (choice == 1) {
             register();
-        } else if (ch == 2) {
+        } else if (choice == 2) {
             login();
-        } else if (ch == 3) {
+        } else if (choice == 3) {
             showRegisteredUsers();
         } else {
-            System.out.print("Bad Choice");
+            System.out.println("\n \n --- Bad Choice --- \n \n");
+            System.exit(0);
         }
     }
 
@@ -60,13 +69,13 @@ public class MenuHelper {
 
         for (User us : database) { // foreach
             if (name.equals(us.getName())) {
-                System.out.println("--- \n \n Found The User  --- \n \n");
+                System.out.println("\n \n ---  Found The User  --- \n \n");
                 System.out
                         .println("Id : " + us.getId() + " Name : " + us.getName() + " Age : " + us.getAge() + " \n \n");
                 return;
             }
         }
-        System.out.println("--- \n \n User Not Found  --- \n \n");
+        System.out.println("\n \n ---  User Not Found  --- \n \n");
     }
 
     private void showRegisteredUsers() {

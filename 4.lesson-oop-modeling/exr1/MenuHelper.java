@@ -103,4 +103,8 @@ public class MenuHelper {
     private void findTheUsersWhoAgeBetween35To60() {
         // write your code here
     }
+
+    private void deleteUser(Long id) {
+        // write your code here
+    }
 }

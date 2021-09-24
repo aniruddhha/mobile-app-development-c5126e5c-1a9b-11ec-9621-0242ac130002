@@ -30,3 +30,11 @@
         // write your code here
     }
 `
+
+> #### Delete the user with perticular id 
+
+`
+    private void findUsersWithAgeGreterThanFifty() {
+        // write your code here
+    }
+`

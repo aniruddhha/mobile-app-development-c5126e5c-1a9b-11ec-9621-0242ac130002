@@ -2,9 +2,17 @@ package exr2;
 
 import java.util.Scanner;
 
+// just to clear your doubt, I am using both wrapper and primtives; 
+// but you uses decide on the basis of requirement
 public class MenuHelper {
 
-    private Scanner sc = new Scanner(System.in);
+    private Scanner sc; // state
+    private WalletRepository repository;
+
+    public MenuHelper() { // initilize the state at the time of object creation
+        sc = new Scanner(System.in);
+        repository = new WalletRepository();
+    }
 
     public void showMenu() {
 
@@ -33,13 +41,47 @@ public class MenuHelper {
 
     private void checkBalance() {
         System.out.println("\n *** Checking Balance *** \n");
+
+        System.out.print("\n Enter Wallet ID : ");
+        Long walledId = sc.nextLong();
+        double balance = repository.checkBalance(walledId);
+
+        System.out.println("\n *** Balance For " + walledId + " is : " + balance + "  *** \n");
     }
 
     private void topUp() {
         System.out.println("\n *** Top Up Wallet *** \n");
+
+        System.out.print("\n Enter Wallet ID : ");
+        Long walledId = sc.nextLong();
+
+        System.out.print("\n Enter Amount : ");
+        Double amount = sc.nextDouble();
+
+        double balance = repository.topUp(walledId, amount);
+
+        System.out.println("\n *** Wallet " + walledId + " Updated : " + balance + "  *** \n");
     }
 
     private void sendMoney() {
         System.out.println("\n *** Sending Money *** \n");
+
+        System.out.print("\n Enter Your Wallet ID : ");
+        Long fromWalledId = sc.nextLong();
+
+        System.out.print("\n Enter Friends ID : ");
+        Long toWalledId = sc.nextLong();
+
+        System.out.print("\n Enter Amount : ");
+        Double amount = sc.nextDouble();
+
+        Integer status = repository.sendMoney(fromWalledId, toWalledId, amount);
+
+        if (status == 0) {
+            System.out.println("\n *** NOT able to Send Money *** \n");
+        } else {
+            System.out.println("\n *** Money Transferred Successfully *** \n");
+        }
     }
+
 }

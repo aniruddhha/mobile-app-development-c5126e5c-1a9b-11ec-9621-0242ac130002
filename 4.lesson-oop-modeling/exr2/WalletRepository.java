@@ -41,7 +41,35 @@ public class WalletRepository {
     }
 
     public int sendMoney(Long fromId, Long toId, double amt) {
-        return 0;
+
+        int posFrm = findWalletPositionById(fromId);
+        int posTo = findWalletPositionById(toId);
+
+        if (posFrm == -1) {
+            return -1;
+        }
+
+        if (posTo == -1) {
+            return -2;
+        }
+
+        Wallet wlFrm = database.get(posFrm);
+        if (wlFrm.getBalance() <= 0) {
+            return -3;
+        }
+
+        if (wlFrm.getBalance() < amt) {
+            return -4;
+        }
+
+        wlFrm.setBalance(wlFrm.getBalance() - amt);
+        database.set(posFrm, wlFrm);
+
+        Wallet wlTo = database.get(posTo);
+        wlTo.setBalance(wlTo.getBalance() + amt);
+        database.set(posTo, wlTo);
+
+        return 1;
     }
 
     private int findWalletPositionById(Long id) {

@@ -44,7 +44,7 @@ public class MenuHelper {
 
         System.out.print("\n Enter Wallet ID : ");
         Long walledId = sc.nextLong();
-        
+
         double balance = repository.checkBalance(walledId);
 
         System.out.println("\n *** Balance For " + walledId + " is : " + balance + "  *** \n");
@@ -78,10 +78,16 @@ public class MenuHelper {
 
         Integer status = repository.sendMoney(fromWalledId, toWalledId, amount);
 
-        if (status == 0) {
-            System.out.println("\n *** NOT able to Send Money *** \n");
+        if (status == -1) {
+            System.out.println("\n *** Sender Wallet Does Not Present *** \n");
+        } else if (status == -2) {
+            System.out.println("\n *** Receiver Wallet Does Not Present *** \n");
+        } else if (status == -3) {
+            System.out.println("\n *** You have Zero/Negative Balance *** \n");
+        } else if (status == -4) {
+            System.out.println("\n *** Insufficient Balance *** \n");
         } else {
-            System.out.println("\n *** Money Transferred Successfully *** \n");
+            System.out.println("\n *** Amount Transferred Successfully *** \n");
         }
     }
 

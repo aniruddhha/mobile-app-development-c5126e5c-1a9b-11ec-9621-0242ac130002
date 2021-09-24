@@ -44,6 +44,7 @@ public class MenuHelper {
 
         System.out.print("\n Enter Wallet ID : ");
         Long walledId = sc.nextLong();
+        
         double balance = repository.checkBalance(walledId);
 
         System.out.println("\n *** Balance For " + walledId + " is : " + balance + "  *** \n");

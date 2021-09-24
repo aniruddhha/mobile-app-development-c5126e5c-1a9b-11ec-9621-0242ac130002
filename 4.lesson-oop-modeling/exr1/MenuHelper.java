@@ -4,12 +4,13 @@ import java.util.LinkedList;
 import java.util.Random;
 import java.util.Scanner;
 
+// this ugly class - why ? because it is taking care of lot of things
 public class MenuHelper {
 
     private Random rn = new Random();
     private Scanner sc = new Scanner(System.in);
 
-    private LinkedList<User> database = new LinkedList<>();
+    private LinkedList<User> database = new LinkedList<>(); // store the data
 
     private int choice;
 
@@ -28,7 +29,7 @@ public class MenuHelper {
             showStartMenu();
 
             System.out.println("--- \n \n Enter Your Choice --- \n \n");
-            choice = sc.nextInt();
+            choice = sc.nextInt(); // you actually get interger from user
             performOperation();
         }
     }
@@ -61,9 +62,9 @@ public class MenuHelper {
         User user = new User();
         user.setName(name);
         user.setAge(age);
-        user.setId(rn.nextLong());
+        user.setId(rn.nextLong()); // random long number
 
-        database.add(user);
+        database.add(user); // adding user to linkedlist i.e. our database
     }
 
     private void login() {
@@ -101,7 +102,6 @@ public class MenuHelper {
     }
 
     private void findTheUsersWhoAgeBetween35To60() {
-        // write your code here
     }
 
     private void deleteUser(Long id) {

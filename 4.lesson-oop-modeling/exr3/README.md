@@ -1,6 +1,6 @@
-## Case Study 3 
+# Case Study 3 
 
-# Basic Shopping Cart
+## Basic Shopping Cart
 
 - Display Menu
 - Item Details

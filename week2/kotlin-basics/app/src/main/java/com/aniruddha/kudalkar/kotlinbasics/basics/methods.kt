@@ -1,7 +1,5 @@
 package com.aniruddha.kudalkar.kotlinbasics.basics
 
-import java.util.*
-
 fun simple(): Int { // How to return value ?  returning int
     return 10
 }

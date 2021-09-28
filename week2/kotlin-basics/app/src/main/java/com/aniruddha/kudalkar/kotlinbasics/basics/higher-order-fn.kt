@@ -59,8 +59,21 @@ fun demo2() {
     val fn1 = fun(file : String) {
         println("File Uploaded - $file")
     }
-
     uploadFiles(files, fn1)
+    uploadFiles(files, fun(file : String) {
+        println("File Uploaded - $file")
+    })
+
+    val fn2 = { file : String -> println(file)  }
+    uploadFiles(files, fn2)
+    uploadFiles(files, { file : String -> println(file)  })
+    uploadFiles(files) { file : String ->
+        println(file)
+    }
+
+    uploadFiles(files) {
+        println(it)
+    }
 }
 
 fun main() {

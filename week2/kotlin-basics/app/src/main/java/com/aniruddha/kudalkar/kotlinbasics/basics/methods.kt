@@ -27,7 +27,7 @@ fun defaultValues( // indentation would be like this
 }
 
 
-infix fun Char.sq(n: Int) = n * n
+infix fun Int.sq(n: Int) = n * n
 
 fun main() {
     /*val dt = simple()
@@ -42,6 +42,6 @@ fun main() {
     println("defaultValues(num2 = 4555, num1 = 10) ${defaultValues(num2 = 4555, num1 = 10)}") // named parameters
     println("defaultValues(num2 = 878) ${defaultValues(num2 = 878)}")*/
 
-    println(" Square is ${'1' sq 2}")
-    println(" Square is ${'1'.sq(2)}")
+    println(" Square is ${1 sq 2}")
+    println(" Square is ${1.sq(2)}")
 }

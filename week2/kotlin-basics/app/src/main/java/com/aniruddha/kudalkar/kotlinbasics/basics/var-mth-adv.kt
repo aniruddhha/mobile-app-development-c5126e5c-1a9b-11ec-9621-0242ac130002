@@ -51,8 +51,10 @@ fun main() {
     fnDemo()
 
     val fn = outer()
-    val str = fn(10)
+    val str1 = fn(10)
+    val str2 = fn.invoke(10)
 
     println(fn) // what is output ?
-    println(str) // what is output ?
+    println(str1) // what is output ?
+    println(str2) // what is output ?
 }

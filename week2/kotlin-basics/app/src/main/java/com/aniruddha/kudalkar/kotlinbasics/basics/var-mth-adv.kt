@@ -1,5 +1,7 @@
 package com.aniruddha.kudalkar.kotlinbasics.basics
 
+typealias SimpleFunction = (n : Int) -> String
+
 fun someObj() = object { // inline function returning object
     var dt = 10
     var os = "android"
@@ -44,6 +46,12 @@ fun outer(): (n1: Int) -> String {
 
     return fun(n: Int): String {
         return "abc"
+    }
+}
+
+fun outer2(): SimpleFunction {
+    return fun ( n : Int ) : String {
+        return "alias"
     }
 }
 

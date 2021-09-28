@@ -7,7 +7,6 @@ fun uploadFiles(files: Array<String>, fn: (st: String) -> Unit ) {
     // just to notify status of processing
 
     // notification for starting the processing ->
-    Thread.sleep(1500)
     fn("starting")
     for ( file in files) {
         // we do some processing
@@ -15,7 +14,6 @@ fun uploadFiles(files: Array<String>, fn: (st: String) -> Unit ) {
         Thread.sleep(1000)
         fn(file)
     }
-    Thread.sleep(1500)
     // after completion on notify status ->
     fn("completed")
 }

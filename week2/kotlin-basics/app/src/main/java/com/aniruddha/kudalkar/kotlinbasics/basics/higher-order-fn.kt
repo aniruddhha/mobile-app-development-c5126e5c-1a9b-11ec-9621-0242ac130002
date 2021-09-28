@@ -1,6 +1,26 @@
 package com.aniruddha.kudalkar.kotlinbasics.basics
 
-fun main() {
+fun uploadFiles(files: Array<String>, fn: (st: String) -> Unit ) {
+
+    // I want to do processing, i.e. uploading files
+    // after processing I want call function
+    // just to notify status of processing
+
+    // notification for starting the processing ->
+    Thread.sleep(1500)
+    fn("starting")
+    for ( file in files) {
+        // we do some processing
+        // during processing we need to notify
+        Thread.sleep(1000)
+        fn(file)
+    }
+    Thread.sleep(1500)
+    // after completion on notify status ->
+    fn("completed")
+}
+
+fun demo1() {
     // fn1 can hold the value of type function whose shape is like
     // zero parameters and returning integer
     // i.e. shape = () -> Int = how many params and what is return type
@@ -27,5 +47,20 @@ fun main() {
             return 10
         }
     val fn10: (st: String, dt: Int, prc: Double) -> Int = { st, dt, prc  -> 10  }
-    val fn11: (st: String, dt: Int, prc: Double) -> Int = { _, _, _ ->  10  }
+    val fn11: (st: String, dt: Int, prc: Double) -> Int = { _, dt, _ ->  10 * dt  }
+}
+
+fun demo2() {
+
+    val files = arrayOf("ajdf", "asdslfh", "akjfh", "alfj", "sdkdfkh", "sdldf", "sdlkfkdj")
+
+    val fn1 = fun(file : String) {
+        println("File Uploaded - $file")
+    }
+
+    uploadFiles(files, fn1)
+}
+
+fun main() {
+    demo2()
 }

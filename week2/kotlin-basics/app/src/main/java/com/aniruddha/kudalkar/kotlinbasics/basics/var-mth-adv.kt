@@ -1,13 +1,19 @@
 package com.aniruddha.kudalkar.kotlinbasics.basics
 
-fun objDemo() {
-    val obj =  object {
-        var dt = 10
-        var os = "android"
-    }
-    println("Data ${obj.dt} Os ${obj.os}")
+fun someObj() = object { // inline function returning object
+    var dt = 10
+    var os = "android"
 }
 
 fun main() {
-    objDemo()
+
+    val ob = object {
+        var dt = 10
+        var os = "android"
+    }
+
+    var ob1 = someObj()
+//    ob1.dt
+
+    println( " Os ${ob.dt}")
 }

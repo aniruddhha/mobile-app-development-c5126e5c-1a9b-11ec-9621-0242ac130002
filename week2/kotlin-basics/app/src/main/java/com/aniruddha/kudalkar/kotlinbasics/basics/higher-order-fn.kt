@@ -70,7 +70,6 @@ fun demo2() {
     uploadFiles(files) { file : String ->
         println(file)
     }
-
     uploadFiles(files) {
         println(it)
     }

@@ -2,7 +2,7 @@ package com.aniruddha.kudalkar.kotlinbasics.basics
 
 fun uploadFiles(
     files: Array<String>,
-    fn: (st: String) -> Unit
+    fn: (st: String) -> Unit // function as parameter
 ) {
 
     // I want to do processing, i.e. uploading files

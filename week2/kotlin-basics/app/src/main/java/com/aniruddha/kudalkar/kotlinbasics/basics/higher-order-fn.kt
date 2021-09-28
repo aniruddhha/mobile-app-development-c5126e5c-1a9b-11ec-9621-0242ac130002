@@ -27,4 +27,5 @@ fun main() {
             return 10
         }
     val fn10: (st: String, dt: Int, prc: Double) -> Int = { st, dt, prc  -> 10  }
+    val fn11: (st: String, dt: Int, prc: Double) -> Int = { _, _, _ ->  10  }
 }

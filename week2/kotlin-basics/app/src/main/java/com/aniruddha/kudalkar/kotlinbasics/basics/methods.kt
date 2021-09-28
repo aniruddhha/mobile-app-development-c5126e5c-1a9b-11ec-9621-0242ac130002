@@ -1,5 +1,7 @@
 package com.aniruddha.kudalkar.kotlinbasics.basics
 
+import java.util.*
+
 fun simple(): Int { // How to return value ?  returning int
     return 10
 }
@@ -26,10 +28,19 @@ fun defaultValues( // indentation would be like this
     return "Num1 = ${num1}, Num2 = ${num2}"
 }
 
-
 infix fun Unit.sq(n: Int) = n * n
 
+fun multiple(vararg strs : String) { // variable arguments
+    println(strs.contentToString())
+}
+
 fun main() {
+
+    multiple("one")
+    multiple("one", "two")
+    multiple("one", "two", "three")
+    multiple("one", "two", "three", "four")
+
     /*val dt = simple()
     println("Dt is $dt")
     println("Addition is " + addition(12, 3))
@@ -44,4 +55,6 @@ fun main() {
 
     println(" Square is ${Unit sq 2}")
     println(" Square is ${Unit.sq(2)}")
+
+
 }

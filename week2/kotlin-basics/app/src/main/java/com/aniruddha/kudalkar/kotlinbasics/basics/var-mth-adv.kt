@@ -51,7 +51,7 @@ fun outer(): (n1: Int) -> String {
 
 fun outer2(): SimpleFunction {
     return fun ( n : Int ) : String {
-        return "alias"
+        return "aliaadfdasdfsafsafdsafs"
     }
 }
 

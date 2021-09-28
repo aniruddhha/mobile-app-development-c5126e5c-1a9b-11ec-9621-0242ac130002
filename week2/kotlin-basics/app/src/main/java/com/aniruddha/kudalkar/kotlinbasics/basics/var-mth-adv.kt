@@ -49,7 +49,7 @@ fun outer(): (n1: Int) -> String {
     }
 }
 
-fun outer2(): SimpleFunction {
+fun outer2(): SimpleFunction { // instead of writing complete (n : Int) -> String just write SimpleFunction
     return fun ( n : Int ) : String {
         return "aliaadfdasdfsafsafdsafs"
     }

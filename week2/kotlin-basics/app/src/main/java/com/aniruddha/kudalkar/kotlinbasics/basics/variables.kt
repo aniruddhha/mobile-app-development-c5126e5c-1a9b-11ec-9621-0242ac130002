@@ -15,8 +15,8 @@ fun main() {
     val lng: Long = 9223372036854775807
     val byt: Byte = 20
 
-    println("String = " + sr + " Double = " + dbl)
-    println("\n String = $sr \n Double = $dbl \n Float = ${flt} \n Boolean = ${bln} ")
+    println("String = " + sr + " Double = " + dbl) // string concatenation
+    println("\n String = $sr \n Double = $dbl \n Float = ${flt} \n Boolean = ${bln} ") // string interpolation
     println("\n Addition = ${ 10 + 20 } ")
     println("\n Square Root = ${ Math.sqrt(25.6) } ")
 }

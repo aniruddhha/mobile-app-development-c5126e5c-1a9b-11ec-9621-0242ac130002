@@ -1,6 +1,9 @@
 package com.aniruddha.kudalkar.kotlinbasics.basics
 
-fun uploadFiles(files: Array<String>, fn: (st: String) -> Unit ) {
+fun uploadFiles(
+    files: Array<String>,
+    fn: (st: String) -> Unit
+) {
 
     // I want to do processing, i.e. uploading files
     // after processing I want call function

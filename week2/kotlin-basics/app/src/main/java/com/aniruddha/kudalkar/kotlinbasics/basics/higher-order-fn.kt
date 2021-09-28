@@ -11,7 +11,8 @@ fun uploadFiles(files: Array<String>, fn: (st: String) -> Unit ) {
     for ( file in files) {
         // we do some processing
         // during processing we need to notify
-        Thread.sleep(1000)
+        Thread.sleep(1000) // not recommended to use
+        // i have used this sleep, just to simulate to delay
         fn(file)
     }
     // after completion on notify status ->

@@ -16,6 +16,12 @@ fun demo1() {
 //    intNums[5] = 78
 
     println(intNums.contentToString())
+
+    val intNums1 = IntArray(5) { 50 } // 50 arrays of size 5, first element is 50
+    val intNums2 = IntArray(5, { 50 })
+    val intNums3 = IntArray(5, fun( n : Int ): Int {
+        return n
+    })
 }
 
 fun main() {

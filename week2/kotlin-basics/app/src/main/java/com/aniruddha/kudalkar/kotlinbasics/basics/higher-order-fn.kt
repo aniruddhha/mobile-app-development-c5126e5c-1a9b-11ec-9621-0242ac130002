@@ -74,6 +74,8 @@ fun demo2() {
     uploadFiles(files) { // it = file: String, kotlin offers you
         println(it)
     }
+
+    uploadFiles(files) { println(it) }
 }
 
 fun main() {

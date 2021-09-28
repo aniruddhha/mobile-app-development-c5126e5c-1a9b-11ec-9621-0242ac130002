@@ -10,6 +10,8 @@ fun demo1() { // primitive array
     println(nums.contentToString())
 
     val intNums = IntArray(5) // dynamic array
+    println(intNums.contentToString())
+
     intNums[0] = 45
     intNums[1] = 12
     intNums[2] = 9
@@ -19,11 +21,13 @@ fun demo1() { // primitive array
 
     println(intNums.contentToString())
 
-    val intNums1 = IntArray(5) { 50 } // 50 arrays of size 5, first element is 50
+    val intNums1 = IntArray(5) { 50 } // 5 element array, each initialized to 50
     val intNums2 = IntArray(5, { 50 })
     val intNums3 = IntArray(5, fun( n : Int ): Int {
-        return n
+        return 50
     })
+
+    println(intNums3.contentToString())
 
     val arrBools = BooleanArray(5) { true }
     println(arrBools.contentToString())
@@ -40,5 +44,5 @@ fun demo2() {
 }
 
 fun main() {
-    demo2()
+    demo1()
 }

@@ -1,6 +1,8 @@
 package com.aniruddha.kudalkar.kotlinbasics.arrays
 
-fun demo1() {
+import java.util.*
+
+fun demo1() { // primitive array
     val nums = intArrayOf(1, 98, 2, 78, 63, 52) // static array
 
     println("0 -> ${nums.get(0)}")
@@ -22,8 +24,21 @@ fun demo1() {
     val intNums3 = IntArray(5, fun( n : Int ): Int {
         return n
     })
+
+    val arrBools = BooleanArray(5) { true }
+    println(arrBools.contentToString())
+}
+
+fun demo2() {
+    val dates = Array<Date>(5) { Date() }
+    println("0th -> ${dates[0]}")
+    println("0th -> ${dates.get(0)}")
+    println(dates.contentToString())
+
+    val names = arrayOf<String>("android", "iOS", "Linux", "Windows")
+    println(names.contentToString())
 }
 
 fun main() {
-    demo1()
+    demo2()
 }

@@ -11,7 +11,7 @@ fun uploadFiles(
 
     // notification for starting the processing ->
     fn("starting")
-    for ( file in files) {
+    for ( file in files) { // right now forget about loop, we will see this separately
         // we do some processing
         // during processing we need to notify
         Thread.sleep(1000) // not recommended to use
@@ -54,6 +54,7 @@ fun demo1() {
 
 fun demo2() {
 
+    // right now forget about array, we will see this separately
     val files = arrayOf("ajdf", "asdslfh", "akjfh", "alfj", "sdkdfkh", "sdldf", "sdlkfkdj")
 
     val fn1 = fun(file : String) {

@@ -1,5 +1,16 @@
 package com.aniruddha.kudalkar.kotlinbasics.basics
 
+/*
+
+Kotlin functions are first-class, which means they can be stored in variables and data structures,
+and can be passed as arguments to and returned from other higher-order functions.
+You can perform any operations on functions that are possible for other non-function values.
+
+To facilitate this, Kotlin, as a statically typed programming language, uses a family of function types
+to represent functions, and provides a set of specialized language constructs, such as lambda expressions.
+
+ */
+
 fun uploadFiles(
     files: Array<String>,
     fn: (st: String) -> Unit // function as parameter

@@ -68,10 +68,10 @@ fun demo2() {
     val fn2 = { file : String -> println(file)  }
     uploadFiles(files, fn2)
     uploadFiles(files, { file : String -> println(file)  })
-    uploadFiles(files) { file : String ->
+    uploadFiles(files) { file: String ->
         println(file)
     }
-    uploadFiles(files) {
+    uploadFiles(files) { // it = file: String, kotlin offers you
         println(it)
     }
 }

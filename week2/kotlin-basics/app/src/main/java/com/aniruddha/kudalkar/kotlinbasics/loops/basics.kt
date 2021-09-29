@@ -37,6 +37,21 @@ fun demo2() {
     }
 }
 
+fun demo3() {
+
+    var i = 0
+    while(i < 10) {
+        i = i + 1
+        println("I is $i")
+    }
+
+    var j = 0
+    do {
+        j = j + 1
+        println("J is $j")
+    }while( j < 10 )
+}
+
 fun main() {
-    demo2()
+    demo3()
 }

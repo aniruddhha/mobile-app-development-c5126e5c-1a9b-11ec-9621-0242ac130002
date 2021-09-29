@@ -8,12 +8,16 @@ package com.aniruddha.kudalkar.kotlinbasics.controlflow.conditionals
 fun demo1() {
     println("Enter The OS : ")
     val os = readLine() // take input from user
+    var st = ""
     if(os.equals("10")) {
         println("Oreo")
+        st = "oreo"
     } else if (os.equals("9")) {
         println("Pie")
+        st = "pie"
     } else {
         println("Android")
+        st = "android"
     }
 }
 

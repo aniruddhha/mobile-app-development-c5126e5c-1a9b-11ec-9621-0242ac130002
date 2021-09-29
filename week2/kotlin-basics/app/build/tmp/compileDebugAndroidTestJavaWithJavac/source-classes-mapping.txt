@@ -1,0 +1,2 @@
+com/aniruddha/kudalkar/kotlinbasics/test/BuildConfig.java
+ com.aniruddha.kudalkar.kotlinbasics.test.BuildConfig

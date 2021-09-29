@@ -1,0 +1,605 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AndroidLayouts">
+    <shared>
+      <config />
+    </shared>
+  </component>
+  <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="NONE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="5cedffbc-4e17-4787-9a5b-7ecde08621aa" name="Default Changelist" comment="packages and imports">
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/aniruddha/kudalkar/kotlinbasics/typeandcast/main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/aniruddha/kudalkar/kotlinbasics/typeandcast/main.kt" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[/home/aniruddha/.android/avd/Pixel_3a_API_30_x86.avd]" />
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="Kotlin Class" />
+        <option value="Kotlin File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="1yiG0QklxFjCyb8jw0d35Xsx6EJ" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.17" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="experimental" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/src/main/java/com/aniruddha/kudalkar/kotlinbasics/basics" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.MainKt">
+    <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App">
+      <module name="KotlinBasics.app" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ALL_USERS" value="false" />
+      <option name="ALWAYS_INSTALL_WITH_PM" value="false" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Hybrid>
+      <Java />
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Sample Java Methods" />
+        <option name="STARTUP_NATIVE_MEMORY_PROFILING_ENABLED" value="false" />
+        <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="SEARCH_ACTIVITY_IN_GLOBAL_SCOPE" value="false" />
+      <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BasicsKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <module name="KotlinBasics.app" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" value="com.aniruddha.kudalkar.kotlinbasics.controlflow.conditionals.BasicsKt" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Higher_order_fnKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <module name="KotlinBasics.app" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" value="com.aniruddha.kudalkar.kotlinbasics.basics.Higher_order_fnKt" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <module name="KotlinBasics.app" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" value="com.aniruddha.kudalkar.kotlinbasics.typeandcast.MainKt" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Var_mth_advKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <module name="KotlinBasics.app" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" value="com.aniruddha.kudalkar.kotlinbasics.basics.Var_mth_advKt" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="VariablesKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <module name="KotlinBasics.app" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" value="com.aniruddha.kudalkar.kotlinbasics.basics.VariablesKt" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.MainKt" />
+        <item itemvalue="Application.BasicsKt" />
+        <item itemvalue="Application.BasicsKt" />
+        <item itemvalue="Application.BasicsKt" />
+        <item itemvalue="Application.Higher_order_fnKt" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5cedffbc-4e17-4787-9a5b-7ecde08621aa" name="Default Changelist" comment="" />
+      <created>1632726773991</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1632726773991</updated>
+    </task>
+    <task id="LOCAL-00001" summary="restructuring">
+      <created>1632726926066</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1632726926066</updated>
+    </task>
+    <task id="LOCAL-00002" summary="studio : git and studio setup">
+      <created>1632732711347</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1632732711347</updated>
+    </task>
+    <task id="LOCAL-00003" summary="readme : updated copy">
+      <created>1632740811384</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1632740811384</updated>
+    </task>
+    <task id="LOCAL-00004" summary="notes : chapter 1">
+      <created>1632741086117</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1632741086117</updated>
+    </task>
+    <task id="LOCAL-00005" summary="notes : basic git commands">
+      <created>1632741992296</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1632741992296</updated>
+    </task>
+    <task id="LOCAL-00006" summary="variables :  basics of variables">
+      <created>1632803316295</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1632803316295</updated>
+    </task>
+    <task id="LOCAL-00007" summary="methods : return type parameters">
+      <created>1632804814293</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1632804814293</updated>
+    </task>
+    <task id="LOCAL-00008" summary="methods : default values">
+      <created>1632807183836</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1632807183836</updated>
+    </task>
+    <task id="LOCAL-00009" summary="methods : infix functions">
+      <created>1632809410194</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1632809410194</updated>
+    </task>
+    <task id="LOCAL-00010" summary="methods : infix functions">
+      <created>1632809661928</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1632809661928</updated>
+    </task>
+    <task id="LOCAL-00011" summary="methods : infix functions">
+      <created>1632809788988</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1632809788988</updated>
+    </task>
+    <task id="LOCAL-00012" summary="methods : varargs">
+      <created>1632810620632</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1632810620632</updated>
+    </task>
+    <task id="LOCAL-00013" summary="objects : basic syntax">
+      <created>1632811634707</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1632811634708</updated>
+    </task>
+    <task id="LOCAL-00014" summary="objects : details">
+      <created>1632812500285</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1632812500285</updated>
+    </task>
+    <task id="LOCAL-00015" summary="functions : inner and anonymous function">
+      <created>1632813253952</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1632813253952</updated>
+    </task>
+    <task id="LOCAL-00016" summary="functions : inner and anonymous function">
+      <created>1632813350424</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1632813350424</updated>
+    </task>
+    <task id="LOCAL-00017" summary="functions : fn type">
+      <created>1632814208353</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1632814208353</updated>
+    </task>
+    <task id="LOCAL-00018" summary="functions : fn type">
+      <created>1632818248624</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1632818248625</updated>
+    </task>
+    <task id="LOCAL-00019" summary="functions : fn type">
+      <created>1632818462055</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1632818462055</updated>
+    </task>
+    <task id="LOCAL-00020" summary="functions : typealias">
+      <created>1632818993866</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1632818993866</updated>
+    </task>
+    <task id="LOCAL-00021" summary="functions : typealias">
+      <created>1632819038998</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1632819038998</updated>
+    </task>
+    <task id="LOCAL-00022" summary="functions : higher order functions">
+      <created>1632821218299</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1632821218299</updated>
+    </task>
+    <task id="LOCAL-00023" summary="functions : higher order functions">
+      <created>1632821546004</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1632821546004</updated>
+    </task>
+    <task id="LOCAL-00024" summary="functions : higher order functions">
+      <created>1632821717909</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1632821717909</updated>
+    </task>
+    <task id="LOCAL-00025" summary="functions : higher order functions">
+      <created>1632824029713</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1632824029713</updated>
+    </task>
+    <task id="LOCAL-00026" summary="functions : higher order functions">
+      <created>1632824234076</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1632824234076</updated>
+    </task>
+    <task id="LOCAL-00027" summary="functions : higher order functions">
+      <created>1632824308557</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1632824308557</updated>
+    </task>
+    <task id="LOCAL-00028" summary="functions : higher order functions">
+      <created>1632824345190</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1632824345190</updated>
+    </task>
+    <task id="LOCAL-00029" summary="functions : higher order functions - lambdas">
+      <created>1632825057273</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1632825057273</updated>
+    </task>
+    <task id="LOCAL-00030" summary="functions : higher order functions - lambdas">
+      <created>1632825289945</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1632825289945</updated>
+    </task>
+    <task id="LOCAL-00031" summary="functions : higher order functions - lambdas">
+      <created>1632825313159</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1632825313159</updated>
+    </task>
+    <task id="LOCAL-00032" summary="functions : higher order functions - lambdas">
+      <created>1632825359352</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1632825359352</updated>
+    </task>
+    <task id="LOCAL-00033" summary="functions : higher order functions - lambdas">
+      <created>1632825509709</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1632825509709</updated>
+    </task>
+    <task id="LOCAL-00034" summary="functions : higher order functions - lambdas">
+      <created>1632825533579</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1632825533579</updated>
+    </task>
+    <task id="LOCAL-00035" summary="functions : higher order functions - lambdas">
+      <created>1632828407288</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1632828407288</updated>
+    </task>
+    <task id="LOCAL-00036" summary="arrays : basics">
+      <created>1632829294040</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1632829294040</updated>
+    </task>
+    <task id="LOCAL-00037" summary="arrays : object arrays">
+      <created>1632829724147</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1632829724147</updated>
+    </task>
+    <task id="LOCAL-00038" summary="arrays : object arrays">
+      <created>1632830398580</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1632830398580</updated>
+    </task>
+    <task id="LOCAL-00039" summary="loop : for variations">
+      <created>1632831384428</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1632831384428</updated>
+    </task>
+    <task id="LOCAL-00040" summary="loop : for variations">
+      <created>1632831933834</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1632831933834</updated>
+    </task>
+    <task id="LOCAL-00041" summary="loop : while loop">
+      <created>1632887203622</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1632887203622</updated>
+    </task>
+    <task id="LOCAL-00042" summary="conditional : if, when">
+      <created>1632887838638</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1632887838638</updated>
+    </task>
+    <task id="LOCAL-00043" summary="conditional : if, when">
+      <created>1632888972156</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1632888972156</updated>
+    </task>
+    <task id="LOCAL-00044" summary="conditional : if, when">
+      <created>1632889031273</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1632889031273</updated>
+    </task>
+    <task id="LOCAL-00045" summary="conditional: spaces removed">
+      <created>1632889859297</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1632889859297</updated>
+    </task>
+    <task id="LOCAL-00046" summary="conditional : when variations">
+      <created>1632890343495</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1632890343495</updated>
+    </task>
+    <task id="LOCAL-00047" summary="conditional : when variations">
+      <created>1632890491881</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1632890491881</updated>
+    </task>
+    <task id="LOCAL-00048" summary="keyword : use of back ticks">
+      <created>1632891264436</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1632891264436</updated>
+    </task>
+    <task id="LOCAL-00049" summary="packages and imports">
+      <created>1632891748173</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1632891748173</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
+    <servers />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.md" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="studio : git and studio setup" />
+    <MESSAGE value="readme : updated copy" />
+    <MESSAGE value="notes : chapter 1" />
+    <MESSAGE value="notes : basic git commands" />
+    <MESSAGE value="variables :  basics of variables" />
+    <MESSAGE value="methods : return type parameters" />
+    <MESSAGE value="methods : default values" />
+    <MESSAGE value="methods : infix functions" />
+    <MESSAGE value="methods : varargs" />
+    <MESSAGE value="objects : basic syntax" />
+    <MESSAGE value="objects : details" />
+    <MESSAGE value="functions : inner and anonymous function" />
+    <MESSAGE value="functions : fn type" />
+    <MESSAGE value="functions : typealias" />
+    <MESSAGE value="functions : higher order functions" />
+    <MESSAGE value="functions : higher order functions - lambdas" />
+    <MESSAGE value="arrays : basics" />
+    <MESSAGE value="arrays : object arrays" />
+    <MESSAGE value="loop : for variations" />
+    <MESSAGE value="loop : while loop" />
+    <MESSAGE value="conditional : if, when" />
+    <MESSAGE value="conditional: spaces removed" />
+    <MESSAGE value="conditional : when variations" />
+    <MESSAGE value="keyword : use of back ticks" />
+    <MESSAGE value="packages and imports" />
+    <option name="LAST_COMMIT_MESSAGE" value="packages and imports" />
+  </component>
+</project>

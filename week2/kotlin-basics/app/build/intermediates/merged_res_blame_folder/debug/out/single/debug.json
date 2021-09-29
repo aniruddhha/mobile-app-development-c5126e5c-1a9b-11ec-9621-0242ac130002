@@ -1,0 +1,58 @@
+[
+    {
+        "merged": "/home/aniruddha/projects/mobile-app-development-c5126e5c-1a9b-11ec-9621-0242ac130002/week2/kotlin-basics/app/build/intermediates/merged_res/debug/mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "/home/aniruddha/projects/mobile-app-development-c5126e5c-1a9b-11ec-9621-0242ac130002/week2/kotlin-basics/app/src/main/res/mipmap-hdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "/home/aniruddha/projects/mobile-app-development-c5126e5c-1a9b-11ec-9621-0242ac130002/week2/kotlin-basics/app/build/intermediates/merged_res/debug/mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "/home/aniruddha/projects/mobile-app-development-c5126e5c-1a9b-11ec-9621-0242ac130002/week2/kotlin-basics/app/src/main/res/mipmap-xxxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "/home/aniruddha/projects/mobile-app-development-c5126e5c-1a9b-11ec-9621-0242ac130002/week2/kotlin-basics/app/build/intermediates/merged_res/debug/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "/home/aniruddha/projects/mobile-app-development-c5126e5c-1a9b-11ec-9621-0242ac130002/week2/kotlin-basics/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "/home/aniruddha/projects/mobile-app-development-c5126e5c-1a9b-11ec-9621-0242ac130002/week2/kotlin-basics/app/build/intermediates/merged_res/debug/mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "/home/aniruddha/projects/mobile-app-development-c5126e5c-1a9b-11ec-9621-0242ac130002/week2/kotlin-basics/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "/home/aniruddha/projects/mobile-app-development-c5126e5c-1a9b-11ec-9621-0242ac130002/week2/kotlin-basics/app/build/intermediates/merged_res/debug/mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "/home/aniruddha/projects/mobile-app-development-c5126e5c-1a9b-11ec-9621-0242ac130002/week2/kotlin-basics/app/src/main/res/mipmap-mdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "/home/aniruddha/projects/mobile-app-development-c5126e5c-1a9b-11ec-9621-0242ac130002/week2/kotlin-basics/app/build/intermediates/merged_res/debug/drawable_ic_launcher_background.xml.flat",
+        "source": "/home/aniruddha/projects/mobile-app-development-c5126e5c-1a9b-11ec-9621-0242ac130002/week2/kotlin-basics/app/src/main/res/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "/home/aniruddha/projects/mobile-app-development-c5126e5c-1a9b-11ec-9621-0242ac130002/week2/kotlin-basics/app/build/intermediates/merged_res/debug/mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "/home/aniruddha/projects/mobile-app-development-c5126e5c-1a9b-11ec-9621-0242ac130002/week2/kotlin-basics/app/src/main/res/mipmap-hdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "/home/aniruddha/projects/mobile-app-development-c5126e5c-1a9b-11ec-9621-0242ac130002/week2/kotlin-basics/app/build/intermediates/merged_res/debug/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "/home/aniruddha/projects/mobile-app-development-c5126e5c-1a9b-11ec-9621-0242ac130002/week2/kotlin-basics/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "/home/aniruddha/projects/mobile-app-development-c5126e5c-1a9b-11ec-9621-0242ac130002/week2/kotlin-basics/app/build/intermediates/merged_res/debug/mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "/home/aniruddha/projects/mobile-app-development-c5126e5c-1a9b-11ec-9621-0242ac130002/week2/kotlin-basics/app/src/main/res/mipmap-xhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "/home/aniruddha/projects/mobile-app-development-c5126e5c-1a9b-11ec-9621-0242ac130002/week2/kotlin-basics/app/build/intermediates/merged_res/debug/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "/home/aniruddha/projects/mobile-app-development-c5126e5c-1a9b-11ec-9621-0242ac130002/week2/kotlin-basics/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "/home/aniruddha/projects/mobile-app-development-c5126e5c-1a9b-11ec-9621-0242ac130002/week2/kotlin-basics/app/build/intermediates/merged_res/debug/mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "/home/aniruddha/projects/mobile-app-development-c5126e5c-1a9b-11ec-9621-0242ac130002/week2/kotlin-basics/app/src/main/res/mipmap-xxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "/home/aniruddha/projects/mobile-app-development-c5126e5c-1a9b-11ec-9621-0242ac130002/week2/kotlin-basics/app/build/intermediates/merged_res/debug/mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "/home/aniruddha/projects/mobile-app-development-c5126e5c-1a9b-11ec-9621-0242ac130002/week2/kotlin-basics/app/src/main/res/mipmap-mdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "/home/aniruddha/projects/mobile-app-development-c5126e5c-1a9b-11ec-9621-0242ac130002/week2/kotlin-basics/app/build/intermediates/merged_res/debug/mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "/home/aniruddha/projects/mobile-app-development-c5126e5c-1a9b-11ec-9621-0242ac130002/week2/kotlin-basics/app/src/main/res/mipmap-xhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "/home/aniruddha/projects/mobile-app-development-c5126e5c-1a9b-11ec-9621-0242ac130002/week2/kotlin-basics/app/build/intermediates/merged_res/debug/drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
+        "source": "/home/aniruddha/projects/mobile-app-development-c5126e5c-1a9b-11ec-9621-0242ac130002/week2/kotlin-basics/app/build/generated/res/pngs/debug/drawable-anydpi-v24/ic_launcher_foreground.xml"
+    }
+]

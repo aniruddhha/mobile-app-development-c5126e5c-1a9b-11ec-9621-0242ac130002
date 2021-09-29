@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<incidents format="6" by="lint 7.0.2" type="incidents">
+
+    <incident
+        id="GradleDynamicVersion"
+        severity="warning"
+        message="Avoid using + in version numbers; can lead to unpredictable and unrepeatable builds (junit:junit:4.+)">
+        <fix-data coordinate="junit:junit:4.+"/>
+        <location
+            file="$APP/build.gradle"
+            line="40"
+            column="24"
+            startOffset="933"
+            endLine="40"
+            endColumn="41"
+            endOffset="950"/>
+    </incident>
+
+</incidents>

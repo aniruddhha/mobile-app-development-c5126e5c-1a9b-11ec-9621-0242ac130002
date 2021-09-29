@@ -26,6 +26,5 @@ fun demo1() {
 }
 
 fun main() {
-
     demo1()
 }

@@ -1,11 +1,15 @@
 package com.aniruddha.kudalkar.kotlinbasics.clsobj
 
 class Dv(
-    private val x : Int,
-    private val y : Int
-)  {
+    private val x: Int,
+    private val y: Int
+) {
     //Returns a string representation of the object.
     override fun toString() = " x = $x, y = $y "
+
+    fun prinXAndY(): String {
+        return " x = $x, y = $y "
+    }
 
     override fun equals(other: Any?): Boolean {
         val oth = other as Dv // type casting
@@ -22,6 +26,6 @@ fun main() {
 
     val dv2 = Dv(10, 465)
 
-    println( dv1.equals(dv2))
-    println( dv2.equals(dv1))
+    println(dv1.equals(dv2))
+    println(dv2.equals(dv1))
 }

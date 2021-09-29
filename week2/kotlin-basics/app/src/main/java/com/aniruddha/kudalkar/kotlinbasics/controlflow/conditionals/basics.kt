@@ -1,6 +1,7 @@
 package com.aniruddha.kudalkar.kotlinbasics.controlflow.conditionals
 
-import java.util.*
+import java.util.Scanner
+import java.util.Date as Dt
 
 
 // for taking input you can use
@@ -49,6 +50,7 @@ fun demo3() {
 
 fun demo4() {
     val safeNums = intArrayOf(45, 89, 50)
+    val d = Dt()
 
     val `when` = 10
     println("When is ${`when`}")

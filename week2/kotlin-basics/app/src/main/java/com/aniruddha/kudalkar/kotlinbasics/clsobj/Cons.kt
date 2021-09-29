@@ -1,5 +1,14 @@
 package com.aniruddha.kudalkar.kotlinbasics.clsobj
 
+/*
+    Classes can contain:
+    - Constructors and initializer blocks
+    - Functions
+    - Properties
+    - Nested and inner classes
+    - Object declarations
+ */
+
 class Empty1 {}
 class Empty2
 
@@ -38,15 +47,29 @@ class Cls6(val dt : String) { // primary
     constructor(d: String,  n: Int): this(d) {// secondary -> `this` will point to primary
         // here d is for satisfying primary constructor
         // integer n is used to perform some logic
+        println("called secondary 1")
     }
     constructor(d: String,  n: Double): this(d) {// secondary -> `this` will point to primary
         // here d is for satisfying primary constructor
         // double n is used to perform some logic
+        println("called secondary 2")
     }
+    constructor(d: String,  n: Double, b : Boolean): this(d) {// secondary -> `this` will point to primary
+        // here d is for satisfying primary constructor
+        // double n is used to perform some logic
+        println("called secondary 2")
+    }
+    init {
+        println("Called init 1 ${dt}")
+    }
+    init {
+        println("Called init 2 $dt")
+    }
+
     fun whatsDt() = dt
 }
 
-fun main() {
+fun demo1() {
     val c1 = Cls3("android")
     println("Name is ${c1.whatYourName()}")
 
@@ -58,10 +81,13 @@ fun main() {
 
     val c4 = Cls5("android")
     println(" Dt is ${c4.dt}")
+}
 
-    val c5 = Cls6("primary") // call to primary
-    val c6 = Cls6("primary", 10) // call to secondary
-    val c7 = Cls6("primary", 10.6) // call to secondary
+fun main() {
+    val c5 = Cls6("primary") // call to primary : exe - primary, init, init
+    val c6 = Cls6("primary", 10) // call to secondary - primary, init, init, secondary
+    val c7 = Cls6("primary", 10.6) // call to secondary - primary, init, init, secondary
+    val c8 = Cls6("primary", 10.6, true) // call to secondary - primary, init, init, secondary
 }
 
 

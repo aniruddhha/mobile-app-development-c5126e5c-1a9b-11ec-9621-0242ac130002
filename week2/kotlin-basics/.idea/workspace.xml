@@ -12,7 +12,7 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5cedffbc-4e17-4787-9a5b-7ecde08621aa" name="Default Changelist" comment="classes and objects : constructors">
+    <list default="true" id="5cedffbc-4e17-4787-9a5b-7ecde08621aa" name="Default Changelist" comment="classes and objects : secondary constructors">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/aniruddha/kudalkar/kotlinbasics/clsobj/Cons.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/aniruddha/kudalkar/kotlinbasics/clsobj/Cons.kt" afterDir="false" />
     </list>
@@ -213,13 +213,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1632726773991</updated>
-    </task>
-    <task id="LOCAL-00006" summary="variables :  basics of variables">
-      <created>1632803316295</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1632803316295</updated>
     </task>
     <task id="LOCAL-00007" summary="methods : return type parameters">
       <created>1632804814293</created>
@@ -557,7 +550,14 @@
       <option name="project" value="LOCAL" />
       <updated>1632897909550</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="classes and objects : secondary constructors">
+      <created>1632899718678</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1632899718678</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -576,7 +576,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="variables :  basics of variables" />
     <MESSAGE value="methods : return type parameters" />
     <MESSAGE value="methods : default values" />
     <MESSAGE value="methods : infix functions" />
@@ -601,6 +600,7 @@
     <MESSAGE value="operators" />
     <MESSAGE value="classes and objects : basics" />
     <MESSAGE value="classes and objects : constructors" />
-    <option name="LAST_COMMIT_MESSAGE" value="classes and objects : constructors" />
+    <MESSAGE value="classes and objects : secondary constructors" />
+    <option name="LAST_COMMIT_MESSAGE" value="classes and objects : secondary constructors" />
   </component>
 </project>

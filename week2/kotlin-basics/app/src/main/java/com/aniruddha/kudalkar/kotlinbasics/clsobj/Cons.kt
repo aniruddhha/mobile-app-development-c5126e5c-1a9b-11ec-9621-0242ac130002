@@ -5,7 +5,7 @@ class Empty2
 
 //in kotlin 2 types of constructor
 // - primary: part of the class header, and it goes after the class name
-// - secondary: which are prefixed with constructor
+// - secondary: which are prefixed with constructor keyword
 
 class Cls1 constructor(nm: String) //primary constructor
 class Cls2(nm: String) //primary constructor
@@ -22,10 +22,10 @@ class Cls4(val name: String) { // pass and assign in one line
 }
 
 class Cls5 {
-    val dt : String
+    val dt : String // state -> property
 
     constructor(d: String) { // secondary constructor
-        dt = d
+        dt = d // assigning value d to property dt
     }
 }
 /*
@@ -43,6 +43,7 @@ class Cls6(val dt : String) { // primary
         // here d is for satisfying primary constructor
         // double n is used to perform some logic
     }
+    fun whatsDt() = dt
 }
 
 fun main() {

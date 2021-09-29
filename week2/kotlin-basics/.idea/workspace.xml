@@ -12,9 +12,9 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5cedffbc-4e17-4787-9a5b-7ecde08621aa" name="Default Changelist" comment="classes and objects : super">
+    <list default="true" id="5cedffbc-4e17-4787-9a5b-7ecde08621aa" name="Default Changelist" comment="classes and objects : get and set">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/aniruddha/kudalkar/kotlinbasics/clsobj/inheritance.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/aniruddha/kudalkar/kotlinbasics/clsobj/inheritance.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/aniruddha/kudalkar/kotlinbasics/clsobj/GtSt.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/aniruddha/kudalkar/kotlinbasics/clsobj/GtSt.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -213,13 +213,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1632726773991</updated>
-    </task>
-    <task id="LOCAL-00016" summary="functions : inner and anonymous function">
-      <created>1632813350424</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1632813350424</updated>
     </task>
     <task id="LOCAL-00017" summary="functions : fn type">
       <created>1632814208353</created>
@@ -557,7 +550,14 @@
       <option name="project" value="LOCAL" />
       <updated>1632908144218</updated>
     </task>
-    <option name="localTasksCounter" value="65" />
+    <task id="LOCAL-00065" summary="classes and objects : get and set">
+      <created>1632909662135</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1632909662135</updated>
+    </task>
+    <option name="localTasksCounter" value="66" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -576,7 +576,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="methods : varargs" />
     <MESSAGE value="objects : basic syntax" />
     <MESSAGE value="objects : details" />
     <MESSAGE value="functions : inner and anonymous function" />
@@ -601,6 +600,7 @@
     <MESSAGE value="classes and objects : inheritance" />
     <MESSAGE value="classes and objects : overriding" />
     <MESSAGE value="classes and objects : super" />
-    <option name="LAST_COMMIT_MESSAGE" value="classes and objects : super" />
+    <MESSAGE value="classes and objects : get and set" />
+    <option name="LAST_COMMIT_MESSAGE" value="classes and objects : get and set" />
   </component>
 </project>

@@ -1,16 +1,24 @@
 package com.aniruddha.kudalkar.kotlinbasics.clsobj
 
 open class Config { // by default every class extends `Any` class
-    fun doConfiguration() {
-        println("In Side Config class")
+    open fun doConfiguration() {
+        println("Inside Config class")
     }
 }
 
 class DbConfig : Config() { // dbconfig is a config
-
+    override fun doConfiguration() {
+        println("Inside Db Configuration")
+        // code related to db
+    }
 }
 
-class FileConfig : Config() // fileconfig is a config
+class FileConfig : Config() { // fileconfig is a config
+    override fun doConfiguration() {
+        println("Inside File Configuration")
+        // code related to file
+    }
+}
 
 fun main() {
 

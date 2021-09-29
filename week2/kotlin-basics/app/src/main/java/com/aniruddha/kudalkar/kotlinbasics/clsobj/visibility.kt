@@ -22,3 +22,10 @@ open class Visibility (
     // internal - inside this module who sees the declaring class sees its internal members.
     // public - who sees the declaring class sees its public members.
 }
+
+class SubSubVisibility : Visibility() {
+    fun vs() {
+        y = 10
+    }
+}
+

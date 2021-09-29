@@ -24,6 +24,10 @@ fun main() {
     sb.z = 10
 }
 
-class SubVisibility : Visibility()
+class SubVisibility : Visibility() {
+     fun sb() {
+         y = 25
+     }
+}
 
 

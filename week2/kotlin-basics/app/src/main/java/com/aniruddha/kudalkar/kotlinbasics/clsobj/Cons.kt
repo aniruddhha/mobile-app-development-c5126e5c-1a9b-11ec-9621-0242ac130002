@@ -44,6 +44,7 @@ class Cls5 {
     same class is done using the this keyword
  */
 class Cls6(val dt : String) { // primary
+    val dt1 : String
     constructor(d: String,  n: Int): this(d) {// secondary -> `this` will point to primary
         // here d is for satisfying primary constructor
         // integer n is used to perform some logic
@@ -61,6 +62,7 @@ class Cls6(val dt : String) { // primary
     }
     init {
         println("Called init 1 ${dt}")
+        dt1 = "sasdaklfjksjfjd"
     }
     init {
         println("Called init 2 $dt")

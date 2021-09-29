@@ -6,6 +6,7 @@ package com.aniruddha.kudalkar.kotlinbasics.controlflow.conditionals
 // - use kotlins native feature readLine
 
 fun demo1() {
+    println("Enter The OS : ")
     val os = readLine() // take input from user
 
     if(os.equals("10")) {

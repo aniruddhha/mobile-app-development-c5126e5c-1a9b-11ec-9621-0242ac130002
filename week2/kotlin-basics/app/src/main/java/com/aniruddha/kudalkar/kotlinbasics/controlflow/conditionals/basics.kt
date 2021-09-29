@@ -7,6 +7,7 @@ package com.aniruddha.kudalkar.kotlinbasics.controlflow.conditionals
 
 fun demo1() {
     println("Enter The OS : ")
+
     val os = readLine() // take input from user
 
     if(os.equals("10")) {
@@ -19,6 +20,7 @@ fun demo1() {
 }
 
 fun demo2() {
+    println("Enter The OS : ")
     val os = readLine() // take input from user
     when(os) {
         "10" -> println("Oreo")

@@ -12,10 +12,8 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5cedffbc-4e17-4787-9a5b-7ecde08621aa" name="Default Changelist" comment="classes and objects : get and set">
+    <list default="true" id="5cedffbc-4e17-4787-9a5b-7ecde08621aa" name="Default Changelist" comment="classes and objects :visibility">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/aniruddha/kudalkar/kotlinbasics/clsobj/GtSt.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/aniruddha/kudalkar/kotlinbasics/clsobj/GtSt.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/aniruddha/kudalkar/kotlinbasics/clsobj/visibility.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/aniruddha/kudalkar/kotlinbasics/clsobj/visibility.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,6 +44,7 @@
         <option value="Class" />
         <option value="Kotlin Class" />
         <option value="Kotlin File" />
+        <option value="Kotlin Interface" />
       </list>
     </option>
   </component>
@@ -214,13 +213,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1632726773991</updated>
-    </task>
-    <task id="LOCAL-00019" summary="functions : fn type">
-      <created>1632818462055</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1632818462055</updated>
     </task>
     <task id="LOCAL-00020" summary="functions : typealias">
       <created>1632818993866</created>
@@ -558,7 +550,14 @@
       <option name="project" value="LOCAL" />
       <updated>1632911439092</updated>
     </task>
-    <option name="localTasksCounter" value="68" />
+    <task id="LOCAL-00068" summary="classes and objects :visibility">
+      <created>1632911636590</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1632911636590</updated>
+    </task>
+    <option name="localTasksCounter" value="69" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -577,7 +576,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="objects : basic syntax" />
     <MESSAGE value="objects : details" />
     <MESSAGE value="functions : inner and anonymous function" />
     <MESSAGE value="functions : fn type" />
@@ -602,6 +600,7 @@
     <MESSAGE value="classes and objects : overriding" />
     <MESSAGE value="classes and objects : super" />
     <MESSAGE value="classes and objects : get and set" />
-    <option name="LAST_COMMIT_MESSAGE" value="classes and objects : get and set" />
+    <MESSAGE value="classes and objects :visibility" />
+    <option name="LAST_COMMIT_MESSAGE" value="classes and objects :visibility" />
   </component>
 </project>

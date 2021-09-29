@@ -1,4 +1,4 @@
-package com.aniruddha.kudalkar.kotlinbasics.loops
+package com.aniruddha.kudalkar.kotlinbasics.controlflow.loops
 
 fun demo1() {
 //    val i = 0

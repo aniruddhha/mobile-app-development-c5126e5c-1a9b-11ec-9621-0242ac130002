@@ -1,4 +1,4 @@
-package com.aniruddha.kudalkar.kotlinbasics
+package com.aniruddha.kudalkar.kotlinbasics.clsobj
 
 open class Config { // by default every class extends `Any` class
     fun doConfiguration() {

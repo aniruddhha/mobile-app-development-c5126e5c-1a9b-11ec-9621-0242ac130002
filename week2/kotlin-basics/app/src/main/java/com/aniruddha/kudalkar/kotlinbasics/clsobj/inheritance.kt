@@ -3,7 +3,6 @@ package com.aniruddha.kudalkar.kotlinbasics.clsobj
 open class Config(
     open val pool: Int
 ) { // by default every class extends `Any` class
-
     init {
         println(" Pool is $pool")
     }
@@ -13,7 +12,7 @@ open class Config(
     }
 }
 
-class DbConfig(
+open class DbConfig(
     override val pool: Int = 10 // default value
 ) : Config(pool) { // dbconfig is a config
 

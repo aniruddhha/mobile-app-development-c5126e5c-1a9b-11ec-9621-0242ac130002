@@ -1,5 +1,7 @@
 package com.aniruddha.kudalkar.kotlinbasics.controlflow.conditionals
 
+import java.util.*
+
 
 // for taking input you can use
 // - scanner from java
@@ -48,7 +50,12 @@ fun demo3() {
 fun demo4() {
     val safeNums = intArrayOf(45, 89, 50)
 
-    val num = 10
+    val `when` = 10
+    println("When is ${`when`}")
+
+    val sc = Scanner(System.`in`)
+    println("Enter your Number")
+    val num = sc.nextInt()
 
     when(num) {
         in 1..10 -> println("it is in range")
@@ -59,4 +66,5 @@ fun demo4() {
 }
 
 fun main() {
+    demo4()
 }

@@ -1,6 +1,5 @@
 package com.aniruddha.kudalkar.kotlinbasics.typeandcast
 
-
 fun demo1() {
     val age = 20
     val str = "hello"

@@ -12,6 +12,10 @@ private class Person(
     fun celebrateBirthday() {
         age++
     }
+
+    override fun toString(): String {
+        return "name = $name, age = $age, city = $city"
+    }
 }
 
 private fun demo1() { // access by it
@@ -62,9 +66,21 @@ private fun demo2() { // with -> access by this keyword
 
 private fun demo3() {
 
+    // The context object is available as a receiver (this). The return value is the object itself.
+    val pr = Person("abc", 78, "uuu").apply {
+        age = 20
+        city = "bnn"
+
+        // some operation that will change the sate
+    }
+    println(pr)
+}
+
+private fun demo4() {
+    val numbers = mutableListOf("one", "two", "three")
+
 }
 
 fun main() {
-    demo1()
-    demo2()
+  demo3()
 }

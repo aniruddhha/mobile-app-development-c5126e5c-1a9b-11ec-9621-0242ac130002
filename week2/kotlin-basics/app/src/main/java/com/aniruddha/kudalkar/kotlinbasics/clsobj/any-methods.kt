@@ -7,7 +7,7 @@ class Dv(
     //Returns a string representation of the object.
     override fun toString() = " x = $x, y = $y "
 
-    fun prinXAndY(): String {
+    fun printXAndY(): String {
         return " x = $x, y = $y "
     }
 
@@ -24,7 +24,7 @@ fun main() {
 
     val dv1 = Dv(10, 465)
 
-    val dv2 = Dv(10, 465)
+    val dv2 = Dv(20, 465)
 
     println(dv1.equals(dv2))
     println(dv2.equals(dv1))

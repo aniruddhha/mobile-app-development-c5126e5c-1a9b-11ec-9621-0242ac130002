@@ -12,6 +12,9 @@ fun main() {
     val gt1 = GtSt(10)
     gt1.x = 10
 
+    println("X - ${gt1.x}")
+
+    // from visibility.kt
     val a = Abc()
     data = 50;
 

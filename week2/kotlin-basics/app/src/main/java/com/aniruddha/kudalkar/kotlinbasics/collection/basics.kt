@@ -61,6 +61,11 @@ private fun demo3() {
 
     val commons = list1.filter { list2.contains(it) }
     println(commons)
+
+    val arr1 = arrayOf(1, 89, 56, 42, 6, 78, 96, 10)
+    val arr2 = arrayOf(10, 72, 41, 36, 711, 211, 96, 10)
+
+    arr1.filter { arr2.contains(it) }
 }
 
 private fun demo4() {
@@ -78,6 +83,19 @@ private fun demo4() {
     println(list)
     println(squared)
     println(sqd)
+}
+
+fun myFn(n : Int) : Unit {
+
+}
+fun demo5() {
+    val list = listOfNotNull(1, 89, 56, 42, 6, 78, 96, 10)
+    list.forEach(::println) // method reference
+    list.forEach(::myFn) // method reference
+    list.forEach({  }) // lambda
+    list.forEach(fun(n : Int){ // anonymous
+
+    })
 }
 
 fun main() {

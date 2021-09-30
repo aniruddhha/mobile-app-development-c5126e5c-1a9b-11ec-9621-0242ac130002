@@ -107,10 +107,11 @@ fun demo6() {
     set.forEach(::println) // no duplicates it considers
 
     println("---------------------")
-    val set1 = setOf<String?>("abc","zxv", "pqr", "hij" ,"abc", "lmn") // remove null
-    val arr = set1.toTypedArray()
+    val set1 = setOf<String?>("abc","zxv",  "pqr", "hij" ,"abc", "lmn") // remove null
+    val arr = set1.toTypedArray() // converts set to array
     val sortedSet = TreeSet<String>(set1) // i will work with data and sort it but I dont need null
     sortedSet.forEach(::println)
+    val upperSet = set1.map { it?.uppercase() }
 
     println("---------------------")
     println(arr.contentToString())

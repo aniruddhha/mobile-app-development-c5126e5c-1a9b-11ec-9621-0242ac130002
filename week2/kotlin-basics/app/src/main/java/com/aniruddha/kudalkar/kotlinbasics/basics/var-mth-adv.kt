@@ -2,12 +2,12 @@ package com.aniruddha.kudalkar.kotlinbasics.basics
 
 typealias SimpleFunction = (n : Int) -> String
 
-fun someObj() = object { // inline function returning object
+private fun someObj() = object { // inline function returning object
     var dt = 10
     var os = "android"
 }
 
-fun objDemo() {
+private fun objDemo() {
     val ob = object {
         var dt = 10
         var os = "android"
@@ -19,7 +19,7 @@ fun objDemo() {
     println(" Os ${ob.dt}")
 }
 
-fun fnDemo() {
+private fun fnDemo() {
     val dt: Int = 10 // accessible in inner function
 
     fun hi() { // inner named function
@@ -38,7 +38,7 @@ fun fnDemo() {
     println(fn(10, 20))
 }
 
-fun outer(): (n1: Int) -> String {
+private fun outer(): (n1: Int) -> String {
     /*
         if variable holds integer value its type is Int, so
         if variable holds function value, what its type would be ?
@@ -49,7 +49,7 @@ fun outer(): (n1: Int) -> String {
     }
 }
 
-fun outer2(): SimpleFunction { // instead of writing complete (n : Int) -> String just write SimpleFunction
+private fun outer2(): SimpleFunction { // instead of writing complete (n : Int) -> String just write SimpleFunction
     return fun ( n : Int ) : String {
         return "aliaadfdasdfsafsafdsafs"
     }

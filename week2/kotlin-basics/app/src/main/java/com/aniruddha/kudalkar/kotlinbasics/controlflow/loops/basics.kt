@@ -1,6 +1,6 @@
 package com.aniruddha.kudalkar.kotlinbasics.controlflow.loops
 
-fun demo1() {
+private fun demo1() {
 //    val i = 0
 //    val j = 10
 
@@ -17,7 +17,7 @@ fun demo1() {
     }
 }
 
-fun demo2() {
+private fun demo2() {
     val nums = intArrayOf(56, 89, 23, 78, 65, 20, 12, 103)
 
     for (i in nums.indices) {
@@ -37,7 +37,7 @@ fun demo2() {
     }
 }
 
-fun demo3() {
+private fun demo3() {
 
     var i = 0
     while(i < 10) {

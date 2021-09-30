@@ -1,6 +1,6 @@
 package com.aniruddha.kudalkar.kotlinbasics.clsobj
 
-class Dv(
+private class Dv(
     private val x: Int,
     private val y: Int
 ) {

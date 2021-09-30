@@ -11,7 +11,7 @@ to represent functions, and provides a set of specialized language constructs, s
 
  */
 
-fun uploadFiles(
+private fun uploadFiles(
     files: Array<String>,
     fn: (st: String) -> Unit // function as parameter
 ) {
@@ -33,7 +33,7 @@ fun uploadFiles(
     fn("completed")
 }
 
-fun demo1() {
+private fun demo1() {
     // fn1 can hold the value of type function whose shape is like
     // zero parameters and returning integer
     // i.e. shape = () -> Int = how many params and what is return type
@@ -63,7 +63,7 @@ fun demo1() {
     val fn11: (st: String, dt: Int, prc: Double) -> Int = { _, dt, _ ->  10 * dt  }
 }
 
-fun demo2() {
+private fun demo2() {
 
     // right now forget about array, we will see this separately
     val files = arrayOf("ajdf", "asdslfh", "akjfh", "alfj", "sdkdfkh", "sdldf", "sdlkfkdj")

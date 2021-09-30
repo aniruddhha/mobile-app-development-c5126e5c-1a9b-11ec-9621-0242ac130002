@@ -1,6 +1,6 @@
 package com.aniruddha.kudalkar.kotlinbasics.clsobj
 
-open class Config(
+private open class Config(
     open val pool: Int
 ) { // by default every class extends `Any` class
     init {
@@ -12,7 +12,7 @@ open class Config(
     }
 }
 
-open class DbConfig(
+private open class DbConfig(
     override val pool: Int = 10 // default value
 ) : Config(pool) { // dbconfig is a config
 
@@ -26,7 +26,7 @@ open class DbConfig(
     }
 }
 
-class FileConfig : Config(23) { // fileconfig is a config
+private class FileConfig : Config(23) { // fileconfig is a config
     override fun doConfiguration() {
         super.doConfiguration()
         println("Inside File Configuration")

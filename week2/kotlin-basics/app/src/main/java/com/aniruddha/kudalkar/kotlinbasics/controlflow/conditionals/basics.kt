@@ -8,7 +8,7 @@ import java.util.Date as Dt
 // - scanner from java
 // - use kotlins native feature readLine -> you read string
 
-fun demo1() {
+private fun demo1() {
     println("Enter The OS : ")
     val os = readLine() // take input from user
     var st = ""
@@ -24,7 +24,7 @@ fun demo1() {
     }
 }
 
-fun demo2() {
+private fun demo2() {
     println("Enter The OS : ")
     val os = readLine() // take input from user
     when(os) {
@@ -35,7 +35,7 @@ fun demo2() {
     }
 }
 
-fun demo3() {
+private fun demo3() {
     println("Enter Name")
     val nm = readLine()
 
@@ -48,7 +48,7 @@ fun demo3() {
     println("Info $info, Dt $dt")
 }
 
-fun demo4() {
+private fun demo4() {
     val safeNums = intArrayOf(45, 89, 50)
     val d = Dt()
 

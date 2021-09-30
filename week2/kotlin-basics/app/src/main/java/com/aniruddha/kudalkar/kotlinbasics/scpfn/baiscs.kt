@@ -1,9 +1,9 @@
 package com.aniruddha.kudalkar.kotlinbasics.scpfn
 
 private class Person(
-    private val name: String,
-    private var age: Int,
-    private var city: String
+    val name: String,
+    var age: Int,
+    var city: String
 ) {
     fun moveTo(newCity : String) {
         this.city = newCity
@@ -14,7 +14,10 @@ private class Person(
     }
 }
 
-private fun demo1() {
+private fun demo1() { // access by it
+    //The context object is available as an argument (it).
+    // The return value is the lambda result.
+
     val p = Person("abc",12,"vvv")
     p.celebrateBirthday()
 
@@ -42,6 +45,26 @@ private fun demo1() {
     }
 }
 
+private fun demo2() { // with -> access by this keyword
+    // A non-extension function: the context object is passed as an argument,
+    // but inside the lambda, it's available as a receiver (this).
+    // The return value is the lambda result.
+
+    val p = Person( "abc", 12, "nnn" )
+    val q = with(p) {
+//        name = "nnn"
+        age = 12
+        city = "jjj"
+        this.celebrateBirthday()
+        this.moveTo("mmm")
+    }
+}
+
+private fun demo3() {
+
+}
+
 fun main() {
     demo1()
+    demo2()
 }

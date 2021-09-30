@@ -1,6 +1,6 @@
 package com.aniruddha.kudalkar.kotlinbasics.typeandcast
 
-fun demo1() {
+private fun demo1() {
     val age = 20
     val str = "hello"
     println(" is str a String ${str is String}" )
@@ -8,7 +8,7 @@ fun demo1() {
     println(" is Age a Integer ${age is Int}")
 }
 
-fun demo2() {
+private fun demo2() {
     //    val num1 = "100" as Int // as is unsafe cast operator
 //    val num2 = "200" as Int // unsafe wont work here
 

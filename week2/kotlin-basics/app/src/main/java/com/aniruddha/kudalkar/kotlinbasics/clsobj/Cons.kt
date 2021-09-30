@@ -9,28 +9,28 @@ package com.aniruddha.kudalkar.kotlinbasics.clsobj
     - Object declarations
  */
 
-class Empty1 {}
-class Empty2
+private class Empty1 {}
+private class Empty2
 
 //in kotlin 2 types of constructor
 // - primary: part of the class header, and it goes after the class name
 // - secondary: which are prefixed with constructor keyword
 
-class Cls1 constructor(nm: String) //primary constructor
-class Cls2(nm: String) //primary constructor
+private class Cls1 constructor(nm: String) //primary constructor
+private class Cls2(nm: String) //primary constructor
 
-class Cls3(nm: String) { // pass values to the constructor
+private class Cls3(nm: String) { // pass values to the constructor
     val name = nm // property/state of class. Assigning value to state
 
     fun whatYourName(): String {
         return name
     }
 }
-class Cls4(val name: String) { // pass and assign in one line
+private class Cls4(val name: String) { // pass and assign in one line
     fun whatYourName() = name
 }
 
-class Cls5 {
+private class Cls5 {
     val dt : String // state -> property
 
     constructor(d: String) { // secondary constructor
@@ -43,7 +43,7 @@ class Cls5 {
     another secondary constructor(s). Delegation to another constructor of the
     same class is done using the this keyword
  */
-class Cls6(val dt : String) { // primary
+private class Cls6(val dt : String) { // primary
     val dt1 : String
     constructor(d: String,  n: Int): this(d) {// secondary -> `this` will point to primary
         // here d is for satisfying primary constructor
@@ -71,7 +71,7 @@ class Cls6(val dt : String) { // primary
     fun whatsDt() = dt
 }
 
-fun demo1() {
+private fun demo1() {
     val c1 = Cls3("android")
     println("Name is ${c1.whatYourName()}")
 

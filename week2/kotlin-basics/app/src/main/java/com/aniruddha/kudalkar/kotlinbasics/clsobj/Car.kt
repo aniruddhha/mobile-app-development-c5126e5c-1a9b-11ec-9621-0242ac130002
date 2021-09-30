@@ -1,6 +1,6 @@
 package com.aniruddha.kudalkar.kotlinbasics.clsobj
 
-class Car { // combination of state and behaviour
+private class Car { // combination of state and behaviour
     var speed = 10 // state
 
     fun speedUp() = ++speed // behaviour = inline functions

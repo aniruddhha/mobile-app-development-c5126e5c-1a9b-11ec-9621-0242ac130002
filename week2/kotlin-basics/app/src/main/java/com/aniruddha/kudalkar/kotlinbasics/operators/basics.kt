@@ -1,7 +1,7 @@
 package com.aniruddha.kudalkar.kotlinbasics.operators
 
 
-fun demo1() {
+private fun demo1() {
     var i = 10
     var j = 20
 

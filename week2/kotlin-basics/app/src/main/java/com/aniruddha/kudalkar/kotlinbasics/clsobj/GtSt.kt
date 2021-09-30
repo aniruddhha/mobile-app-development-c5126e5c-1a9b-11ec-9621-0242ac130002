@@ -1,6 +1,6 @@
 package com.aniruddha.kudalkar.kotlinbasics.clsobj
 
-class GtSt(
+private class GtSt(
     private var xPos : Int
 ) {
     var x : Int
@@ -27,7 +27,7 @@ fun main() {
     sb.z = 10
 }
 
-class SubVisibility : Visibility() {
+private class SubVisibility : Visibility() {
      fun sb() {
          y = 25
      }

@@ -1,23 +1,23 @@
 package com.aniruddha.kudalkar.kotlinbasics.basics
 
-fun simple(): Int { // How to return value ?  returning int
+private fun simple(): Int { // How to return value ?  returning int
     return 10
 }
 
-fun addition(
+private fun addition(
     num1: Int,
     num2: Int
 ): Int { // How to pass parameters and return ? accepting two parameters and returning int
     return num1 + num2
 }
 
-fun rtnTyp(): Unit { // What is void ? default return type is Unit = void in java
+private fun rtnTyp(): Unit { // What is void ? default return type is Unit = void in java
     println("Just Call")
 }
 
-fun nTimes(num: Int, n: Int) = n * num // inline function
+private fun nTimes(num: Int, n: Int) = n * num // inline function
 
-fun defaultValues( // indentation would be like this
+private fun defaultValues( // indentation would be like this
     num1: Int = 30, // default value
     num2: Int = 20 //  default value
 ): String {
@@ -26,9 +26,9 @@ fun defaultValues( // indentation would be like this
     return "Num1 = ${num1}, Num2 = ${num2}"
 }
 
-infix fun Unit.sq(n: Int) = n * n
+private infix fun Unit.sq(n: Int) = n * n
 
-fun multiple(vararg strs : String) { // variable arguments
+private fun multiple(vararg strs : String) { // variable arguments
     println(strs.contentToString())
 }
 

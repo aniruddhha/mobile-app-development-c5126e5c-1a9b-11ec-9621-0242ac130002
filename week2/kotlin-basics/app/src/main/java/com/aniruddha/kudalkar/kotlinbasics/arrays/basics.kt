@@ -2,7 +2,7 @@ package com.aniruddha.kudalkar.kotlinbasics.arrays
 
 import java.util.*
 
-fun demo1() { // primitive array
+private fun demo1() { // primitive array
     val nums = intArrayOf(1, 98, 2, 78, 63, 52) // static array
 
     println("0 -> ${nums.get(0)}")
@@ -33,7 +33,7 @@ fun demo1() { // primitive array
     println(arrBools.contentToString())
 }
 
-fun demo2() {
+private fun demo2() {
     val dates = Array<Date>(5) { Date() }
     println("0th -> ${dates[0]}")
     println("0th -> ${dates.get(0)}")

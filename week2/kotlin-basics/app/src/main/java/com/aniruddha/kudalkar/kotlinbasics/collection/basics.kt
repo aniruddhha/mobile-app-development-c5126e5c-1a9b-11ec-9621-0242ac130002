@@ -1,6 +1,7 @@
 package com.aniruddha.kudalkar.kotlinbasics.collection
 
 import java.util.*
+import java.util.Map
 
 private fun demo1() {
     val list = LinkedList<String?>()
@@ -120,9 +121,25 @@ fun demo6() {
 }
 
 fun demo7() {
+    val kvDs = HashMap<Int, String>() // key = int, value = string
+    kvDs.put(1, "abc") // javas way
+    kvDs[2]= "pqr" // kotlins way
+    kvDs[3]= "lmn"
+    kvDs[4]= "xyz"
+    kvDs[5]= "def"
+    kvDs[6]= "hij"
+    kvDs[7]= "hij"
 
+    kvDs.entries.forEach {
+            entry -> println("Key - ${entry.key} Value - ${entry.value}")
+    }
+    kvDs.entries.forEach(::println)
+
+    for ( (k,v) in kvDs ) {
+        println("Key - $k Value - $v")
+    }
 }
 
 fun main() {
-    demo6()
+    demo7()
 }

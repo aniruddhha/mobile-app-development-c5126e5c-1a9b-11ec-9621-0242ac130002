@@ -42,6 +42,8 @@ private fun demo2() {
     println("Length is ${ln}")
     println("Length is ${ln1}")
 }
+
+
 fun main() {
 
 }

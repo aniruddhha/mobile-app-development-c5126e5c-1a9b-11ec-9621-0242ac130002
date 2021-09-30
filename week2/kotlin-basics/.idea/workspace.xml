@@ -215,13 +215,6 @@
       <option name="presentableId" value="Default" />
       <updated>1632726773991</updated>
     </task>
-    <task id="LOCAL-00024" summary="functions : higher order functions">
-      <created>1632821717909</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1632821717909</updated>
-    </task>
     <task id="LOCAL-00025" summary="functions : higher order functions">
       <created>1632824029713</created>
       <option name="number" value="00025" />
@@ -558,7 +551,14 @@
       <option name="project" value="LOCAL" />
       <updated>1632980608940</updated>
     </task>
-    <option name="localTasksCounter" value="73" />
+    <task id="LOCAL-00073" summary="classes and objects : toString and equality">
+      <created>1632981939915</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1632981939915</updated>
+    </task>
+    <option name="localTasksCounter" value="74" />
     <servers />
   </component>
   <component name="UnknownFeatures">

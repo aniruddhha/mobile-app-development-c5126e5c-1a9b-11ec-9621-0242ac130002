@@ -18,9 +18,7 @@ private class Person(
     }
 }
 
-private fun demo1() { // access by it
-    //The context object is available as an argument (it).
-    // The return value is the lambda result.
+private fun demo() {
 
     val p = Person("abc",12,"vvv")
     p.celebrateBirthday()
@@ -28,10 +26,16 @@ private fun demo1() { // access by it
     val q = Person("abc",12,"vvv")
     q.moveTo("lll")
     p.celebrateBirthday()
+}
+
+private fun demo1() { // access by it
+    //The context object is available as an argument (it).
+    // The return value is the lambda result.
 
     // The scope functions do not introduce any new technical capabilities,
     // but they can make your code more concise and readable.
 
+    // let Person object perform this work
     Person(
         "bcd",
         89,
@@ -39,13 +43,6 @@ private fun demo1() { // access by it
     ).let {
         it.moveTo("kkk")
         it.celebrateBirthday()
-    }
-
-   val list = listOf<String?>("abc", "pqr", "lmn", null, "ghh", "nnm")
-    list.forEach { el ->
-        el?.let {
-            println(it.uppercase())
-        }
     }
 }
 
@@ -57,19 +54,29 @@ private fun demo2() { // with -> access by this keyword
     val p = Person( "abc", 12, "nnn" )
     val q = with(p) {
 //        name = "nnn"
-        age = 12
-        city = "jjj"
-        this.celebrateBirthday()
-        this.moveTo("mmm")
+
+        // kindly execute with p and give me result back
+        // you are doing just processing i.e. setting
+        p.age = 78
+        p.city = "bbbb"
+
+        // modified results
+        Person("abxc", this.age, this.city)
     }
+    println("P ${p}")
+    println("Q ${q}")
 }
 
 private fun demo3() {
 
-    // The context object is available as a receiver (this). The return value is the object itself.
-    val pr = Person("abc", 78, "uuu").apply {
-        age = 20
-        city = "bnn"
+    // The context object is available as a receiver (this).
+    // The return value is the object itself.
+
+    // along performing operations, apply processing and get me same object back
+    val pr = Person("abc", 78, "uuu")
+        .apply {
+        this.age = 20
+        this.city = "bnn"
 
         // some operation that will change the sate
     }
@@ -77,10 +84,17 @@ private fun demo3() {
 }
 
 private fun demo4() {
-    val numbers = mutableListOf("one", "two", "three")
+    // The context object is available as an argument (it).
+    // The return value is the object itself.
 
+    // let Person object perform this work; also get me same object back
+    val pr = Person("abc", 78, "uuu").also {
+        it.age = 20
+        it.city = "bnn"
+        // some operation that will change the sate
+    }
 }
 
 fun main() {
-  demo3()
+    demo2()
 }

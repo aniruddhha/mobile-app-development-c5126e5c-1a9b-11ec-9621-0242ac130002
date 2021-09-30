@@ -1,7 +1,8 @@
 package com.aniruddha.kudalkar.kotlinbasics.collection
 
 import java.util.*
-import java.util.Map
+
+// please refere this link https://www.geeksforgeeks.org/collections-in-java-2/
 
 private fun demo1() {
     val list = LinkedList<String?>()
@@ -88,11 +89,11 @@ private fun demo4() {
     println(sqd)
 }
 
-fun myFn(n : Int) : Unit {
+private fun myFn(n : Int) : Unit {
 
 }
 
-fun demo5() {
+private fun demo5() {
     val list = listOfNotNull(1, 89, 56, 42, 6, 78, 96, 10)
     list.forEach(::println) // method reference
     list.forEach(::myFn) // method reference
@@ -103,7 +104,7 @@ fun demo5() {
     })
 }
 
-fun demo6() {
+private fun demo6() {
     val set = setOf<String?>("abc", null, "zxv", "pqr", "hij" ,"abc", "lmn")
     set.forEach(::println) // no duplicates it considers
 
@@ -120,7 +121,7 @@ fun demo6() {
     println(arr.contentToString())
 }
 
-fun demo7() {
+private fun demo7() {
     val kvDs = HashMap<Int, String>() // key = int, value = string
     kvDs.put(1, "abc") // javas way
     kvDs[2]= "pqr" // kotlins way

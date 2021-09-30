@@ -12,8 +12,7 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5cedffbc-4e17-4787-9a5b-7ecde08621aa" name="Default Changelist" comment="collections : functions">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="5cedffbc-4e17-4787-9a5b-7ecde08621aa" name="Default Changelist" comment="collections : method reference">
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/aniruddha/kudalkar/kotlinbasics/collection/basics.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/aniruddha/kudalkar/kotlinbasics/collection/basics.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -214,20 +213,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1632726773991</updated>
-    </task>
-    <task id="LOCAL-00033" summary="functions : higher order functions - lambdas">
-      <created>1632825509709</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1632825509709</updated>
-    </task>
-    <task id="LOCAL-00034" summary="functions : higher order functions - lambdas">
-      <created>1632825533579</created>
-      <option name="number" value="00034" />
-      <option name="presentableId" value="LOCAL-00034" />
-      <option name="project" value="LOCAL" />
-      <updated>1632825533579</updated>
     </task>
     <task id="LOCAL-00035" summary="functions : higher order functions - lambdas">
       <created>1632828407288</created>
@@ -558,7 +543,21 @@
       <option name="project" value="LOCAL" />
       <updated>1632991589652</updated>
     </task>
-    <option name="localTasksCounter" value="82" />
+    <task id="LOCAL-00082" summary="collections : method reference">
+      <created>1632992507503</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1632992507503</updated>
+    </task>
+    <task id="LOCAL-00083" summary="collections : method reference">
+      <created>1632992600152</created>
+      <option name="number" value="00083" />
+      <option name="presentableId" value="LOCAL-00083" />
+      <option name="project" value="LOCAL" />
+      <updated>1632992600152</updated>
+    </task>
+    <option name="localTasksCounter" value="84" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -577,7 +576,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="functions : higher order functions - lambdas" />
     <MESSAGE value="arrays : basics" />
     <MESSAGE value="arrays : object arrays" />
     <MESSAGE value="loop : for variations" />
@@ -602,6 +600,7 @@
     <MESSAGE value="classes and objects : generics" />
     <MESSAGE value="collections : foreach" />
     <MESSAGE value="collections : functions" />
-    <option name="LAST_COMMIT_MESSAGE" value="collections : functions" />
+    <MESSAGE value="collections : method reference" />
+    <option name="LAST_COMMIT_MESSAGE" value="collections : method reference" />
   </component>
 </project>

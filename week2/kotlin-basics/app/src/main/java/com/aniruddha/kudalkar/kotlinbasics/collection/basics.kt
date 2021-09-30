@@ -95,7 +95,7 @@ fun demo5() {
     list.forEach({ el -> print(el) }) // lambda
     list.forEach{ print(it) } // lambda
     list.forEach(fun(n : Int){ // anonymous
-
+        print(n)
     })
 }
 

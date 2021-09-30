@@ -73,7 +73,7 @@
       <recent name="$PROJECT_DIR$/app/src/main/java/com/aniruddha/kudalkar/kotlinbasics/basics" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.More_on_clsKt">
+  <component name="RunManager" selected="Application.BasicsKt">
     <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App">
       <module name="KotlinBasics.app" />
       <option name="DEPLOY" value="true" />
@@ -145,14 +145,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ConsKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+    <configuration name="BasicsKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
       <module name="KotlinBasics.app" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" value="com.aniruddha.kudalkar.kotlinbasics.clsobj.ConsKt" />
+      <option name="MAIN_CLASS_NAME" value="com.aniruddha.kudalkar.kotlinbasics.genercs.BasicsKt" />
       <option name="WORKING_DIRECTORY" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -199,11 +199,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.BasicsKt" />
         <item itemvalue="Application.More_on_clsKt" />
         <item itemvalue="Application.Any_methodsKt" />
         <item itemvalue="Application.InheritanceKt" />
         <item itemvalue="Application.InheritanceKt" />
-        <item itemvalue="Application.ConsKt" />
       </list>
     </recent_temporary>
   </component>
@@ -215,13 +215,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1632726773991</updated>
-    </task>
-    <task id="LOCAL-00029" summary="functions : higher order functions - lambdas">
-      <created>1632825057273</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1632825057273</updated>
     </task>
     <task id="LOCAL-00030" summary="functions : higher order functions - lambdas">
       <created>1632825289945</created>
@@ -559,7 +552,14 @@
       <option name="project" value="LOCAL" />
       <updated>1632985228047</updated>
     </task>
-    <option name="localTasksCounter" value="78" />
+    <task id="LOCAL-00078" summary="classes and objects : generics">
+      <created>1632985998331</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1632985998332</updated>
+    </task>
+    <option name="localTasksCounter" value="79" />
     <servers />
   </component>
   <component name="UnknownFeatures">

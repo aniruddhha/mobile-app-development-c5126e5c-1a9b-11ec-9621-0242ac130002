@@ -73,6 +73,13 @@ private fun demo4() {
     println("You Entered : $age")
 }
 
+private fun demo5() : Nothing {
+
+    val age = readLine()?.toInt() ?: throw Exception()
+
+    throw Exception()
+}
+
 fun main() {
     demo4()
 }

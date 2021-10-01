@@ -33,4 +33,9 @@ fun main() {
     println("User Name - ${DbConnector.userName}")
     println("Password - ${DbConnector.PASSWORD}")
     DbConnector.crackPassword()
+
+    val cmp = DbConnector
+    cmp.userName
+    cmp.crackPassword()
+    cmp.PASSWORD
 }

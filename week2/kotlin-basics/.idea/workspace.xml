@@ -13,8 +13,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5cedffbc-4e17-4787-9a5b-7ecde08621aa" name="Default Changelist" comment="object : companion object">
+      <change beforePath="$PROJECT_DIR$/.gradle/7.0.2/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.0.2/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/aniruddha/kudalkar/kotlinbasics/cmpobj/companions.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/aniruddha/kudalkar/kotlinbasics/cmpobj/companions.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,8 +44,8 @@
       <list>
         <option value="Class" />
         <option value="Kotlin Interface" />
-        <option value="Kotlin Class" />
         <option value="Kotlin File" />
+        <option value="Kotlin Class" />
       </list>
     </option>
   </component>
@@ -72,7 +72,7 @@
       <recent name="$PROJECT_DIR$/app/src/main/java/com/aniruddha/kudalkar/kotlinbasics/basics" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.BaiscsKt">
+  <component name="RunManager" selected="Application.BasicsKt">
     <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App">
       <module name="KotlinBasics.app" />
       <option name="DEPLOY" value="true" />
@@ -164,7 +164,7 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" value="com.aniruddha.kudalkar.kotlinbasics.collection.BasicsKt" />
+      <option name="MAIN_CLASS_NAME" value="com.aniruddha.kudalkar.kotlinbasics.exception.BasicsKt" />
       <option name="WORKING_DIRECTORY" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -198,11 +198,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.BasicsKt" />
         <item itemvalue="Application.BaiscsKt" />
         <item itemvalue="Application.BasicsKt" />
         <item itemvalue="Application.BasicsKt" />
         <item itemvalue="Application.More_on_clsKt" />
-        <item itemvalue="Application.Any_methodsKt" />
       </list>
     </recent_temporary>
   </component>
@@ -214,13 +214,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1632726773991</updated>
-    </task>
-    <task id="LOCAL-00047" summary="conditional : when variations">
-      <created>1632890491881</created>
-      <option name="number" value="00047" />
-      <option name="presentableId" value="LOCAL-00047" />
-      <option name="project" value="LOCAL" />
-      <updated>1632890491881</updated>
     </task>
     <task id="LOCAL-00048" summary="keyword : use of back ticks">
       <created>1632891264436</created>
@@ -558,7 +551,14 @@
       <option name="project" value="LOCAL" />
       <updated>1633062354922</updated>
     </task>
-    <option name="localTasksCounter" value="96" />
+    <task id="LOCAL-00096" summary="object : companion object">
+      <created>1633062589937</created>
+      <option name="number" value="00096" />
+      <option name="presentableId" value="LOCAL-00096" />
+      <option name="project" value="LOCAL" />
+      <updated>1633062589937</updated>
+    </task>
+    <option name="localTasksCounter" value="97" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -603,5 +603,15 @@
     <MESSAGE value="collections : scope functions" />
     <MESSAGE value="object : companion object" />
     <option name="LAST_COMMIT_MESSAGE" value="object : companion object" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" suspend="THREAD" type="java-exception">
+          <properties class="java.lang.Exception" package="java.lang" />
+          <option name="timeStamp" value="5" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

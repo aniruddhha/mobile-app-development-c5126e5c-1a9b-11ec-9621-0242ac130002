@@ -1,5 +1,7 @@
 package com.aniruddha.kudalkar.kotlinbasics.exception
 
+import java.lang.NumberFormatException
+
 private class InvalidAgeException( // custom exception
     private val age : Int
 ) : Exception() {
@@ -43,6 +45,28 @@ private fun demo2() {
     }
 }
 
+private fun demo3() {
+    /*println("Enter Age : ")
+    val age = readLine()?.toInt() // to int can not convert some non numerical string to int
+    println("Executed this line")*/
+
+    try {
+        // execution
+        var age1 = readLine()?.toInt()
+    } catch (e : NumberFormatException) {
+        // exception has handled at this line
+        println("You are not entering numbers")
+        var age1 = 0
+    } finally {
+        // releasing
+        // resource cleanup
+            // releasing heavy resources
+
+      println("Exception in there or not, this be getting executed")
+    }
+    println("Executed this line")
+}
+
 fun main() {
-    demo2()
+    demo3()
 }

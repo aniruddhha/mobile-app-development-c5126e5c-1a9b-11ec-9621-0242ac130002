@@ -52,7 +52,7 @@ private fun demo3() {
 
     try {
         // execution
-        var age1 = readLine()?.toInt()
+        var age1 = readLine()?.toInt() // throw NumberFormatException()
     } catch (e : NumberFormatException) {
         // exception has handled at this line
         println("You are not entering numbers")
@@ -67,6 +67,12 @@ private fun demo3() {
     println("Executed this line")
 }
 
+private fun demo4() {
+    println("Enter Age : ")
+    val age = try { readLine()?.toInt()  } catch (e : Exception) { 0 }
+    println("You Entered : $age")
+}
+
 fun main() {
-    demo3()
+    demo4()
 }

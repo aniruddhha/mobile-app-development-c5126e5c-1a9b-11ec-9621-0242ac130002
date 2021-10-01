@@ -13,6 +13,8 @@ class DbConnector {
         fun crackPassword() {
             //nm = 10 private member of class
             // dbNm = "" nothing is accessible from class
+
+            println("Accessing URL $url")
         }
     }
 

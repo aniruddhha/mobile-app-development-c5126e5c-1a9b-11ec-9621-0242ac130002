@@ -12,10 +12,9 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5cedffbc-4e17-4787-9a5b-7ecde08621aa" name="Default Changelist" comment="collections : scope functions">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/aniruddha/kudalkar/kotlinbasics/cmpobj/companions.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.0.2/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.0.2/fileHashes/fileHashes.lock" afterDir="false" />
+    <list default="true" id="5cedffbc-4e17-4787-9a5b-7ecde08621aa" name="Default Changelist" comment="object : companion object">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/aniruddha/kudalkar/kotlinbasics/cmpobj/companions.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/aniruddha/kudalkar/kotlinbasics/cmpobj/companions.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -215,13 +214,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1632726773991</updated>
-    </task>
-    <task id="LOCAL-00044" summary="conditional : if, when">
-      <created>1632889031273</created>
-      <option name="number" value="00044" />
-      <option name="presentableId" value="LOCAL-00044" />
-      <option name="project" value="LOCAL" />
-      <updated>1632889031273</updated>
     </task>
     <task id="LOCAL-00045" summary="conditional: spaces removed">
       <created>1632889859297</created>
@@ -559,7 +551,14 @@
       <option name="project" value="LOCAL" />
       <updated>1633003655375</updated>
     </task>
-    <option name="localTasksCounter" value="93" />
+    <task id="LOCAL-00093" summary="object : companion object">
+      <created>1633061691487</created>
+      <option name="number" value="00093" />
+      <option name="presentableId" value="LOCAL-00093" />
+      <option name="project" value="LOCAL" />
+      <updated>1633061691488</updated>
+    </task>
+    <option name="localTasksCounter" value="94" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -578,7 +577,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="arrays : object arrays" />
     <MESSAGE value="loop : for variations" />
     <MESSAGE value="loop : while loop" />
     <MESSAGE value="conditional : if, when" />
@@ -603,6 +601,7 @@
     <MESSAGE value="collections : functions" />
     <MESSAGE value="collections : method reference" />
     <MESSAGE value="collections : scope functions" />
-    <option name="LAST_COMMIT_MESSAGE" value="collections : scope functions" />
+    <MESSAGE value="object : companion object" />
+    <option name="LAST_COMMIT_MESSAGE" value="object : companion object" />
   </component>
 </project>

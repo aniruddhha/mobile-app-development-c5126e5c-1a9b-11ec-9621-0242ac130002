@@ -81,11 +81,4 @@ private suspend fun demoCoScp() {
 
 fun main() {
     demo3()
-
-    val t1 = Thread {
-
-    }
-    t1.start()
-    t1.suspend()
-    t1.state
 }

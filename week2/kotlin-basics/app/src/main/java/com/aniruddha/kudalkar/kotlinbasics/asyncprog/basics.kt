@@ -79,6 +79,18 @@ private suspend fun demoCoScp() {
     }
 }
 
+private fun job1() {
+    runBlocking {
+        val job = launch {
+            delay(1500)
+            println("World")
+        }
+        println("hello")
+//        job.join() // until job is complete wait here
+        println("job completed")
+    }
+}
+
 fun main() {
-    demo3()
+    job1()
 }

@@ -1,9 +1,6 @@
 package com.aniruddha.kudalkar.kotlinbasics.asyncprog
 
-import kotlinx.coroutines.coroutineScope
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.runBlocking
+import kotlinx.coroutines.*
 
 private fun demo1() {
     println()
@@ -86,7 +83,10 @@ private fun job1() {
             println("World")
         }
         println("hello")
+//        job.cancel()
 //        job.join() // until job is complete wait here
+
+        job.cancelAndJoin()
         println("job completed")
     }
 }

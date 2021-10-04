@@ -78,12 +78,13 @@ private suspend fun demoCoScp() {
 
 private fun job1() {
     runBlocking {
+
         val job = launch {
             delay(1500)
             println("World")
         }
         println("hello")
-//        job.cancel()
+        job.cancel("some message")
 //        job.join() // until job is complete wait here
 
         job.cancelAndJoin()

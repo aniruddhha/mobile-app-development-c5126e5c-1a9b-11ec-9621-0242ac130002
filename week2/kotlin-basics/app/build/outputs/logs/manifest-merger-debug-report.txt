@@ -8,6 +8,7 @@ MERGED from [androidx.core:core-ktx:1.6.0] /home/aniruddha/.gradle/caches/transf
 MERGED from [com.google.android.material:material:1.4.0] /home/aniruddha/.gradle/caches/transforms-3/5a3e51d9d3bf13afa5f76faada65dc67/transformed/material-1.4.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] /home/aniruddha/.gradle/caches/transforms-3/d59e2dc559dbb053f188271f11508abf/transformed/constraintlayout-2.0.1/AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.appcompat:appcompat:1.3.1] /home/aniruddha/.gradle/caches/transforms-3/1f32e1a2627ee7417c8e63fffba2f220/transformed/appcompat-1.3.1/AndroidManifest.xml:17:1-24:12
+MERGED from [io.reactivex.rxjava3:rxandroid:3.0.0] /home/aniruddha/.gradle/caches/transforms-3/2df29aeebc383e893fc6188e6d8ce61f/transformed/jetified-rxandroid-3.0.0/AndroidManifest.xml:15:1-20:12
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] /home/aniruddha/.gradle/caches/transforms-3/6992373c65c655b5c4a348ed8d0b6cf5/transformed/jetified-viewpager2-1.0.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.fragment:fragment:1.3.6] /home/aniruddha/.gradle/caches/transforms-3/6f400cf71312b4d19b880072fe153953/transformed/fragment-1.3.6/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.activity:activity:1.2.4] /home/aniruddha/.gradle/caches/transforms-3/c6ed5fdb9fba19db1e6c2ec736d2d97b/transformed/jetified-activity-1.2.4/AndroidManifest.xml:17:1-24:12
@@ -93,6 +94,8 @@ MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] /home/aniruddha/.
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] /home/aniruddha/.gradle/caches/transforms-3/d59e2dc559dbb053f188271f11508abf/transformed/constraintlayout-2.0.1/AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.appcompat:appcompat:1.3.1] /home/aniruddha/.gradle/caches/transforms-3/1f32e1a2627ee7417c8e63fffba2f220/transformed/appcompat-1.3.1/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.appcompat:appcompat:1.3.1] /home/aniruddha/.gradle/caches/transforms-3/1f32e1a2627ee7417c8e63fffba2f220/transformed/appcompat-1.3.1/AndroidManifest.xml:20:5-22:41
+MERGED from [io.reactivex.rxjava3:rxandroid:3.0.0] /home/aniruddha/.gradle/caches/transforms-3/2df29aeebc383e893fc6188e6d8ce61f/transformed/jetified-rxandroid-3.0.0/AndroidManifest.xml:18:5-43
+MERGED from [io.reactivex.rxjava3:rxandroid:3.0.0] /home/aniruddha/.gradle/caches/transforms-3/2df29aeebc383e893fc6188e6d8ce61f/transformed/jetified-rxandroid-3.0.0/AndroidManifest.xml:18:5-43
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] /home/aniruddha/.gradle/caches/transforms-3/6992373c65c655b5c4a348ed8d0b6cf5/transformed/jetified-viewpager2-1.0.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] /home/aniruddha/.gradle/caches/transforms-3/6992373c65c655b5c4a348ed8d0b6cf5/transformed/jetified-viewpager2-1.0.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.fragment:fragment:1.3.6] /home/aniruddha/.gradle/caches/transforms-3/6f400cf71312b4d19b880072fe153953/transformed/fragment-1.3.6/AndroidManifest.xml:20:5-22:41

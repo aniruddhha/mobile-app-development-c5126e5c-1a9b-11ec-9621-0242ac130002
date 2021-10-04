@@ -93,11 +93,25 @@ private fun job1() {
 }
 
 private fun job2() {
+
+    val handler = CoroutineExceptionHandler { _, exception ->
+        println("CoroutineExceptionHandler got $exception")
+    }
+
     runBlocking {
-        launch { // context of the parent, main runBlocking coroutine
+        launch(handler) { // context of the parent, main runBlocking coroutine
             println("main runBlocking      : I'm working in thread -> ${Thread.currentThread().name}")
         }
-        launch(Dispatchers.Default) { // will get dispatched to DefaultDispatcher
+        val job = CoroutineScope(Dispatchers.Default)
+            .launch(handler) { // will get dispatched to DefaultDispatcher
+                for( i in 1..1000) {
+                    // below line will simulate, connectivity step like
+                    // connected, processing and disconnected etx
+                    if(i == 999) {
+                        throw Exception("Example Exception")
+                    }
+                }
+
             println("Default               : I'm working in thread ->  ${Thread.currentThread().name}")
         }
     }

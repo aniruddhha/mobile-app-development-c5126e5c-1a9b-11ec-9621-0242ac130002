@@ -24,10 +24,14 @@ class MainActivity : AppCompatActivity() {
         //resource = R, folder = drawable, file_name = ic_launcher_background
 //        R.drawable.ic_launcher_background
 //        R.mipmap.ic_launcher
+
         setContentView(R.layout.activity_main) // it parses xml and creates objects for widgets ans store it in memory
 
-        val txkajddfjh = findViewById<TextView>(R.id.txVw)
+        val txVw: TextView = findViewById(R.id.txVw)
 
-        val sdsjdfgsjdg = findViewById<Button>(R.id.btOk)
+        val btOk = findViewById<Button>(R.id.btOk)
+        btOk.setOnClickListener {
+            txVw.text = "Welcome to Android Programming"
+        }
     }
 }

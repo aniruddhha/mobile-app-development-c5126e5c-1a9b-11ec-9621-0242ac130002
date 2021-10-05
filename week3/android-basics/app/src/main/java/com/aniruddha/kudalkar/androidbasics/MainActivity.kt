@@ -2,6 +2,8 @@ package com.aniruddha.kudalkar.androidbasics
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
+import android.widget.TextView
 
 /*
 
@@ -22,6 +24,10 @@ class MainActivity : AppCompatActivity() {
         //resource = R, folder = drawable, file_name = ic_launcher_background
 //        R.drawable.ic_launcher_background
 //        R.mipmap.ic_launcher
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_main) // it parses xml and creates objects for widgets ans store it in memory
+
+        val txkajddfjh = findViewById<TextView>(R.id.txVw)
+
+        val sdsjdfgsjdg = findViewById<Button>(R.id.btOk)
     }
 }

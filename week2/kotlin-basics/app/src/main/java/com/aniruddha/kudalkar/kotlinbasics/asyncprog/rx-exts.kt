@@ -82,7 +82,6 @@ private fun obs3() {
         .doOnNext { println(it) }
         .subscribe()
 
-
     while (true) { }
 }
 

@@ -27,8 +27,10 @@ class MainActivity : AppCompatActivity() {
 
         setContentView(R.layout.activity_main) // it parses xml and creates objects for widgets ans store it in memory
 
+        val i: Int = 10
         val txVw: TextView = findViewById(R.id.txVw)
 
+        val j = 110
         val btOk = findViewById<Button>(R.id.btOk)
         btOk.setOnClickListener {
             txVw.text = "Welcome to Android Programming"

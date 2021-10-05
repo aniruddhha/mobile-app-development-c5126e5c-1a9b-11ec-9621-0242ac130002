@@ -3,7 +3,9 @@ package com.aniruddha.kudalkar.kotlinbasics.asyncprog
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
 import io.reactivex.rxjava3.core.Observable
 import io.reactivex.rxjava3.schedulers.Schedulers
+import io.reactivex.rxjava3.subjects.PublishSubject
 import java.util.concurrent.TimeUnit
+import javax.security.auth.Subject
 
 /*
 implementation 'io.reactivex.rxjava3:rxkotlin:3.0.0'
@@ -37,12 +39,27 @@ private fun obs1() {
 }
 
 private fun obs2() {
+
+    var cond = true
+
     Observable.interval(1300, TimeUnit.MILLISECONDS)
-        .subscribeOn(Schedulers.computation())
-        .doOnNext { println(it) }
+            .subscribeOn(Schedulers.computation())
+        .observeOn(Schedulers.io())
+        .takeWhile { cond }
+         // interval operator will work until cond is true
+            .doOnNext {
+                cond = it < 10
+                println("---> $cond")
+            }
 //        .doOnError {  }
 //        .doOnComplete {  }
         .subscribe()
+
+    println("")
+
+    while (cond){
+        println(cond)
+    } // -> there operator which continue until condition is met
 
     /*Observable.interval(1300, TimeUnit.MILLISECONDS)
         .subscribe(

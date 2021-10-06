@@ -61,8 +61,8 @@ class CalculatorActivity : AppCompatActivity() {
         val etNum1 = findViewById<EditText>(R.id.etNum1)
         val etNum2 = findViewById<EditText>(R.id.etNum2)
 
-        val num1 = etNum1.text.toString().toDouble()
-        val num2 = etNum2.text.toString().toDouble()
+        val num1 = etNum1.text?.toString()?.toDouble() ?: 0.0
+        val num2 = etNum2.text?.toString()?.toDouble() ?: 0.0
 
         when(id) {
             R.id.btAdd -> { txRes.text = "${num1 + num2}"   }

@@ -2,7 +2,9 @@ package com.aniruddha.kudalkar.androidbasics
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
+import android.widget.CheckBox
 import android.widget.EditText
 import android.widget.TextView
 
@@ -10,6 +12,16 @@ class CalculatorActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_calculator)
+
+        findViewById<CheckBox>(R.id.chkSh).setOnCheckedChangeListener { _, isChecked ->
+            val texRes = findViewById<TextView>(R.id.txRes)
+            if(isChecked) {
+                texRes.visibility = View.VISIBLE
+            }else {
+                texRes.visibility = View.INVISIBLE
+//                texRes.visibility = View.GONE
+            }
+        }
 
         findViewById<Button>(R.id.btAdd).setOnClickListener {
             val txRes = findViewById<TextView>(R.id.txRes)

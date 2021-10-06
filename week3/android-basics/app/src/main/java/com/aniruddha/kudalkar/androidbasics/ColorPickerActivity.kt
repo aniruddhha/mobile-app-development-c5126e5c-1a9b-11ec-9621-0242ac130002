@@ -13,7 +13,6 @@ class ColorPickerActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_color_picker)
 
-
         val kafhskafhdslkhfd = findViewById<Button>(R.id.btPk)
         kafhskafhdslkhfd.setOnClickListener {
 
@@ -28,7 +27,12 @@ class ColorPickerActivity : AppCompatActivity() {
 
             val txtClr = findViewById<TextView>(R.id.txtClr)
 
-            txtClr.setTextColor(Color.rgb(red, green, blue))
+            if( (red in 0..255) && (green in 0..255) && (blue in 0..255) ) {
+                txtClr.setTextColor(Color.rgb(red, green, blue))
+            }else {
+                txtClr.setTextColor(Color.BLACK)
+                txtClr.text = "Bad Color - $red, $green, $blue"
+            }
         }
     }
 }

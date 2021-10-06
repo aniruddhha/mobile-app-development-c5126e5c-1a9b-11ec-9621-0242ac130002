@@ -72,6 +72,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="50dp"
         android:text="Color :"
+        android:textColor="#2D4E64"
         android:textSize="34sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/btPk"

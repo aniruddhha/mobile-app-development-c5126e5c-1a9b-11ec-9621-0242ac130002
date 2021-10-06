@@ -2,6 +2,7 @@ package com.aniruddha.kudalkar.androidbasics
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.CheckBox
@@ -49,6 +50,13 @@ class CalculatorActivity : AppCompatActivity() {
     }
 
     private fun letsClick(id : Int) {
+
+        Log.i("anidroid", "This is information")
+        Log.d("anidroid", "This is debug")
+        Log.w("anidroid", "This is warning")
+        Log.v("anidroid", "This is verbose")
+        Log.e("anidroid", "This is error")
+
         val txRes = findViewById<TextView>(R.id.txRes)
         val etNum1 = findViewById<EditText>(R.id.etNum1)
         val etNum2 = findViewById<EditText>(R.id.etNum2)

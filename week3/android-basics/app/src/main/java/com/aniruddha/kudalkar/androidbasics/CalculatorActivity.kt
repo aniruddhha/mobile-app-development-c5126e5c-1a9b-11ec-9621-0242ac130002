@@ -43,24 +43,24 @@ class CalculatorActivity : AppCompatActivity() {
             txRes.text = "${num1 - num2}"
         }
 
-        findViewById<Button>(R.id.btMul).setOnClickListener {
-            val txRes = findViewById<TextView>(R.id.txRes)
-            val etNum1 = findViewById<EditText>(R.id.etNum1)
-            val etNum2 = findViewById<EditText>(R.id.etNum2)
+        findViewById<Button>(R.id.btMul).setOnClickListener { letsClick(R.id.btMul) }
 
-            val num1 = etNum1.text.toString().toDouble()
-            val num2 = etNum2.text.toString().toDouble()
-            txRes.text = "${num1 * num2}"
-        }
+        findViewById<Button>(R.id.btDiv).setOnClickListener { letsClick(R.id.btDiv) }
+    }
 
-        findViewById<Button>(R.id.btDiv).setOnClickListener {
-            val txRes = findViewById<TextView>(R.id.txRes)
-            val etNum1 = findViewById<EditText>(R.id.etNum1)
-            val etNum2 = findViewById<EditText>(R.id.etNum2)
+    private fun letsClick(id : Int) {
+        val txRes = findViewById<TextView>(R.id.txRes)
+        val etNum1 = findViewById<EditText>(R.id.etNum1)
+        val etNum2 = findViewById<EditText>(R.id.etNum2)
 
-            val num1 = etNum1.text.toString().toDouble()
-            val num2 = etNum2.text.toString().toDouble()
-            txRes.text = "${num1 / num2}"
+        val num1 = etNum1.text.toString().toDouble()
+        val num2 = etNum2.text.toString().toDouble()
+
+        when(id) {
+            R.id.btAdd -> { txRes.text = "${num1 + num2}"   }
+            R.id.btSub -> { txRes.text = "${num1 - num2}"  }
+            R.id.btMul -> { txRes.text = "${num1 * num2}"   }
+            R.id.btDiv -> {  txRes.text = "${num1 / num2}"   }
         }
     }
 }

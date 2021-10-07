@@ -11,16 +11,18 @@
         android:theme="@style/Theme.AndroidBasics">
         <activity
             android:name=".InvoiceActivity"
-            android:exported="true" />
-        <activity
-            android:name=".ResponsiveActivity"
-            android:exported="true">
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".ResponsiveActivity"
+            android:exported="true"/>
+
+
         <activity
             android:name=".WhatsAppItemActivity"
             android:exported="true" />

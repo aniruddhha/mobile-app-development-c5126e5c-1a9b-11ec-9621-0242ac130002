@@ -35,7 +35,10 @@ class InvoiceActivity : AppCompatActivity() {
         findViewById<TextView>(R.id.txtClNm).text = "Abc Pvt Ltd"
         findViewById<TextView>(R.id.txtClAddr).text = "#122, abc street, pqr road."
 
-        findViewById<TextView>(R.id.txtInvDt).text = "13-01-2021"
+        val cal = Calendar.getInstance()
+
+        findViewById<TextView>(R.id.txtInvDt).text =
+            "${cal.get(Calendar.DATE)}-${cal.get(Calendar.MONTH) + 1}-${cal.get(Calendar.YEAR)}"
         findViewById<TextView>(R.id.txtInvAmt).text = "INR. 0"
     }
 
@@ -47,9 +50,12 @@ class InvoiceActivity : AppCompatActivity() {
                 findViewById<EditText>(R.id.etInvPrice).text.toString().toDouble(),
             )
             invoices.add(invoiceItem)
+
             findViewById<TextView>(R.id.txtInvInfo).append("\n")
             findViewById<TextView>(R.id.txtInvInfo).append(invoiceItem.toString())
-            findViewById<TextView>(R.id.txtInvAmt).text = invoices.sumOf { it.price * it.quantity }.toString()
+
+            findViewById<TextView>(R.id.txtInvAmt).text =
+                invoices.sumOf { it.price * it.quantity }.toString()
 
             clearInvoiceItemDetails()
         }

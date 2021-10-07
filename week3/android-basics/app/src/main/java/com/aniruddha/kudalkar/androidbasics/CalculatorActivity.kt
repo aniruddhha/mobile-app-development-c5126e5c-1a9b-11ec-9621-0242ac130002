@@ -9,6 +9,13 @@ import android.widget.CheckBox
 import android.widget.EditText
 import android.widget.TextView
 
+// 1. create new activity
+// 2. It should work in port and land mode
+// 3. In the land mode -> button, checkbox, switch horizontally in a line
+// 4. In the port mode -> checkbox, button and switch vertically centered
+
+
+
 class CalculatorActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

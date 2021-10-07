@@ -2,5 +2,5 @@
     <string name="app_name">AndroidBasics</string>
     <string name="welcome_message">Welcome to Android App</string>
 
-
+    <string name="inv_num">Invoice Number</string>
 </resources>

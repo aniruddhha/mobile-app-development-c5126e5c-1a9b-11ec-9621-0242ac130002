@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidBasics">
         <activity
-            android:name=".InvoiceActivity"
+            android:name=".AsyncUiActivity"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,10 +19,12 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ResponsiveActivity"
+            android:name=".InvoiceActivity"
             android:exported="true"/>
 
-
+        <activity
+            android:name=".ResponsiveActivity"
+            android:exported="true" />
         <activity
             android:name=".WhatsAppItemActivity"
             android:exported="true" />

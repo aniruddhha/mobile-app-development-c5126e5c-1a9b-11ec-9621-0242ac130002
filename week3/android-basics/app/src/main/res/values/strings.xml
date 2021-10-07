@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">AndroidBasics</string>
+    <string name="welcome_message">Welcome to Android App</string>
+
+
 </resources>

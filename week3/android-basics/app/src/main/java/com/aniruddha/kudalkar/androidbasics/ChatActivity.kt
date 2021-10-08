@@ -1,6 +1,5 @@
 package com.aniruddha.kudalkar.androidbasics
 
-import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.EditText
@@ -14,6 +13,9 @@ class ChatActivity : AppCompatActivity() {
 
         setContentView(R.layout.activity_chat)
 
+    }
+
+    private fun justTextViewChat() {
         val llChats = findViewById<LinearLayout>(R.id.llChats)
         val et = findViewById<EditText>(R.id.etCht)
 

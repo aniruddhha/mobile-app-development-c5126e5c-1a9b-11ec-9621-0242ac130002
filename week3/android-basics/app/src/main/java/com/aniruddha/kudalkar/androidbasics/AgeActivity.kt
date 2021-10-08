@@ -5,22 +5,26 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.CalendarView
 import android.widget.TextView
-import java.util.*
+import java.util.Calendar
 
 class AgeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_age)
 
+        val calObj = Calendar.getInstance()
+
         val txt = findViewById<TextView>(R.id.txtAg)
         val cal = findViewById<CalendarView>(R.id.cal)
+        cal.maxDate = calObj.timeInMillis
+
         cal.setOnDateChangeListener { _, year, month, dayOfMonth ->
             Log.i("@ani", "Selected Date is $dayOfMonth-$month-$year")
-
-            val calObj = Calendar.getInstance()
             calObj.set(year, month, dayOfMonth)
+
             val selectedMillis = calObj.timeInMillis
             val currentMillis = System.currentTimeMillis()
+
             val diff = currentMillis - selectedMillis
             val seconds = diff / 1000
             val minutes = seconds / 60

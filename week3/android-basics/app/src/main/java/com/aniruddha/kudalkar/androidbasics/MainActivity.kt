@@ -27,7 +27,8 @@ class MainActivity : AppCompatActivity() {
 
         setContentView(R.layout.activity_main) // it parses xml and creates objects for widgets ans store it in memory
 
-        val i: Int = 10
+        var i: Int = 10
+        i = 20
         val txVw: TextView = findViewById(R.id.txVw)
 
         val j = 110

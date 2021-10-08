@@ -4,8 +4,10 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.util.TypedValue
+import android.widget.EditText
 import android.widget.SeekBar
 import android.widget.TextView
+import androidx.core.widget.doOnTextChanged
 
 class DependentUiActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -27,5 +29,14 @@ class DependentUiActivity : AppCompatActivity() {
             override fun onStopTrackingTouch(seekBar: SeekBar?) {
             }
         })
+
+        val et = findViewById<EditText>(R.id.etSz)
+
+        et.doOnTextChanged { text, _, _, _ ->
+            Log.i("@ani", "Text is $text")
+            if(text.toString().isEmpty().not())
+                txt.textSize = text.toString().toFloat()
+            else txt.setTextSize(1f)
+        }
     }
 }

@@ -2,6 +2,7 @@ package com.aniruddha.kudalkar.androidbasics
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.LayoutInflater
 import android.widget.EditText
 import android.widget.LinearLayout
 import android.widget.TextView
@@ -13,6 +14,19 @@ class ChatActivity : AppCompatActivity() {
 
         setContentView(R.layout.activity_chat)
 
+        leftRightChatBubbles()
+    }
+
+    private fun leftRightChatBubbles()  {
+        val llChats = findViewById<LinearLayout>(R.id.llChats)
+        val et = findViewById<EditText>(R.id.etCht)
+
+        val inflater = LayoutInflater.from(this)
+        val vwRt = inflater.inflate(R.layout.chat_right_item, llChats, false)
+        llChats.addView(vwRt)
+
+        val vwLt = inflater.inflate(R.layout.chat_left_item, llChats, false)
+        llChats.addView(vwLt)
     }
 
     private fun justTextViewChat() {

@@ -2,4 +2,5 @@
 <resources>
     <dimen name="pad_wel">5dp</dimen>
     <dimen name="mar_inv_crd">8dp</dimen>
+    <dimen name="chat_item_height">80dp</dimen>
 </resources>

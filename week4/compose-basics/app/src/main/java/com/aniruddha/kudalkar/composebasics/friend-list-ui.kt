@@ -35,7 +35,6 @@ internal fun FriendList(friends : List<Friend>) {
                     modifier = Modifier.fillMaxWidth(),
                     horizontalArrangement = Arrangement.SpaceBetween
                 ) {
-
                     Column {
                         Row(verticalAlignment =  Alignment.CenterVertically) {
                             Image(

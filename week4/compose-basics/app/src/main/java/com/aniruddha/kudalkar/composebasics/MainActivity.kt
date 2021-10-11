@@ -10,8 +10,50 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
 
         super.onCreate(savedInstanceState)
+
+        val friends = listOf<Friend>(
+            Friend("Abc", "9666666", "@abc"),
+            Friend("Pqr", "9894313", "@pqr"),
+            Friend("Lmn", "6346523748", "@lmn"),
+            Friend("Abc", "9666666", "@abc"),
+            Friend("Pqr", "9894313", "@pqr"),
+            Friend("Lmn", "6346523748", "@lmn"),
+            Friend("Abc", "9666666", "@abc"),
+            Friend("Pqr", "9894313", "@pqr"),
+            Friend("Lmn", "6346523748", "@lmn"),
+            Friend("Abc", "9666666", "@abc"),
+            Friend("Pqr", "9894313", "@pqr"),
+            Friend("Lmn", "6346523748", "@lmn"),
+            Friend("Abc", "9666666", "@abc"),
+            Friend("Pqr", "9894313", "@pqr"),
+            Friend("Lmn", "6346523748", "@lmn"),
+            Friend("Abc", "9666666", "@abc"),
+            Friend("Pqr", "9894313", "@pqr"),
+            Friend("Lmn", "6346523748", "@lmn"),
+            Friend("Lmn", "6346523748", "@lmn"),
+            Friend("Abc", "9666666", "@abc"),
+            Friend("Pqr", "9894313", "@pqr"),
+            Friend("Lmn", "6346523748", "@lmn"),
+            Friend("Lmn", "6346523748", "@lmn"),
+            Friend("Abc", "9666666", "@abc"),
+            Friend("Pqr", "9894313", "@pqr"),
+            Friend("Lmn", "6346523748", "@lmn"),
+            Friend("Lmn", "6346523748", "@lmn"),
+            Friend("Abc", "9666666", "@abc"),
+            Friend("Pqr", "9894313", "@pqr"),
+            Friend("Lmn", "6346523748", "@lmn"),
+            Friend("Lmn", "6346523748", "@lmn"),
+            Friend("Abc", "9666666", "@abc"),
+            Friend("Pqr", "9894313", "@pqr"),
+            Friend("Lmn", "6346523748", "@lmn"),
+            Friend("Lmn", "6346523748", "@lmn"),
+            Friend("Abc", "9666666", "@abc"),
+            Friend("Pqr", "9894313", "@pqr"),
+            Friend("Lmn", "6346523748", "@lmn")
+        )
+
         setContent {
-            OptimizedCalculator()
+            FriendList(friends = friends)
         }
     }
 }
@@ -19,5 +61,7 @@ class MainActivity : ComponentActivity() {
 @Preview(showBackground = true)
 @Composable
 fun AppPreView() {
-    OptimizedCalculator()
+    val friends = listOf<Friend>()
+
+    FriendList(friends = friends)
 }

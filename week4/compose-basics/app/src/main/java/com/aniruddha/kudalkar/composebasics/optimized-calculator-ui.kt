@@ -71,7 +71,7 @@ internal fun OptimizedCalculator() {
 
     Column {
         ResultUi(result)
-        NumberUi(num1, ) { num1 = if (it.isEmpty() || it.isDigitsOnly().not()) 0 else it.toInt() }
+        NumberUi(num1) { num1 = if (it.isEmpty() || it.isDigitsOnly().not()) 0 else it.toInt() }
         NumberUi(num2) { num2 = if (it.isEmpty() || it.isDigitsOnly().not()) 0 else it.toInt() }
         ButtonUi { result = (num1 + num2).toString() }
     }

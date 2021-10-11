@@ -35,7 +35,6 @@ internal fun Calculator() {
                     fontSize = 30.sp
                 ),
                 modifier = Modifier.padding(16.dp)
-
             )
         }
 

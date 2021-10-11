@@ -11,7 +11,7 @@ class MainActivity : ComponentActivity() {
 
         super.onCreate(savedInstanceState)
         setContent {
-            Calculator()
+            OptimizedCalculator()
         }
     }
 }
@@ -19,5 +19,5 @@ class MainActivity : ComponentActivity() {
 @Preview(showBackground = true)
 @Composable
 fun AppPreView() {
-    Calculator()
+    OptimizedCalculator()
 }

@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.widget.EditText
 import android.widget.LinearLayout
 import android.widget.TextView
+import java.util.*
 
 class ChatActivity : AppCompatActivity() {
 
@@ -18,7 +19,6 @@ class ChatActivity : AppCompatActivity() {
     }
 
     private fun leftRightChatUserInput() {
-
     }
 
     private fun leftRightChatBubbles()  {

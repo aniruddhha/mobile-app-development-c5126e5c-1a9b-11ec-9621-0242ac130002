@@ -2,10 +2,7 @@ package com.aniruddha.kudalkar.jetpackapps
 
 import android.content.Context
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
 class FriendAdapter(
@@ -19,21 +16,12 @@ class FriendAdapter(
     }
 
     override fun onBindViewHolder(holder: FriendHolder, position: Int) {
-        TODO("Not yet implemented")
+        holder.profilePictureImageView().setImageResource(friends[position].icon)
+        holder.userNameTextView().setText(friends[position].name)
+        holder.mobileTextView().setText(friends[position].mobile)
+        holder.handleTextView().setText(friends[position].handle)
     }
 
     override fun getItemCount() = friends.size
 }
 
-class FriendHolder(
-    private val view: View
-) : RecyclerView.ViewHolder(view) {
-
-    fun userNameTextView() = view.findViewById<TextView>(R.id.txNm)
-
-    fun mobileTextView() = view.findViewById<TextView>(R.id.txMob)
-
-    fun handleTextView() = view.findViewById<TextView>(R.id.txHnd)
-
-    fun profilePictureImageView() = view.findViewById<ImageView>(R.id.imgDp)
-}

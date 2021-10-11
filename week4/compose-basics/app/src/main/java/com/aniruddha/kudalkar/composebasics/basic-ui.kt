@@ -10,7 +10,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 
-class Demos {
+class BasicDemo {
     companion object {
 
         @Composable
@@ -38,7 +38,6 @@ class Demos {
         fun ModifierDemo() {
             Text(
                 text = "Hello",
-
                 modifier = Modifier
                     .width(100.dp)
                     .height(100.dp)

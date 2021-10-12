@@ -2,6 +2,7 @@ package com.aniruddha.kudalkar.jetpackapps.anidemo
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.viewModels
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
@@ -19,7 +20,11 @@ class AniLiveDataViewModelActivity : AppCompatActivity() {
         binding.lifecycleOwner = this
 
         viewModel.getUsers().observe(this) {
+            Log.i("@ani", "Data Added")
+        }
 
+        viewModel.getStr().observe(this) {
+            Log.i("@ani", "String Cganged")
         }
     }
 }

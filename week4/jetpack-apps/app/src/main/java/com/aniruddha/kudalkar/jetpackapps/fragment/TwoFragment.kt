@@ -7,18 +7,14 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.aniruddha.kudalkar.jetpackapps.R
 
-class MobileFragment : Fragment() {
+
+class TwoFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val vw = inflater.inflate(
-            R.layout.fragment_mobile,
-            container,
-            false
-        )
-        return vw
+        return inflater.inflate(R.layout.fragment_two,container, false )
     }
 }

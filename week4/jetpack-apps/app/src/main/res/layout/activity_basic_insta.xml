@@ -9,8 +9,9 @@
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="0dp"
-        android:layout_height="100dp"
+        android:layout_height="80dp"
         android:layout_marginBottom="3dp"
+        android:gravity="center"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -19,30 +20,36 @@
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="50dp"
+            android:layout_width="0dp"
             android:layout_height="50dp"
-            app:srcCompat="@drawable/ic_android" />
+            android:layout_weight="1"
+            app:srcCompat="@drawable/ic_profile"
+            tools:srcCompat="@drawable/ic_profile" />
 
         <ImageView
             android:id="@+id/imageView2"
-            android:layout_width="50dp"
+            android:layout_width="0dp"
             android:layout_height="50dp"
-            app:srcCompat="@drawable/ic_android" />
+            android:layout_weight="1"
+            app:srcCompat="@drawable/ic_messages"
+            tools:srcCompat="@drawable/ic_messages" />
 
         <ImageView
             android:id="@+id/imageView3"
-            android:layout_width="50dp"
+            android:layout_width="0dp"
             android:layout_height="50dp"
-            app:srcCompat="@drawable/ic_android" />
+            android:layout_weight="1"
+            app:srcCompat="@drawable/ic_settings"
+            tools:srcCompat="@drawable/ic_settings" />
     </LinearLayout>
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragInsta"
-        android:name="com.aniruddha.kudalkar.jetpackapps.fragment.MobileFragment"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

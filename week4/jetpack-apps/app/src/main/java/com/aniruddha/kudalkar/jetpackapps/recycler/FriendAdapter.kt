@@ -1,9 +1,11 @@
-package com.aniruddha.kudalkar.jetpackapps
+package com.aniruddha.kudalkar.jetpackapps.recycler
 
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.aniruddha.kudalkar.jetpackapps.Friend
+import com.aniruddha.kudalkar.jetpackapps.R
 
 class FriendAdapter(
     private val context: Context,

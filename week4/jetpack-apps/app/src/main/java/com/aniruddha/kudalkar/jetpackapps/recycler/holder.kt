@@ -1,9 +1,10 @@
-package com.aniruddha.kudalkar.jetpackapps
+package com.aniruddha.kudalkar.jetpackapps.recycler
 
 import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.aniruddha.kudalkar.jetpackapps.R
 import kotlin.math.pow
 
 class FriendHolder(

@@ -7,7 +7,6 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.aniruddha.kudalkar.jetpackapps.R
 
-
 class OneFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater,

@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.commit
 import androidx.fragment.app.replace
+import androidx.fragment.app.add
 import com.aniruddha.kudalkar.jetpackapps.R
 
 class BestFragmentActivity : AppCompatActivity() {

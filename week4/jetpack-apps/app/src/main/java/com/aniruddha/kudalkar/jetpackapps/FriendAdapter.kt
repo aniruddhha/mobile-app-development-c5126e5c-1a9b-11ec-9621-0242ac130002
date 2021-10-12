@@ -9,6 +9,7 @@ class FriendAdapter(
     private val context: Context,
     private val friends: List<Friend>
 ) : RecyclerView.Adapter<FriendHolder>() {
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FriendHolder {
         val inflater = LayoutInflater.from(context)
         val vw = inflater.inflate(R.layout.recycler_item, parent, false)

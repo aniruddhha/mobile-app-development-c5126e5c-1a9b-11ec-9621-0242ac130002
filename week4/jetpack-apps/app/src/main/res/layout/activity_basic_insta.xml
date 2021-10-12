@@ -19,7 +19,7 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <ImageView
-            android:id="@+id/imageView"
+            android:id="@+id/imgPrf"
             android:layout_width="0dp"
             android:layout_height="50dp"
             android:layout_weight="1"
@@ -27,7 +27,7 @@
             tools:srcCompat="@drawable/ic_profile" />
 
         <ImageView
-            android:id="@+id/imageView2"
+            android:id="@+id/imgMsg"
             android:layout_width="0dp"
             android:layout_height="50dp"
             android:layout_weight="1"
@@ -35,7 +35,7 @@
             tools:srcCompat="@drawable/ic_messages" />
 
         <ImageView
-            android:id="@+id/imageView3"
+            android:id="@+id/imgSet"
             android:layout_width="0dp"
             android:layout_height="50dp"
             android:layout_weight="1"

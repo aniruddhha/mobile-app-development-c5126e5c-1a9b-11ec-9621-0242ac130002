@@ -10,8 +10,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.JetpackApps">
         <activity
-            android:name=".anidemo.AniLiveDataViewModelActivity"
-            android:exported="true" >
+            android:name=".archcomp.VmDemoActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -19,9 +19,12 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".anidemo.AniDataBindingActivity"
-            android:exported="true"/>
+            android:name=".anidemo.AniLiveDataViewModelActivity"
+            android:exported="true" />
 
+        <activity
+            android:name=".anidemo.AniDataBindingActivity"
+            android:exported="true" />
         <activity
             android:name=".anidemo.AniViewBindingActivity"
             android:exported="true" />

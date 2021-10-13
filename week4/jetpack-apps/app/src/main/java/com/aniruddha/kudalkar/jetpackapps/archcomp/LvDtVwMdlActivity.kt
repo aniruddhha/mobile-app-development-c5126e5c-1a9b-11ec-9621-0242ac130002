@@ -2,6 +2,7 @@ package com.aniruddha.kudalkar.jetpackapps.archcomp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.viewModels
 import androidx.databinding.DataBindingUtil
 import com.aniruddha.kudalkar.jetpackapps.R
@@ -19,6 +20,10 @@ class LvDtVwMdlActivity : AppCompatActivity() {
         val viewModel: LvDtVmViewModel by viewModels()
         binding.vm = viewModel
         binding.lifecycleOwner = this
+
+        viewModel.prg.observe(this) {
+            Log.i("@ani", "Progress is $it")
+        }
     }
 }
 

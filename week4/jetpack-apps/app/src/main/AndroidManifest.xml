@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.JetpackApps">
         <activity
-            android:name=".archcomp.DbDemoActivity"
+            android:name=".archcomp.LvDtVwMdlActivity"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -18,10 +18,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".archcomp.DbDemoActivity"
+            android:exported="true"/>
         <activity
             android:name=".archcomp.VmDemoActivity"
-            android:exported="true"/>
-
+            android:exported="true" />
         <activity
             android:name=".anidemo.AniLiveDataViewModelActivity"
             android:exported="true" />

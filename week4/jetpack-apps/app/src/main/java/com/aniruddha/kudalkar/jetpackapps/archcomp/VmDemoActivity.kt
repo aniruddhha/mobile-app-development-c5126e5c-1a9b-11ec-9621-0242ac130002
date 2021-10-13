@@ -20,7 +20,7 @@ class VmDemoActivity : AppCompatActivity() {
             binding.txtDtNw.setText(Date().toString())
 
             binding.pbDm.visibility = if(isVs) View.INVISIBLE else View.VISIBLE
-            isVs = isVs.not()
+            isVs = isVs.not() // false become true, true becomes false
         }
     }
 }

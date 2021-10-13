@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.JetpackApps">
         <activity
-            android:name=".archcomp.LvDtVwMdlActivity"
+            android:name=".fragcom.FrgaComActivity"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -20,8 +20,12 @@
         </activity>
 
         <activity
-            android:name=".archcomp.DbDemoActivity"
+            android:name=".archcomp.LvDtVwMdlActivity"
             android:exported="true"/>
+
+        <activity
+            android:name=".archcomp.DbDemoActivity"
+            android:exported="true" />
         <activity
             android:name=".archcomp.VmDemoActivity"
             android:exported="true" />

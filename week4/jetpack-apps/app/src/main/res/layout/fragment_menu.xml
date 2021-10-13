@@ -1,47 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".fragcom.MenuFragment">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:backgroundTint="#FF1744"
-        android:text="Button" />
+    <data>
+        <variable
+            name="vm"
+            type="com.aniruddha.kudalkar.jetpackapps.fragcom.FragCommViewModel" />
+    </data>
 
-    <Button
-        android:id="@+id/button5"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:backgroundTint="#FFEA00"
-        android:text="Button" />
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".fragcom.MenuFragment">
 
-    <Button
-        android:id="@+id/button6"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:backgroundTint="#1DE9B6"
-        android:text="Button" />
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="#FF1744"
+            android:onClick="@{ () -> vm.changeColor(`#FF1744`) }"
+            android:text="Button" />
 
-    <Button
-        android:id="@+id/button7"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:backgroundTint="#00E5FF"
-        android:text="Button" />
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="#FFEA00"
+            android:onClick="@{ () -> vm.changeColor(`#FFEA00`) }"
+            android:text="Button" />
 
-    <Button
-        android:id="@+id/button8"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="Button" />
-</LinearLayout>
+        <Button
+            android:id="@+id/button6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="#1DE9B6"
+            android:onClick="@{ () -> vm.changeColor(`#1DE9B6`) }"
+            android:text="Button" />
+
+        <Button
+            android:id="@+id/button7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="#00E5FF"
+            android:onClick="@{ () -> vm.changeColor(`#00E5FF`) }"
+            android:text="Button" />
+
+        <Button
+            android:id="@+id/button8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="@{ () -> vm.changeColor(`#FFFFFF`) }"
+            android:text="Button" />
+    </LinearLayout>
+</layout>

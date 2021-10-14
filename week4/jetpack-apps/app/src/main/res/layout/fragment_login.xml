@@ -54,7 +54,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView16" />
+            app:layout_constraintTop_toBottomOf="@+id/textView16"
+            android:text="@={vm.userName}"/>
 
         <EditText
             android:id="@+id/editTextTextPassword"
@@ -69,7 +70,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress2" />
+            app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress2"
+            android:text="@={vm.password}"/>
 
         <TextView
             android:id="@+id/textView17"

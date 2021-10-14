@@ -8,8 +8,11 @@
 
         <variable
             name="aggg"
-            type="java.lang.String"
-            />
+            type="java.lang.String"/>
+
+        <variable
+            name="vm"
+            type="com.aniruddha.kudalkar.jetpackapps.fragcom.FragCommViewModel" />
 
     </data>
 

@@ -10,9 +10,17 @@ class StockAppActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_stock_app)
+    }
 
+    private fun loadLogin() {
         supportFragmentManager.commit {
             replace<LoginFragment>(R.id.fragMainContainer)
+        }
+    }
+
+    private fun loadStocks() {
+        supportFragmentManager.commit {
+            replace<StocksFragment>(R.id.fragMainContainer)
         }
     }
 }

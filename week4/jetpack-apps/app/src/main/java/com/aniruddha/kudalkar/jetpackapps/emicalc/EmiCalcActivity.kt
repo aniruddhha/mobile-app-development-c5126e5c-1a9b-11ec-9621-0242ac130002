@@ -2,6 +2,7 @@ package com.aniruddha.kudalkar.jetpackapps.emicalc
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.SeekBar
 import androidx.activity.viewModels
 import androidx.databinding.DataBindingUtil
 import com.aniruddha.kudalkar.jetpackapps.R

@@ -34,6 +34,7 @@ class EmiWidgetFragment : Fragment() {
         binding.lifecycleOwner = this
         binding.vm = viewModel
         binding.frag = getFragmentType()
+        binding.etHnt = etHint()
 
         return binding.root
     }
@@ -44,5 +45,9 @@ class EmiWidgetFragment : Fragment() {
         else -> "N"
     }
 
-
+    private fun etHint() = when(id) {
+        R.id.fragmentContainerView3 -> "Loan Amount"
+        R.id.fragmentContainerView4 -> "Rate Of Interest"
+        else -> "Duration"
+    }
 }

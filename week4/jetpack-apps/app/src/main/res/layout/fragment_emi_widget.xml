@@ -8,6 +8,11 @@
         <variable
             name="frag"
             type="java.lang.String" />
+
+        <variable
+            name="etHnt"
+            type="java.lang.String" />
+
         <variable
             name="vm"
             type="EmiViewModel" />
@@ -34,8 +39,8 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
                 android:ems="10"
-                android:inputType="numberDecimal"
-               />
+                android:hint="@{etHnt}"
+                android:inputType="numberDecimal" />
 
             <SeekBar
                 android:id="@+id/seekBar2"

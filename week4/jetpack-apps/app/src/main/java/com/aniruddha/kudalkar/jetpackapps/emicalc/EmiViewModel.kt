@@ -6,19 +6,22 @@ import kotlin.math.pow
 
 class EmiViewModel: ViewModel() {
     val emi : MutableLiveData<Double> = MutableLiveData(0.0)
-    val p : MutableLiveData<Double> = MutableLiveData(0.0)
-    val r : MutableLiveData<Double> = MutableLiveData(0.0)
-    val n : MutableLiveData<Double> = MutableLiveData(0.0)
+    val p : MutableLiveData<Int> = MutableLiveData(0)
+    val r : MutableLiveData<Int> = MutableLiveData(0)
+    val n : MutableLiveData<Int> = MutableLiveData(0)
 
     fun changeProgress(progress : Int, type : String) {
         when (type) {
-            "P" -> p.value = progress.toDouble()
-            "R" -> r.value = progress.toDouble()
-            else -> n.value = progress.toDouble()
+            "P" -> p.value = progress
+            "R" -> r.value = progress
+            else -> n.value = progress
         }
-        emi.value = emiCalc(p.value ?: 0.0, r.value ?: 0.0 , n.value ?: 0.0)
+        emi.value = emiCalc(
+            p.value?.toDouble() ?: 0.0  ,
+            r.value?.toDouble() ?: 0.0 ,
+            n.value?.toDouble() ?: 0.0
+        )
     }
-
 
     private fun emiCalc(principalAmount: Double, rateOfInterest: Double, duration: Double): Double {
         val num = (1 + rateOfInterest).pow(duration)

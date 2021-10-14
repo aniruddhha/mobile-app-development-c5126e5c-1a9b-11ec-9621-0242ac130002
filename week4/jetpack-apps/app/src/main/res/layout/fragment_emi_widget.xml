@@ -40,7 +40,9 @@
                 android:layout_margin="16dp"
                 android:ems="10"
                 android:hint="@{etHnt}"
-                android:inputType="numberDecimal" />
+                android:inputType="numberDecimal"
+                android:onTextChanged="@{(cs, st, ed, cn) -> vm.etChangeProgress(cs.toString(), frag)}"
+                />
 
             <SeekBar
                 android:id="@+id/seekBar2"

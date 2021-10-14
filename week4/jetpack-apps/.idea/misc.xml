@@ -14,17 +14,20 @@
         <entry key="app/src/main/res/layout/activity_frga_com.xml" value="0.3229166666666667" />
         <entry key="app/src/main/res/layout/activity_lv_dt_vw_mdl.xml" value="0.3229166666666667" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.30520833333333336" />
+        <entry key="app/src/main/res/layout/activity_stock_app.xml" value="0.2898148148148148" />
         <entry key="app/src/main/res/layout/activity_vm_demo.xml" value="0.3229166666666667" />
         <entry key="app/src/main/res/layout/fragment_blank.xml" value="0.3229166666666667" />
         <entry key="app/src/main/res/layout/fragment_content.xml" value="0.3229166666666667" />
         <entry key="app/src/main/res/layout/fragment_db_demo.xml" value="0.264" />
         <entry key="app/src/main/res/layout/fragment_emi_widget.xml" value="0.31574074074074077" />
+        <entry key="app/src/main/res/layout/fragment_login.xml" value="0.3166496424923391" />
         <entry key="app/src/main/res/layout/fragment_menu.xml" value="0.3229166666666667" />
         <entry key="app/src/main/res/layout/fragment_messages.xml" value="0.3166496424923391" />
         <entry key="app/src/main/res/layout/fragment_mobile.xml" value="0.3" />
         <entry key="app/src/main/res/layout/fragment_one.xml" value="0.3" />
         <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.3166496424923391" />
         <entry key="app/src/main/res/layout/fragment_settings.xml" value="0.3166496424923391" />
+        <entry key="app/src/main/res/layout/fragment_sign_up.xml" value="0.3166496424923391" />
         <entry key="app/src/main/res/layout/fragment_two.xml" value="0.3" />
         <entry key="app/src/main/res/layout/recycler_item.xml" value="0.72" />
       </map>

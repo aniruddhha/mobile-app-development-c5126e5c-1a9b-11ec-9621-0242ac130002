@@ -1,10 +1,13 @@
 package com.aniruddha.kudalkar.jetpackapps.emicalc
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.SeekBar
+import android.widget.SeekBar.OnSeekBarChangeListener
 import androidx.activity.viewModels
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.activityViewModels
@@ -18,7 +21,9 @@ class EmiWidgetFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
+
+        val viewModel : EmiViewModel by activityViewModels()
 
         val binding = DataBindingUtil.inflate<FragmentEmiWidgetBinding>(
             inflater,
@@ -27,10 +32,15 @@ class EmiWidgetFragment : Fragment() {
             false
         )
         binding.lifecycleOwner = this
-
-        val viewModel : EmiViewModel by activityViewModels()
         binding.vm = viewModel
+        binding.frag = getFragmentType()
 
         return binding.root
+    }
+
+    private fun getFragmentType() = when(id) {
+        R.id.fragmentContainerView3 -> "P"
+        R.id.fragmentContainerView4 -> "R"
+        else -> "N"
     }
 }

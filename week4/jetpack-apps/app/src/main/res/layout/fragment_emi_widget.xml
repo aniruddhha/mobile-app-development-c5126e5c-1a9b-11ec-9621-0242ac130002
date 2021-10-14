@@ -6,6 +6,9 @@
     <data>
         <import type="com.aniruddha.kudalkar.jetpackapps.emicalc.EmiViewModel"/>
         <variable
+            name="frag"
+            type="java.lang.String" />
+        <variable
             name="vm"
             type="EmiViewModel" />
     </data>
@@ -39,7 +42,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
-                android:progress="@={vm.emi}"
+                android:onProgressChanged="@{ (v, p, b) -> vm.changeProgress(p, frag) }"
                 />
         </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>

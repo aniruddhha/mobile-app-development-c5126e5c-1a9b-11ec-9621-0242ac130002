@@ -25,16 +25,23 @@ class EmiViewModel: ViewModel() {
     }
 
     fun etChangeProgress(progress: String, type : String) {
+        val prg = if(progress.isNotEmpty()) progress.toInt() else 0
         when (type) {
-            "P" -> p.value = progress.toInt()
-            "R" -> r.value = progress.toInt()
-            else -> n.value = progress.toInt()
+            "P" -> p.value = prg
+            "R" -> r.value = prg
+            else -> n.value = prg
         }
         emi.value = emiCalc(
             p.value?.toDouble() ?: 0.0  ,
             r.value?.toDouble() ?: 0.0 ,
             n.value?.toDouble() ?: 0.0
         )
+    }
+
+    fun getProgress(type : String) = when(type) {
+        "P" -> p
+        "R" -> r
+        else -> n
     }
 
     private fun emiCalc(principalAmount: Double, rateOfInterest: Double, duration: Double): Double {

@@ -55,7 +55,8 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView16"
-            android:text="@={vm.userName}"/>
+            android:onTextChanged="@{ (ch, st, en, cnt) -> vm.updateUserName(ch.toString())  }"
+            />
 
         <EditText
             android:id="@+id/editTextTextPassword"
@@ -71,7 +72,8 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress2"
-            android:text="@={vm.password}"/>
+            android:onTextChanged="@{ (ch, st, en, cnt) -> vm.updatePassword(ch.toString())  }"
+            />
 
         <TextView
             android:id="@+id/textView17"

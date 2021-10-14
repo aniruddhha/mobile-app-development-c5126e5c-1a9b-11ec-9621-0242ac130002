@@ -17,6 +17,7 @@ class StockAppActivity : AppCompatActivity() {
         loadLogin()
 
         val vm : StockViewModel by viewModels()
+
         vm.loginCheck.observe(this) {
             Log.i("@ani", "State is $it")
             if(it == 100) loadStocks()

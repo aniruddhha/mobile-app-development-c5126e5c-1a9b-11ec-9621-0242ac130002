@@ -1,6 +1,7 @@
 package com.aniruddha.kudalkar.myapplication.recgrd
 
 import android.content.Context
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -24,6 +25,20 @@ class RecDshAdapter(
     }
 
     override fun onBindViewHolder(holder: RecDshViewHolder, position: Int) {
+
+        holder.itemView.setOnClickListener {
+
+            val clickedItem = it.tag as RecDsh
+
+            when (clickedItem.menu) {
+                "Home" -> Log.i("@ani", "Home Clicked")
+                "Admin" -> Log.i("@ani", "Admin Clicked")
+                "Settings" -> Log.i("@ani", "Settings Clicked")
+                else -> Log.i("@ani", "Profile Clicked")
+            }
+        }
+
+        holder.itemView.tag = dataSource[position]
         holder.icon().setImageResource(dataSource[position].icon)
         holder.label().setText(dataSource[position].menu)
     }

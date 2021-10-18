@@ -57,19 +57,19 @@ class RecGrdFragment : Fragment() {
             when (it.menu) {
                 "Home" -> activity?.supportFragmentManager?.commit {
                     replace<RecHomeFragment>(R.id.fragmentContainerView)
-                    this.addToBackStack("RecHomeFragment")
+                    addToBackStack("RecHomeFragment")
                 }
                 "Admin" ->  activity?.supportFragmentManager?.commit {
                     replace<RecAdminFragment>(R.id.fragmentContainerView)
-                    this.addToBackStack("RecHomeFragment")
+                    addToBackStack("RecHomeFragment")
                 }
                 "Settings" -> activity?.supportFragmentManager?.commit {
                     replace<RecSettingsFragment>(R.id.fragmentContainerView)
-                    this.addToBackStack("RecSettingsFragment")
+                    addToBackStack("RecSettingsFragment")
                 }
                 else -> activity?.supportFragmentManager?.commit {
                     replace<RecProfileFragment>(R.id.fragmentContainerView)
-                    this.addToBackStack("RecProfileFragment")
+                    addToBackStack("RecProfileFragment")
                 }
             }
         }

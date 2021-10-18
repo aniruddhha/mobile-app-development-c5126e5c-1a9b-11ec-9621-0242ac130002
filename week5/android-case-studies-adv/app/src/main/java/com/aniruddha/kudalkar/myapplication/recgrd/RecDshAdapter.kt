@@ -7,8 +7,11 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
 import androidx.recyclerview.widget.RecyclerView
 import com.aniruddha.kudalkar.myapplication.R
+import io.reactivex.rxjava3.subjects.PublishSubject
 
 data class RecDsh(
     val menu : String,
@@ -19,6 +22,11 @@ class RecDshAdapter(
     private val context : Context,
     private val dataSource : List<RecDsh>
 ) : RecyclerView.Adapter<RecDshViewHolder>() {
+
+//    val itemClick = PublishSubject.create<RecDsh>()
+    private val _itemClick = MutableLiveData<RecDsh>()
+    val itemClick : LiveData<RecDsh> = _itemClick
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecDshViewHolder {
         val vw = LayoutInflater.from(context).inflate(R.layout.rec_dsh_item, parent, false)
         return RecDshViewHolder(vw)
@@ -27,15 +35,9 @@ class RecDshAdapter(
     override fun onBindViewHolder(holder: RecDshViewHolder, position: Int) {
 
         holder.itemView.setOnClickListener {
-
             val clickedItem = it.tag as RecDsh
-
-            when (clickedItem.menu) {
-                "Home" -> Log.i("@ani", "Home Clicked")
-                "Admin" -> Log.i("@ani", "Admin Clicked")
-                "Settings" -> Log.i("@ani", "Settings Clicked")
-                else -> Log.i("@ani", "Profile Clicked")
-            }
+//            itemClick.onNext(clickedItem)
+            _itemClick.value = clickedItem
         }
 
         holder.itemView.tag = dataSource[position]

@@ -19,7 +19,7 @@ class StockViewModel: ViewModel() {
         Log.i("@ani", "User Logged In")
         Log.i("@ani", "User Name - ${userName.value}")
         Log.i("@ani", "Password - ${password.value}")
-        if(userName.value == "android" && password.value == "android") {
+        if(userName.value == "android" && _password.value == "android") {
             _loginCheck.value = 100
         }else {
             _loginCheck.value = -100

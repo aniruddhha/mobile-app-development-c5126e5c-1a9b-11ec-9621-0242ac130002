@@ -1,10 +1,11 @@
 package com.aniruddha.kudalkar.myapplication.recgrd
 
-
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
+import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.aniruddha.kudalkar.myapplication.R
 
@@ -23,7 +24,8 @@ class RecDshAdapter(
     }
 
     override fun onBindViewHolder(holder: RecDshViewHolder, position: Int) {
-
+        holder.icon().setImageResource(dataSource[position].icon)
+        holder.label().setText(dataSource[position].menu)
     }
 
     override fun getItemCount(): Int = dataSource.size
@@ -31,4 +33,9 @@ class RecDshAdapter(
 
 class RecDshViewHolder(
     private val view: View
-) : RecyclerView.ViewHolder(view)
+) : RecyclerView.ViewHolder(view) {
+
+    fun icon() = view.findViewById<ImageView>(R.id.icMn)
+
+    fun label() = view.findViewById<TextView>(R.id.lbMn)
+}

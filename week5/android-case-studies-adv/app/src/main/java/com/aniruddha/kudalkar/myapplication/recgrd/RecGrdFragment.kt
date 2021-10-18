@@ -32,9 +32,9 @@ class RecGrdFragment : Fragment() {
             requireContext(),
             listOf(
                 RecDsh("Home", R.drawable.ic_ph),
-                RecDsh("Admin", R.drawable.ic_ph),
-                RecDsh("Settings", R.drawable.ic_ph),
-                RecDsh("Profile", R.drawable.ic_ph)
+                RecDsh("Admin", R.drawable.ic_ad),
+                RecDsh("Settings", R.drawable.ic_st),
+                RecDsh("Profile", R.drawable.ic_pff)
             )
         )
     }

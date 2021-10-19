@@ -1,17 +1,13 @@
-package com.aniruddha.kudalkar.myapplication
+package com.aniruddha.kudalkar.myapplication.recgrd
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import androidx.activity.viewModels
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.commit
 import androidx.fragment.app.replace
+import com.aniruddha.kudalkar.myapplication.R
 import com.aniruddha.kudalkar.myapplication.databinding.ActivityMainBinding
-import com.aniruddha.kudalkar.myapplication.recgrd.RecGrdFragment
-
-import com.aniruddha.kudalkar.myapplication.recgrd.SharedViewModel
-import com.aniruddha.kudalkar.myapplication.recgrd.TraditionalFragment
 
 class MainActivity : AppCompatActivity() {
 
@@ -20,7 +16,9 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        val binding: ActivityMainBinding = DataBindingUtil.setContentView(this, R.layout.activity_main)
+        val binding: ActivityMainBinding = DataBindingUtil.setContentView(this,
+            R.layout.activity_main
+        )
         binding.vm = viewModel
         binding.lifecycleOwner = this
 

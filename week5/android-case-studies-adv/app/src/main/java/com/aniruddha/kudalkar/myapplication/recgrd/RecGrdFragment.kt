@@ -71,9 +71,6 @@ class RecGrdFragment : Fragment() {
                     replace<RecSalaryCardFragment>(R.id.fragmentContainerView)
                     addToBackStack("RecSettingsFragment")
                 }
-                else -> activity?.supportFragmentManager?.commit {
-                    addToBackStack("RecProfileFragment")
-                }
             }
         }
         binding.recDsh.adapter = adapter

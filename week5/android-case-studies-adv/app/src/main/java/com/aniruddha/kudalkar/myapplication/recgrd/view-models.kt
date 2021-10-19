@@ -21,8 +21,6 @@ open class SharedViewModel : ViewModel() {
 
     private fun saveData(dt : SalaryCard) {
         _appData.value = dt.copy()
-        Log.i("@ani", "In Parent")
-        Log.i("@ani", _appData.value.toString())
     }
 
     fun onNameChanged(nm : String) {
@@ -69,7 +67,6 @@ open class SharedViewModel : ViewModel() {
             ctc = ctc.value ?: 0.0,
             hra = hra.value ?: 0.0
         )
-
         saveData(
             SalaryCard(sd = sd, bd = _appData.value?.bd ?: BasicDetails())
         )
@@ -82,9 +79,6 @@ open class SharedViewModel : ViewModel() {
             email = email.value ?: "",
             age = age.value ?: 0,
         )
-
-        Log.i("@ani", bd.toString())
-
         saveData(
             SalaryCard(bd = bd, sd = _appData.value?.sd ?: SalaryDetails())
         )

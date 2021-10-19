@@ -5,9 +5,13 @@ import android.os.Bundle
 import android.util.Log
 import androidx.activity.viewModels
 import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.commit
+import androidx.fragment.app.replace
 import com.aniruddha.kudalkar.myapplication.databinding.ActivityMainBinding
+import com.aniruddha.kudalkar.myapplication.recgrd.RecGrdFragment
 
 import com.aniruddha.kudalkar.myapplication.recgrd.SharedViewModel
+import com.aniruddha.kudalkar.myapplication.recgrd.TraditionalFragment
 
 class MainActivity : AppCompatActivity() {
 
@@ -18,13 +22,26 @@ class MainActivity : AppCompatActivity() {
 
         val binding: ActivityMainBinding = DataBindingUtil.setContentView(this, R.layout.activity_main)
         binding.vm = viewModel
-//        binding.bdVm = bdVm
-//        binding.sdVm = sdVm
         binding.lifecycleOwner = this
 
         viewModel.appData.observe(this) {
-            Log.i("@ani", "In An Activity")
-            Log.i("@ani", it.toString())
+            supportFragmentManager.commit {
+                replace<RecGrdFragment>(R.id.fragmentContainerView)
+            }
+        }
+
+        traditionalWayOfPassingData()
+    }
+
+    private fun traditionalWayOfPassingData() {
+
+        supportFragmentManager.commit {
+            val frag = TraditionalFragment()
+            val bundle = Bundle()
+            bundle.putString("onadajfdfskjdsjdah", "red")
+            bundle.putString("zmxnvxcmjtdsusfy", "#ff0000")
+            frag.setArguments(bundle)
+            replace(R.id.fragmentContainerView, frag)
         }
     }
 }

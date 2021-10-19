@@ -7,6 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.activityViewModels
+import androidx.fragment.app.commit
+import androidx.fragment.app.replace
 import com.aniruddha.kudalkar.myapplication.R
 import com.aniruddha.kudalkar.myapplication.databinding.FragmentRecGrdBinding
 import com.aniruddha.kudalkar.myapplication.databinding.FragmentRecSalaryDetailsBinding

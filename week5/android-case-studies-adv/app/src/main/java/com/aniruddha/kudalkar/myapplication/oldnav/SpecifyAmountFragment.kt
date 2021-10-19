@@ -26,7 +26,14 @@ class SpecifyAmountFragment : Fragment() {
 
         binding.button6.setOnClickListener { requireActivity().onBackPressed() }
 
-        binding.button5.setOnClickListener {    }
+        binding.button5.setOnClickListener {
+            (requireActivity() as OldNavActivity).loadFragment(
+                ConfirmationFragment.newInstance(
+                    arguments?.getString(KEY_RECIPIENT) ?: "",
+                    binding.editTextTextPersonName3.text.toString().toInt()
+                )
+            )
+        }
 
         return binding.root
     }

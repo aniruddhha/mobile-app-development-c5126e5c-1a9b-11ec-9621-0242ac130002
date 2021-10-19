@@ -36,12 +36,10 @@ class MainActivity : AppCompatActivity() {
     private fun traditionalWayOfPassingData() {
 
         supportFragmentManager.commit {
-            val frag = TraditionalFragment()
-            val bundle = Bundle()
-            bundle.putString("onadajfdfskjdsjdah", "red")
-            bundle.putString("zmxnvxcmjtdsusfy", "#ff0000")
-            frag.setArguments(bundle)
-            replace(R.id.fragmentContainerView, frag)
+            replace(
+                R.id.fragmentContainerView,
+                TraditionalFragment.newInstance("green", "#00ff00")
+            )
         }
     }
 }

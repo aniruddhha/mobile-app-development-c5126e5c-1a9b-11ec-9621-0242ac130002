@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.activityViewModels
+import androidx.fragment.app.viewModels
 import com.aniruddha.kudalkar.myapplication.R
 import com.aniruddha.kudalkar.myapplication.databinding.FragmentRecBasicDetailsBinding
 

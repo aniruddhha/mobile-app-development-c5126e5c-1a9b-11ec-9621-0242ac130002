@@ -7,7 +7,7 @@
     tools:context=".oldnav.OldNavActivity">
 
     <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/fragmentContainerView2"
+        android:id="@+id/fcv"
         android:name="com.aniruddha.kudalkar.myapplication.oldnav.MainFragment"
         android:layout_width="0dp"
         android:layout_height="0dp"

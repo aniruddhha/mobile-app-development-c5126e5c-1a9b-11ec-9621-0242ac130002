@@ -5,10 +5,20 @@
 
     <data>
         <import type="com.aniruddha.kudalkar.myapplication.recgrd.SharedViewModel"/>
+        <import type="com.aniruddha.kudalkar.myapplication.recgrd.BasicDetailsViewModel"/>
+        <import type="com.aniruddha.kudalkar.myapplication.recgrd.SalaryDetailsViewModel"/>
 
         <variable
             name="vm"
             type="SharedViewModel" />
+
+        <variable
+            name="bdVm"
+            type="BasicDetailsViewModel" />
+
+        <variable
+            name="sdVm"
+            type="SalaryDetailsViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

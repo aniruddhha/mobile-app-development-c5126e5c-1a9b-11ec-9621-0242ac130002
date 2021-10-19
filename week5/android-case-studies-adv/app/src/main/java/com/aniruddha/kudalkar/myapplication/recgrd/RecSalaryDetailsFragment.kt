@@ -14,14 +14,14 @@ import com.aniruddha.kudalkar.myapplication.databinding.FragmentRecSalaryDetails
 
 class RecSalaryDetailsFragment : Fragment() {
 
+    val viewModel : SharedViewModel by activityViewModels()
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
         activity?.title="Salary Details"
-
-        val viewModel : SalaryDetailsViewModel by activityViewModels()
 
         val binding = DataBindingUtil.inflate<FragmentRecSalaryDetailsBinding>(
             inflater,

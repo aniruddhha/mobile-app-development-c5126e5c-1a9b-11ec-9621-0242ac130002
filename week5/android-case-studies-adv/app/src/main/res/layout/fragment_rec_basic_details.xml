@@ -5,15 +5,10 @@
 
     <data>
         <import type="com.aniruddha.kudalkar.myapplication.recgrd.SharedViewModel"/>
-        <import type="com.aniruddha.kudalkar.myapplication.recgrd.BasicDetailsViewModel"/>
 
         <variable
             name="vm"
             type="SharedViewModel" />
-
-        <variable
-            name="bdVm"
-            type="BasicDetailsViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -36,7 +31,7 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:onTextChanged="@{ (txt, st, ed, cn) -> bdVm.onNameChanged(txt.toString()) }"/>
+            android:onTextChanged="@{ (txt, st, ed, cn) -> vm.onNameChanged(txt.toString()) }"/>
 
         <EditText
             android:id="@+id/editTextPhone"
@@ -51,7 +46,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName"
-            android:onTextChanged="@{ (txt, st, ed, cn) -> bdVm.onMobileChanged(txt.toString()) }"/>
+            android:onTextChanged="@{ (txt, st, ed, cn) -> vm.onMobileChanged(txt.toString()) }"/>
 
         <EditText
             android:id="@+id/editTextNumberSigned"
@@ -66,7 +61,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/editTextPhone"
-            android:onTextChanged="@{ (txt, st, ed, cn) -> bdVm.onAgeChanged(txt.toString()) }"/>
+            android:onTextChanged="@{ (txt, st, ed, cn) -> vm.onAgeChanged(txt.toString()) }"/>
 
         <EditText
             android:id="@+id/editTextTextEmailAddress"
@@ -81,7 +76,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/editTextNumberSigned"
-            android:onTextChanged="@{ (txt, st, ed, cn) -> bdVm.onEmailChanged(txt.toString()) }"
+            android:onTextChanged="@{ (txt, st, ed, cn) -> vm.onEmailChanged(txt.toString()) }"
             />
 
         <Button
@@ -93,6 +88,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress"
-            android:onClick="@{ () -> bdVm.onSaveClicked() }"/>
+            android:onClick="@{ () -> vm.onBdSaveClicked() }"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

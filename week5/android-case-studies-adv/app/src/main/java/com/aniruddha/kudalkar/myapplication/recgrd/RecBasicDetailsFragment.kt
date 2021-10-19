@@ -7,10 +7,15 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.activityViewModels
+import androidx.fragment.app.viewModels
+import androidx.lifecycle.ViewModelProvider
+import com.aniruddha.kudalkar.myapplication.MainActivity
 import com.aniruddha.kudalkar.myapplication.R
 import com.aniruddha.kudalkar.myapplication.databinding.FragmentRecBasicDetailsBinding
 
 class RecBasicDetailsFragment : Fragment() {
+
+    private val vm: SharedViewModel by activityViewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -20,8 +25,6 @@ class RecBasicDetailsFragment : Fragment() {
 
         activity?.title = "Basic Details"
 
-        val viewModel : BasicDetailsViewModel by activityViewModels()
-
         val binding = DataBindingUtil.inflate<FragmentRecBasicDetailsBinding>(
             inflater,
             R.layout.fragment_rec_basic_details,
@@ -29,7 +32,7 @@ class RecBasicDetailsFragment : Fragment() {
             false
         )
         binding.lifecycleOwner = this
-        binding.vm = viewModel
+        binding.vm = vm
 
         return binding.root
     }

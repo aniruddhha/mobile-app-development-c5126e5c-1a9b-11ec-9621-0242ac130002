@@ -9,18 +9,21 @@ open class SharedViewModel : ViewModel() {
     private val _appData = MutableLiveData<SalaryCard>()
     val appData: LiveData<SalaryCard> = _appData
 
-    protected fun saveData(dt : SalaryCard) {
-        _appData.value = dt.copy()
-        Log.i("@ani", "In Parent")
-        Log.i("@ani", _appData.value.toString())
-    }
-}
-
-class BasicDetailsViewModel : SharedViewModel() {
     private val name = MutableLiveData<String>()
     private val mobile = MutableLiveData<String>()
     private val email = MutableLiveData<String>()
     private val age = MutableLiveData<Int>()
+
+    private val basicSalary = MutableLiveData<Double>()
+    private val hra = MutableLiveData<Double>()
+    private val ta = MutableLiveData<Double>()
+    private val ctc = MutableLiveData<Double>()
+
+    private fun saveData(dt : SalaryCard) {
+        _appData.value = dt.copy()
+        Log.i("@ani", "In Parent")
+        Log.i("@ani", _appData.value.toString())
+    }
 
     fun onNameChanged(nm : String) {
         name.value = nm
@@ -41,28 +44,7 @@ class BasicDetailsViewModel : SharedViewModel() {
         age.value = ag.toInt()
         Log.i("@ani", "Age ${age.value}")
     }
-    fun onSaveClicked() {
-        val bd = BasicDetails(
-            name = name.value ?: "",
-            mobile = mobile.value ?: "",
-            email = email.value ?: "",
-            age = age.value ?: 0,
-        )
 
-        Log.i("@ani", bd.toString())
-
-        saveData(
-            SalaryCard(bd = bd)
-        )
-    }
-}
-
-class SalaryDetailsViewModel : SharedViewModel() {
-
-    private val basicSalary = MutableLiveData<Double>()
-    private val hra = MutableLiveData<Double>()
-    private val ta = MutableLiveData<Double>()
-    private val ctc = MutableLiveData<Double>()
 
     fun onBasicSalaryChanged(sal  : String) {
         basicSalary.value = sal.toDouble()
@@ -80,7 +62,7 @@ class SalaryDetailsViewModel : SharedViewModel() {
         ctc.value = c.toDouble()
     }
 
-    fun onSaveClicked() {
+    fun onSdSaveClicked() {
         val sd = SalaryDetails(
             basicSalary = basicSalary.value ?: 0.0,
             ta = ta.value ?: 0.0,
@@ -89,7 +71,23 @@ class SalaryDetailsViewModel : SharedViewModel() {
         )
 
         saveData(
-            SalaryCard(sd = sd)
+            SalaryCard(sd = sd, bd = _appData.value?.bd ?: BasicDetails())
+        )
+    }
+
+    fun onBdSaveClicked() {
+        val bd = BasicDetails(
+            name = name.value ?: "",
+            mobile = mobile.value ?: "",
+            email = email.value ?: "",
+            age = age.value ?: 0,
+        )
+
+        Log.i("@ani", bd.toString())
+
+        saveData(
+            SalaryCard(bd = bd, sd = _appData.value?.sd ?: SalaryDetails())
         )
     }
 }
+

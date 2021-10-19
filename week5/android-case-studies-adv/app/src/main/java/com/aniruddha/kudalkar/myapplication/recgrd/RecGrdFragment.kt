@@ -2,14 +2,11 @@ package com.aniruddha.kudalkar.myapplication.recgrd
 
 import android.os.Bundle
 import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
-import androidx.fragment.app.activityViewModels
-import androidx.fragment.app.commit
-import androidx.fragment.app.replace
+import androidx.fragment.app.*
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.aniruddha.kudalkar.myapplication.R
@@ -17,6 +14,8 @@ import com.aniruddha.kudalkar.myapplication.databinding.FragmentRecBasicDetailsB
 import com.aniruddha.kudalkar.myapplication.databinding.FragmentRecGrdBinding
 
 class RecGrdFragment : Fragment() {
+
+    private val viewModel: SharedViewModel by activityViewModels()
 
     private lateinit var binding: FragmentRecGrdBinding
 
@@ -27,8 +26,6 @@ class RecGrdFragment : Fragment() {
     ): View {
 
         activity?.title="Dashboard"
-
-        val viewModel : SharedViewModel by activityViewModels()
 
         binding = DataBindingUtil.inflate<FragmentRecGrdBinding>(
             inflater,

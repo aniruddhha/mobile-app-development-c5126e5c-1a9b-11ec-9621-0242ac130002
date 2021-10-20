@@ -1,4 +1,4 @@
-package com.aniruddha.kudalkar.jetpacknavigationgraph
+package com.aniruddha.kudalkar.jetpacknavigationgraph.fundamentals
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
+import com.aniruddha.kudalkar.jetpacknavigationgraph.R
 import com.aniruddha.kudalkar.jetpacknavigationgraph.databinding.FragmentConfirmationBinding
 
 class ConfirmationFragment : Fragment() {

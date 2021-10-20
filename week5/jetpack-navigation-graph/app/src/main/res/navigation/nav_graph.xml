@@ -6,7 +6,7 @@
     app:startDestination="@id/mainFragment">
     <fragment
         android:id="@+id/mainFragment"
-        android:name="com.aniruddha.kudalkar.jetpacknavigationgraph.MainFragment"
+        android:name="com.aniruddha.kudalkar.jetpacknavigationgraph.fundamentals.MainFragment"
         android:label="fragment_main"
         tools:layout="@layout/fragment_main" >
         <action
@@ -31,7 +31,7 @@
         tools:layout="@layout/fragment_view_txn" />
     <fragment
         android:id="@+id/chooseRecipientFragment"
-        android:name="com.aniruddha.kudalkar.jetpacknavigationgraph.ChooseRecipientFragment"
+        android:name="com.aniruddha.kudalkar.jetpacknavigationgraph.fundamentals.ChooseRecipientFragment"
         android:label="fragment_choose_recipient"
         tools:layout="@layout/fragment_choose_recipient">
         <action
@@ -40,12 +40,12 @@
     </fragment>
     <fragment
         android:id="@+id/viewBalanceFragment"
-        android:name="com.aniruddha.kudalkar.jetpacknavigationgraph.ViewBalanceFragment"
+        android:name="com.aniruddha.kudalkar.jetpacknavigationgraph.fundamentals.ViewBalanceFragment"
         android:label="fragment_view_balance"
         tools:layout="@layout/fragment_view_balance" />
     <fragment
         android:id="@+id/specifyAmountFragment"
-        android:name="com.aniruddha.kudalkar.jetpacknavigationgraph.SpecifyAmountFragment"
+        android:name="com.aniruddha.kudalkar.jetpacknavigationgraph.fundamentals.SpecifyAmountFragment"
         android:label="fragment_specify_amount"
         tools:layout="@layout/fragment_specify_amount" >
         <action
@@ -57,7 +57,7 @@
     </fragment>
     <fragment
         android:id="@+id/confirmationFragment"
-        android:name="com.aniruddha.kudalkar.jetpacknavigationgraph.ConfirmationFragment"
+        android:name="com.aniruddha.kudalkar.jetpacknavigationgraph.fundamentals.ConfirmationFragment"
         android:label="fragment_confirmation"
         tools:layout="@layout/fragment_confirmation" >
         <argument

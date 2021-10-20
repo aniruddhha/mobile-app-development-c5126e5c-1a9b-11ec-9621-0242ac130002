@@ -1,4 +1,4 @@
-package com.aniruddha.kudalkar.jetpacknavigationgraph
+package com.aniruddha.kudalkar.jetpacknavigationgraph.fundamentals
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

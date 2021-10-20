@@ -1,4 +1,4 @@
-package com.aniruddha.kudalkar.jetpacknavigationgraph
+package com.aniruddha.kudalkar.jetpacknavigationgraph.fundamentals
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.core.os.bundleOf
 import androidx.navigation.NavController
 import androidx.navigation.fragment.findNavController
+import com.aniruddha.kudalkar.jetpacknavigationgraph.R
 import com.aniruddha.kudalkar.jetpacknavigationgraph.databinding.FragmentChooseRecipientBinding
 
 class ChooseRecipientFragment : Fragment() {

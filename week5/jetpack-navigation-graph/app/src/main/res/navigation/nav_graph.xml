@@ -28,7 +28,7 @@
         android:id="@+id/chooseRecipientFragment"
         android:name="com.aniruddha.kudalkar.jetpacknavigationgraph.ChooseRecipientFragment"
         android:label="fragment_choose_recipient"
-        tools:layout="@layout/fragment_choose_recipient" >
+        tools:layout="@layout/fragment_choose_recipient">
         <action
             android:id="@+id/action_chooseRecipientFragment_to_specifyAmountFragment"
             app:destination="@id/specifyAmountFragment" />

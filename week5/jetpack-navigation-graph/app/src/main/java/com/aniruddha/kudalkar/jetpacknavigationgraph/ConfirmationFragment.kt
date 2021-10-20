@@ -6,10 +6,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
 import com.aniruddha.kudalkar.jetpacknavigationgraph.databinding.FragmentConfirmationBinding
 
-
 class ConfirmationFragment : Fragment() {
+
+    private val args : ConfirmationFragmentArgs by navArgs()
 
     private lateinit var binding : FragmentConfirmationBinding
 
@@ -24,6 +26,8 @@ class ConfirmationFragment : Fragment() {
             container,
             false
         )
+
+        binding.textView4.text = "Yo have sent INR.${args.amt} to ${args.nm} "
 
         return binding.root
     }

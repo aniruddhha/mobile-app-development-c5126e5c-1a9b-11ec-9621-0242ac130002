@@ -46,14 +46,20 @@
         <action
             android:id="@+id/action_specifyAmountFragment_to_confirmationFragment"
             app:destination="@id/confirmationFragment" />
+        <argument
+            android:name="nm"
+            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/confirmationFragment"
         android:name="com.aniruddha.kudalkar.jetpacknavigationgraph.ConfirmationFragment"
         android:label="fragment_confirmation"
         tools:layout="@layout/fragment_confirmation" >
-        <action
-            android:id="@+id/action_confirmationFragment_to_mainFragment"
-            app:destination="@id/mainFragment" />
+        <argument
+            android:name="nm"
+            app:argType="string" />
+        <argument
+            android:name="amt"
+            app:argType="integer" />
     </fragment>
 </navigation>

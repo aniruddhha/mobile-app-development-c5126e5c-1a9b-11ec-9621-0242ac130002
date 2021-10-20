@@ -6,12 +6,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
 import com.aniruddha.kudalkar.jetpacknavigationgraph.databinding.FragmentSpecifyAmountBinding
 
 
 class SpecifyAmountFragment : Fragment() {
 
     private lateinit var binding : FragmentSpecifyAmountBinding
+    private val args : SpecifyAmountFragmentArgs by navArgs()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -33,8 +35,15 @@ class SpecifyAmountFragment : Fragment() {
 
         val navCon = findNavController()
 
+        binding.textView3.text = "Sending Money to ${args.nm}"
+
         binding.button6.setOnClickListener {
-            navCon.navigate(R.id.action_specifyAmountFragment_to_confirmationFragment)
+
+            val nm = args.nm
+            val amt = binding.editTextTextPersonName2.text.toString().toInt()
+
+            val action = SpecifyAmountFragmentDirections.actionSpecifyAmountFragmentToConfirmationFragment(nm, amt)
+            navCon.navigate(action)
         }
 
         binding.button7.setOnClickListener {

@@ -10,7 +10,7 @@ import com.aniruddha.kudalkar.jetpacknavigationgraph.databinding.FragmentChooseR
 
 class ChooseRecipientFragment : Fragment() {
 
-    private lateinit var binding : FragmentChooseRecipientBinding
+    private lateinit var binding: FragmentChooseRecipientBinding
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -27,7 +27,12 @@ class ChooseRecipientFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         val navCon = findNavController()
-        binding.button4.setOnClickListener { navCon.navigate(R.id.action_chooseRecipientFragment_to_specifyAmountFragment) }
+
+        binding.button4.setOnClickListener {
+            val nm = binding.editTextTextPersonName.text.toString()
+            val action = ChooseRecipientFragmentDirections.actionChooseRecipientFragmentToSpecifyAmountFragment(nm)
+            navCon.navigate(action)
+        }
         binding.button5.setOnClickListener { navCon.popBackStack() }
     }
 }

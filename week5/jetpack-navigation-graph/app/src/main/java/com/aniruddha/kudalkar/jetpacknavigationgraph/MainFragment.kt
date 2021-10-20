@@ -28,15 +28,18 @@ class MainFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.button.setOnClickListener {
-            findNavController().navigate(R.id.action_mainFragment_to_viewTxnFragment)
+            val action = MainFragmentDirections.actionMainFragmentToViewTxnFragment()
+            findNavController().navigate(action)
         }
 
         binding.button2.setOnClickListener {
-            findNavController().navigate(R.id.action_mainFragment_to_chooseRecipientFragment)
+            val action = MainFragmentDirections.actionMainFragmentToChooseRecipientFragment()
+            findNavController().navigate(action)
         }
 
         binding.button3.setOnClickListener {
-            findNavController().navigate(R.id.action_mainFragment_to_viewBalanceFragment)
+            val action = MainFragmentDirections.actionMainFragmentToViewBalanceFragment()
+            findNavController().navigate(action)
         }
     }
 }

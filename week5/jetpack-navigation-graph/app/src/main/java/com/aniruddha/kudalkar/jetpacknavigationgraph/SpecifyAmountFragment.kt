@@ -36,6 +36,7 @@ class SpecifyAmountFragment : Fragment() {
         val navCon = findNavController()
 
         binding.textView3.text = "Sending Money to ${args.nm}"
+        binding.textView3.text = arguments?.getString("nm") ?: ""
 
         binding.button6.setOnClickListener {
 

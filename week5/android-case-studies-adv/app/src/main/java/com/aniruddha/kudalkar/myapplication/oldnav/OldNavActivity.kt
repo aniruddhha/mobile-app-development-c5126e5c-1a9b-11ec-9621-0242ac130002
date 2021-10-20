@@ -20,4 +20,11 @@ class OldNavActivity : AppCompatActivity() {
             Log.i("@ani"," Canonical Name ${frag.javaClass.canonicalName}" )
         }
     }
+
+    fun goToMainFragment() {
+        Log.i("@ani", "Backstack Count ${supportFragmentManager.backStackEntryCount}")
+        for(i in 0..supportFragmentManager.backStackEntryCount) {
+            supportFragmentManager.popBackStack()
+        }
+    }
 }

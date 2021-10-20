@@ -28,8 +28,7 @@ class ConfirmationFragment : Fragment() {
         """.trimIndent()
 
         binding.textView7.setOnClickListener {
-
-
+            (requireActivity() as OldNavActivity).goToMainFragment()
         }
 
         return binding.root

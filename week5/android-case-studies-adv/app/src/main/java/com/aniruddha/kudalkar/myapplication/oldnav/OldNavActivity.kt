@@ -24,7 +24,7 @@ class OldNavActivity : AppCompatActivity() {
     fun goToMainFragment() {
         Log.i("@ani", "Backstack Count ${supportFragmentManager.backStackEntryCount}")
         for(i in 0..supportFragmentManager.backStackEntryCount) {
-            supportFragmentManager.popBackStack()
+
         }
     }
 }

@@ -4,11 +4,9 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.aniruddha.kudalkar.jetpacknavigationgraph.databinding.FragmentHomeBinding
@@ -33,22 +31,32 @@ class HomeFragment : Fragment() {
 
         val linearLayoutManager = LinearLayoutManager(requireContext())
         binding.recMls.layoutManager = linearLayoutManager
-        binding.recMls.adapter = HomeAdapter(
-            requireContext(),
-            listOf(
-                HomeData("Abc", "11:00"),
-                HomeData("Pqr", "11:15"),
-                HomeData("Lmn", "12:15"),
-                HomeData("Tuv", "12:30"),
-                HomeData("Xyz", "07:09")
-            )
+
+        val dataSource = listOf(
+            HomeData("Abc", "11:00", false),
+            HomeData("Pqr", "11:15", false),
+            HomeData("Lmn", "12:15", false),
+            HomeData("Tuv", "12:30", false),
+            HomeData("Xyz", "07:09", false)
         )
+        val adapter = HomeAdapter(
+            requireContext(),
+            dataSource
+        )
+        adapter.clkPos.observe(viewLifecycleOwner) {
+            val item = dataSource[it]
+            val action = HomeFragmentDirections.actionNavHomeToNavGallery(item.from, item.blb)
+            findNavController().navigate(action)
+        }
+
+        binding.recMls.adapter = adapter
         binding.recMls.addItemDecoration(
             DividerItemDecoration(
                 requireContext(),
                 linearLayoutManager.orientation
             )
         )
+
 
         return binding.root
     }

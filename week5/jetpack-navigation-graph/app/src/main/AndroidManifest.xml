@@ -10,21 +10,27 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.JetpackNavigationGraph">
         <activity
-            android:name=".adv.BtnNavActivity"
+            android:name=".hammn.NvDrActivity"
             android:exported="true"
-            android:label="@string/title_activity_btn_nav" >
+            android:label="@string/title_activity_nv_dr"
+            android:theme="@style/Theme.JetpackNavigationGraph.NoActionBar" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".adv.BtnNavActivity"
+            android:exported="true"
+            android:label="@string/title_activity_btn_nav"/>
+
         <activity
             android:name=".fundamentals.MainActivity"
             android:exported="true"
             android:label="@string/app_name"
-            android:theme="@style/Theme.JetpackNavigationGraph.NoActionBar"/>
-
+            android:theme="@style/Theme.JetpackNavigationGraph.NoActionBar" />
     </application>
 
 </manifest>

@@ -29,7 +29,7 @@ class HomeAdapter(
 
     override fun onBindViewHolder(holder: HomeViewHolder, position: Int) {
 
-        holder.itemView.setOnClickListener {
+        holder.root().setOnClickListener {
             _clkPos.value = position
         }
         holder.from().text = dataSource[position].from

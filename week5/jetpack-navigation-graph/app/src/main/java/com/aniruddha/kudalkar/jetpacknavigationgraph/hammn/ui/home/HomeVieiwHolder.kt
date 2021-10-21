@@ -10,6 +10,8 @@ class HomeViewHolder(
     private val itemView : View
 ) : RecyclerView.ViewHolder(itemView) {
 
+    fun root() = itemView
+
     fun from() = itemView.findViewById<TextView>(R.id.textView7)
 
     fun time() = itemView.findViewById<TextView>(R.id.textView8)

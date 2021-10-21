@@ -45,7 +45,10 @@ class HomeFragment : Fragment() {
         )
         adapter.clkPos.observe(viewLifecycleOwner) {
             val item = dataSource[it]
-            val action = HomeFragmentDirections.actionNavHomeToNavGallery(item.from, item.blb)
+            val action = HomeFragmentDirections.actionNavHomeToNavGallery(
+                item.from,
+                item.blb
+            )
             findNavController().navigate(action)
         }
 

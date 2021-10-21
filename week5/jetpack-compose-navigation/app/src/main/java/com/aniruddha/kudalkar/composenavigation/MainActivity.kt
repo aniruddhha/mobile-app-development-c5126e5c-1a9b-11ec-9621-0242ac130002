@@ -16,6 +16,9 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.navArgument
 import androidx.navigation.compose.rememberNavController
+import com.aniruddha.kudalkar.composenavigation.composables.AppNavHost
+import com.aniruddha.kudalkar.composenavigation.composables.Greeting
+import com.aniruddha.kudalkar.composenavigation.composables.Profile
 import com.aniruddha.kudalkar.composenavigation.ui.theme.ComposeNavigationTheme
 
 class MainActivity : ComponentActivity() {
@@ -24,34 +27,10 @@ class MainActivity : ComponentActivity() {
 
         setContent {
             val navController = rememberNavController()
-
-            NavHost(navController = navController, startDestination = "sdjjdgsxg" ) {
-                composable(
-                    route = "grt/{msg}",
-                    arguments = listOf(
-                        navArgument("msg") { type = NavType.StringType }
-                    )
-                ) {
-                    val msg = it.arguments?.getString("msg") ?: ""
-                    Greeting(name = msg)
-                }
-                composable("sdjjdgsxg") { Profile(navCon = navController) }
-            }
+            AppNavHost(navController)
         }
     }
 }
 
-@Composable
-fun Profile(navCon : NavController) {
-    Column {
-        Button(onClick = { navCon.navigate("grt/mymsgsldkfskfhksdfjsdkfjhsjdfdhs")  }) {
-            Text(text = "Greetings")
-        }
-    }
-}
 
-@Composable
-fun Greeting(name: String) {
-    Text(text = "sdfsadfsafasfd $name!")
-}
 

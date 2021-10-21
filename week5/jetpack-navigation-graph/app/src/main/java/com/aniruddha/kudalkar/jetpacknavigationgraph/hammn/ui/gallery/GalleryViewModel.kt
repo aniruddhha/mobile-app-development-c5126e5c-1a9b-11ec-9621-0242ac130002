@@ -1,7 +1,6 @@
 package com.aniruddha.kudalkar.jetpacknavigationgraph.hammn.ui.gallery
 
 import android.graphics.drawable.Drawable
-import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel

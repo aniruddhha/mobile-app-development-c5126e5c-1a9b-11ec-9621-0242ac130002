@@ -22,9 +22,10 @@ class MainActivity : ComponentActivity() {
 
         setContent {
             val navController = rememberNavController()
-            NavHost(navController = navController, startDestination = "profile" ) {
-                composable("profile") { Profile(navController) }
-                composable("greetings") { Greeting("Hello") }
+
+            NavHost(navController = navController, startDestination = "sdjjdgsxg" ) {
+                composable("grt") { Greeting(name = "skjdjfhsjfdhhfsdjh") }
+                composable("sdjjdgsxg") { Profile(navCon = navController) }
             }
         }
     }
@@ -33,7 +34,7 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun Profile(navCon : NavController) {
     Column {
-        Button(onClick = { navCon.navigate("greetings")  }) {
+        Button(onClick = { navCon.navigate("grt")  }) {
             Text(text = "Greetings")
         }
     }
@@ -41,6 +42,6 @@ fun Profile(navCon : NavController) {
 
 @Composable
 fun Greeting(name: String) {
-    Text(text = "Hello $name!")
+    Text(text = "sdfsadfsafasfd $name!")
 }
 

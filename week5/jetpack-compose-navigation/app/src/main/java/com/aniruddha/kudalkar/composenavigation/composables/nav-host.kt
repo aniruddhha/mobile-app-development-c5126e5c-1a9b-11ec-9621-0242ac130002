@@ -25,6 +25,7 @@ fun AppNavHost(
             val msg = it.arguments?.getString("msg") ?: ""
             Greeting(name = msg)
         }
+
         composable("sdjjdgsxg") {
             Profile(navCon = navController)
         }

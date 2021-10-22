@@ -17,6 +17,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.navArgument
 import androidx.navigation.compose.rememberNavController
 import com.aniruddha.kudalkar.composenavigation.composables.AppNavHost
+import com.aniruddha.kudalkar.composenavigation.composables.ColorPicker
 import com.aniruddha.kudalkar.composenavigation.composables.Greeting
 import com.aniruddha.kudalkar.composenavigation.composables.Profile
 import com.aniruddha.kudalkar.composenavigation.ui.theme.ComposeNavigationTheme
@@ -25,8 +26,10 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            val navController = rememberNavController()
-            AppNavHost(navController)
+//            val navController = rememberNavController()
+//            AppNavHost(navController)
+
+            ColorPicker()
         }
     }
 }

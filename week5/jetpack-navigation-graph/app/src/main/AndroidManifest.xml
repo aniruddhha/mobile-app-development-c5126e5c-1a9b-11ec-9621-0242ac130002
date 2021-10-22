@@ -10,22 +10,24 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.JetpackNavigationGraph">
         <activity
-            android:name=".hammn.NvDrActivity"
-            android:exported="true"
-            android:label="@string/title_activity_nv_dr"
-            android:theme="@style/Theme.JetpackNavigationGraph.NoActionBar" >
+            android:name=".stlthm.StlThmActivity"
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".hammn.NvDrActivity"
+            android:exported="true"
+            android:label="@string/title_activity_nv_dr"
+            android:theme="@style/Theme.JetpackNavigationGraph.NoActionBar"/>
 
         <activity
             android:name=".adv.BtnNavActivity"
             android:exported="true"
-            android:label="@string/title_activity_btn_nav"/>
-
+            android:label="@string/title_activity_btn_nav" />
         <activity
             android:name=".fundamentals.MainActivity"
             android:exported="true"

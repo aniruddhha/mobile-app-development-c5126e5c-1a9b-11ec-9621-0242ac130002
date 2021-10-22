@@ -22,4 +22,9 @@
     <style name="Theme.JetpackNavigationGraph.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="Theme.JetpackNavigationGraph.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="btnBig">
+        <item name="android:textSize">48sp</item>
+        <item name="android:textColor">#ff0000</item>
+    </style>
 </resources>

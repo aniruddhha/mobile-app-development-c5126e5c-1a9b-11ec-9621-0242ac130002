@@ -4,4 +4,9 @@
         <item name="android:textSize">@dimen/smTxt</item>
         <item name="android:background">@color/smTxBk</item>
     </style>
+
+    <style name="rounddedCorner">
+        <item name="android:textSize">48dp</item>
+        <item name="android:background">@drawable/sm</item>
+    </style>
 </resources>

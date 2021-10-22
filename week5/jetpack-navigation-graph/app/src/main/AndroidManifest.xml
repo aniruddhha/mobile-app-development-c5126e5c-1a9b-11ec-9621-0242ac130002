@@ -11,7 +11,8 @@
         android:theme="@style/Theme.JetpackNavigationGraph">
         <activity
             android:name=".stlthm.StlThmActivity"
-            android:exported="true">
+            android:exported="true"
+            android:theme="@style/Theme.MaterialComponents.DayNight.Dialog.Alert">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

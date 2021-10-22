@@ -14,7 +14,7 @@ fun AppNavHost(
 
     NavHost(
         navController = navController,
-        startDestination = "data-list"
+        startDestination = "color-picker"
     ) {
         composable(
             route = "grt/{msg}",
@@ -51,6 +51,26 @@ fun AppNavHost(
                 ),
                 navCon = navController
             )
+        }
+
+        composable("color-picker") {
+            ColorPicker(navController)
+        }
+
+        composable(
+            route = "color-presenter/{red}/{green}/{blue}",
+            arguments = listOf(
+                navArgument("red"){ type = NavType.FloatType },
+                navArgument("green"){ type = NavType.FloatType },
+                navArgument("blue"){ type = NavType.FloatType }
+            )
+        ) {
+
+            val red = it.arguments?.getFloat("red") ?: 0.0f
+            val green = it.arguments?.getFloat("green") ?: 0.0f
+            val blue = it.arguments?.getFloat("blue") ?: 0.0f
+
+            ColorPresenter(red, green, blue)
         }
     }
 }

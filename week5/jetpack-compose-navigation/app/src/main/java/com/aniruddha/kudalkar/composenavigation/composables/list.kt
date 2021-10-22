@@ -9,7 +9,9 @@ import androidx.compose.material.Switch
 import androidx.compose.material.Text
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 
 data class DataItem(
     var from : String,
@@ -21,7 +23,6 @@ data class DataItem(
 fun DataList(
     dataItems : List<DataItem>
 ) {
-
     LazyColumn {
         items(dataItems) { itm ->
             DataRow(itm)
@@ -42,8 +43,14 @@ fun DataRow(itm : DataItem) {
                 .weight(0.5f),
             verticalArrangement = Arrangement.SpaceAround
         ) {
-            Text(text = itm.from)
-            Text(text = itm.time)
+            Text(
+                text = itm.from,
+                fontSize = 24.sp
+            )
+            Text(
+                text = itm.time,
+                color = Color.Gray
+            )
         }
         Column(
             modifier = Modifier

@@ -14,10 +14,11 @@ import com.aniruddha.kudalkar.dihiltintro.databinding.ActivityMainBinding
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 
-@AndroidEntryPoint
+@AndroidEntryPoint //  hey dagger please create/provide/delete this object
 class MainActivity : AppCompatActivity() {
 
-    @Inject lateinit var nwConfig: NwConfig // field injection
+    // hey dagger please give me the object that you have created for NwConfig class
+    @Inject lateinit var nwConfig: NwConfig
 
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityMainBinding

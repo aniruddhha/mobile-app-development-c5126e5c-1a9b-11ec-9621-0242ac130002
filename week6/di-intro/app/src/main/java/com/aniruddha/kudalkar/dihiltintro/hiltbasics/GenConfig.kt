@@ -6,7 +6,7 @@ import javax.inject.Singleton
 
 @Singleton
 class GenConfig
-@Inject
+@Inject // // hey dagger please create/provide/delete this object
 constructor() {
     fun genConfig() = Log.i("@ani", "General Config")
 }

@@ -5,10 +5,8 @@ import javax.inject.Inject
 import javax.inject.Singleton
 
 @Singleton
-class NwConfig
+class GenConfig
 @Inject
-constructor(
-    val gc : GenConfig // constructor injection
-) {
-    fun config() = Log.i("@ani", "Configuring Network")
+constructor() {
+    fun genConfig() = Log.i("@ani", "General Config")
 }

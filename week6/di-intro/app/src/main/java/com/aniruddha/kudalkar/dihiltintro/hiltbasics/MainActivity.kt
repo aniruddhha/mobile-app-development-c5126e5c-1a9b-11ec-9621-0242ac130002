@@ -1,4 +1,4 @@
-package com.aniruddha.kudalkar.dihiltintro
+package com.aniruddha.kudalkar.dihiltintro.hiltbasics
 
 import android.os.Bundle
 import com.google.android.material.snackbar.Snackbar
@@ -9,6 +9,7 @@ import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import android.view.Menu
 import android.view.MenuItem
+import com.aniruddha.kudalkar.dihiltintro.R
 import com.aniruddha.kudalkar.dihiltintro.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {

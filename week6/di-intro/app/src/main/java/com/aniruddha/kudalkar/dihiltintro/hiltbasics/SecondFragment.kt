@@ -1,4 +1,4 @@
-package com.aniruddha.kudalkar.dihiltintro
+package com.aniruddha.kudalkar.dihiltintro.hiltbasics
 
 import androidx.fragment.app.Fragment
 

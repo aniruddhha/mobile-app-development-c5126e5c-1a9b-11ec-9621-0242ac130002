@@ -19,7 +19,9 @@ class Bmw {
     }
 }
 
-open class Engine
+class FuelSensor
+
+open class Engine()
 
 class LiEngine : Engine()
 

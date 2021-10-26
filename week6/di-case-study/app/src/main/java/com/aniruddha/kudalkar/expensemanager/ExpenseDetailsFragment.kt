@@ -1,72 +1,64 @@
 package com.aniruddha.kudalkar.expensemanager
 
+import android.app.NotificationChannel
+import android.app.NotificationManager
+import android.content.Context
+import android.os.Build
 import android.os.Bundle
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
-import androidx.fragment.app.activityViewModels
+import android.widget.Button
+import androidx.annotation.RequiresApi
+import androidx.core.app.NotificationCompat
+import androidx.core.app.NotificationManagerCompat
+import androidx.core.content.ContextCompat.getSystemService
+import androidx.fragment.app.Fragment
 import dagger.hilt.android.AndroidEntryPoint
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [ExpenseDetailsFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
-
 @AndroidEntryPoint
-class ExpenseDetailsFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
-
-    private val viewModel: ExpenseViewModel by activityViewModels()
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
-
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_expense_details, container, false)
-    }
+class ExpenseDetailsFragment : Fragment(R.layout.fragment_expense_details) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val expense = viewModel.loadExpenseById(10)
-        // set this expense to UI
+        view.findViewById<Button>(R.id.btNty).setOnClickListener {
+
+            createNotificationChannel()
+
+            val builder = NotificationCompat.Builder(
+                requireActivity(),
+                "123"
+            )
+                .setSmallIcon(R.drawable.ic_err)
+                .setContentTitle("Title")
+                .setContentText("Content Text")
+                .setStyle(
+                    NotificationCompat.BigTextStyle()
+                        .bigText("Big Text")
+                )
+                .setPriority(NotificationCompat.PRIORITY_LOW)
+
+            NotificationManagerCompat.from(requireActivity()).notify(3231, builder.build())
+        }
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment ExpenseDetailsFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            ExpenseDetailsFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
+    private fun createNotificationChannel() {
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            val name = "my_data"
+            val descriptionText = "this is description text"
+            val importance = NotificationManager.IMPORTANCE_LOW
+            val channel = NotificationChannel("123", name, importance).apply {
+                description = descriptionText
             }
+            // Register the channel with the system
+            val notificationManager: NotificationManager =
+                requireActivity().getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
+            notificationManager.createNotificationChannel(channel)
+        }
+    }
+
+    @RequiresApi(value = Build.VERSION_CODES.LOLLIPOP)
+    private fun abc() {
+        // this function is meant only for lollipop
     }
 }

@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.aniruddha.kudalkar.expensemanager.databinding.FragmentExpenseBinding
@@ -42,8 +43,23 @@ class ExpenseFragment : Fragment() {
             android.R.layout.simple_expandable_list_item_1,
             dataSource
         )
+
         binding.expIc.adapter = adapter
+
         binding.btSv.setOnClickListener {
+
+            /*if(binding.expNm.toString().isEmpty()) {
+
+                val drawable = ContextCompat.getDrawable(requireContext(), R.drawable.ic_err)
+                drawable?.setBounds(0, 0 , drawable.intrinsicWidth, drawable.intrinsicHeight )
+
+                binding.expNm.setError(
+                    "Mandatory Field",
+                    drawable
+                )
+
+            }*/
+
             viewModel.createExpense(
                 Expense(
                     12,

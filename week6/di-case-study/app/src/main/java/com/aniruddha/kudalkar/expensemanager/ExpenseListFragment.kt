@@ -11,7 +11,6 @@ import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.aniruddha.kudalkar.expensemanager.databinding.FragmentExpenseListBinding
 
-
 class ExpenseListFragment : Fragment() {
 
     private val viewModel: ExpenseViewModel by activityViewModels()

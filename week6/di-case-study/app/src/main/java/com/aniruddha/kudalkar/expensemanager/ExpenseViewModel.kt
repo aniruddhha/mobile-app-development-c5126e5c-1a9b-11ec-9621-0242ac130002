@@ -28,5 +28,12 @@ class ExpenseViewModel : ViewModel() {
         _expenses.value?.add(expense)
     }
 
-    fun loadExpenseById(id : Int) = expenses.value?.find { exp -> id == exp.id }
+    fun loadExpenseById(id : Int) : Expense {
+        for(exp in getExpenses()) {
+            if(id == exp.id) return exp
+        }
+        return  Expense(0, "", 0.0, 1)
+    }
+
+    fun loadExpById(id : Int) = expenses.value?.find { exp -> exp.id == id }
 }

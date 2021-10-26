@@ -10,7 +10,9 @@ import androidx.fragment.app.activityViewModels
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.aniruddha.kudalkar.expensemanager.databinding.FragmentExpenseListBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class ExpenseListFragment : Fragment() {
 
     private val viewModel: ExpenseViewModel by activityViewModels()

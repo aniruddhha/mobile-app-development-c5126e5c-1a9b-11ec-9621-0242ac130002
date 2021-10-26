@@ -11,10 +11,12 @@ import androidx.core.content.ContextCompat
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.aniruddha.kudalkar.expensemanager.databinding.FragmentExpenseBinding
+import dagger.hilt.android.AndroidEntryPoint
 
 /**
  * A simple [Fragment] subclass as the second destination in the navigation.
  */
+@AndroidEntryPoint
 class ExpenseFragment : Fragment() {
 
     private val viewModel: ExpenseViewModel by activityViewModels()

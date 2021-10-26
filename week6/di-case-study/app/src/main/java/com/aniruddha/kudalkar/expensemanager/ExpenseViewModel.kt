@@ -7,8 +7,10 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 
 @HiltViewModel
-class ExpenseViewModel @Inject constructor(
-    val localDataSource : LocalDataSource
+class ExpenseViewModel
+@Inject
+constructor(
+    private val localDataSource : LocalDataSource
 ) : ViewModel() {
 
     private val _expenses: MutableLiveData<ArrayList<Expense>> = MutableLiveData()

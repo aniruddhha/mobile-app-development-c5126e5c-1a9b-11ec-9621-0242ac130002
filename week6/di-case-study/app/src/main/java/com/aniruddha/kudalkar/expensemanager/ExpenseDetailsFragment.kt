@@ -37,7 +37,9 @@ class ExpenseDetailsFragment : Fragment(R.layout.fragment_expense_details) {
                 )
                 .setPriority(NotificationCompat.PRIORITY_LOW)
 
-            NotificationManagerCompat.from(requireActivity()).notify(3231, builder.build())
+            NotificationManagerCompat
+                .from(requireActivity())
+                .notify(3231, builder.build())
         }
     }
 

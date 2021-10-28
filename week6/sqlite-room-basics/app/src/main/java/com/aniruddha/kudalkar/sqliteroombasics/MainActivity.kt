@@ -30,6 +30,8 @@ class MainActivity : AppCompatActivity() {
     private lateinit var db : DealerDatabase
     private lateinit var dealerDao: DealerDao
 
+    private val scp = CoroutineScope(Dispatchers.IO)
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -42,7 +44,6 @@ class MainActivity : AppCompatActivity() {
         appBarConfiguration = AppBarConfiguration(navController.graph)
         setupActionBarWithNavController(navController, appBarConfiguration)
 
-
         db = Room.databaseBuilder(
             this,
             DealerDatabase::class.java,
@@ -51,25 +52,8 @@ class MainActivity : AppCompatActivity() {
 
         dealerDao = db.dealerDao()
 
-        val scp =   CoroutineScope(Job() + Dispatchers.IO)
-
         binding.fab.setOnClickListener { view ->
-
-            val dlr = Dealer(
-                dlNm = "pqr",
-                isActive = false,
-                mobile = "274724425",
-                period = 10
-            )
-            scp.launch {
-                dealerDao.createNewDealer(dlr)
-            }
-
-            scp.launch {
-                dealerDao.findAllDealers().forEach { dl ->
-                    Log.i("@ani", "${dl.id} ${dl.dlNm}, ${dl.mobile}, ${dl.isActive}, ${dl.period} ")
-                }
-            }
+            navController.navigate(R.id.SecondFragment)
         }
     }
 

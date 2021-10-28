@@ -6,8 +6,16 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
+import androidx.room.Room
 import com.aniruddha.kudalkar.sqliteroombasics.R
 import com.aniruddha.kudalkar.sqliteroombasics.databinding.FragmentFirstBinding
+import com.aniruddha.kudalkar.sqliteroombasics.db.Dealer
+import com.aniruddha.kudalkar.sqliteroombasics.db.DealerDao
+import com.aniruddha.kudalkar.sqliteroombasics.db.DealerDatabase
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 /**
  * A simple [Fragment] subclass as the default destination in the navigation.
@@ -16,25 +24,46 @@ class FirstFragment : Fragment() {
 
     private var _binding: FragmentFirstBinding? = null
 
-    // This property is only valid between onCreateView and
-    // onDestroyView.
     private val binding get() = _binding!!
+
+    private lateinit var db: DealerDatabase
+    private lateinit var dealerDao: DealerDao
+    private val scp = CoroutineScope(Dispatchers.IO)
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
+
+        db = Room.databaseBuilder(
+            requireContext(),
+            DealerDatabase::class.java,
+            "dealer-database"
+        ).build()
+
+        dealerDao = db.dealerDao()
 
         _binding = FragmentFirstBinding.inflate(inflater, container, false)
         return binding.root
-
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.buttonFirst.setOnClickListener {
-            findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)
+        binding.btSv.setOnClickListener {
+            val dlr = Dealer(
+                dlNm = binding.etDlNm.text.toString(),
+                mobile = binding.etDlMb.text.toString(),
+                period = binding.etDlPrd.text.toString().toInt(),
+                isActive = binding.swAct.isChecked
+            )
+
+            scp.launch {
+                dealerDao.createNewDealer(dlr)
+                withContext(Dispatchers.Main) {
+                    binding.txtSt.text = "Dealer Saved Successfully"
+                }
+            }
         }
     }
 

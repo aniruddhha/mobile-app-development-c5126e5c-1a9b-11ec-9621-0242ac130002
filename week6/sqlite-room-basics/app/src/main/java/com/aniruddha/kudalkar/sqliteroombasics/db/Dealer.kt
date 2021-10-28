@@ -10,7 +10,7 @@ import androidx.room.PrimaryKey
 data class Dealer(
 
     @PrimaryKey(autoGenerate = true)
-    var id: Long,
+    var id: Long = 0,
 
     @ColumnInfo(name = "dl_nm")
     var dlNm: String,

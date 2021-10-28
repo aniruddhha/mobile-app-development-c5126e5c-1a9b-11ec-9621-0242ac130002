@@ -9,13 +9,21 @@ import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import android.view.Menu
 import android.view.MenuItem
+import androidx.room.Room
+import androidx.room.RoomDatabase
 import com.aniruddha.kudalkar.sqliteroombasics.R
 import com.aniruddha.kudalkar.sqliteroombasics.databinding.ActivityMainBinding
+import com.aniruddha.kudalkar.sqliteroombasics.db.Dealer
+import com.aniruddha.kudalkar.sqliteroombasics.db.DealerDao
+import com.aniruddha.kudalkar.sqliteroombasics.db.DealerDatabase
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityMainBinding
+
+    private lateinit var db : DealerDatabase
+    private lateinit var dealerDao: DealerDao
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,9 +37,25 @@ class MainActivity : AppCompatActivity() {
         appBarConfiguration = AppBarConfiguration(navController.graph)
         setupActionBarWithNavController(navController, appBarConfiguration)
 
+
+        db = Room.databaseBuilder(
+            this,
+            DealerDatabase::class.java,
+            "dealer-database"
+        ).build()
+
+        dealerDao = db.dealerDao()
+
         binding.fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                .setAction("Action", null).show()
+
+            val dlr = Dealer(
+                dlNm = "abc",
+                isActive = true,
+                mobile = "9678523231",
+                period = 10
+            )
+
+            dealerDao.createNewDealer(dlr)
         }
     }
 

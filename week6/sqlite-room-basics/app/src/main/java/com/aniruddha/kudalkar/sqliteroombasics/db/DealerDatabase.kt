@@ -1,4 +1,4 @@
 package com.aniruddha.kudalkar.sqliteroombasics.db
 
-class DealerDatabase {
-}
+// class helps you in connecting with db
+class DealerDatabase

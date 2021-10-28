@@ -9,6 +9,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.aniruddha.kudalkar.filehandlingintro.databinding.FragmentFirstBinding
+import java.io.File
+import java.io.FileInputStream
+import java.io.FileOutputStream
 import java.lang.StringBuilder
 
 /**
@@ -37,12 +40,13 @@ class FirstFragment : Fragment() {
 
         binding.btRd.setOnClickListener {
             storageLocationInfo()
-            readInternalStorage()
+            val dt = readExternalStorage()
+            binding.textView.text = dt
         }
 
         binding.btWr.setOnClickListener {
             val str = binding.editTextTextPersonName.text.toString()
-            writeInternalStorage(str)
+            writeExternalStorage(str)
         }
     }
 
@@ -62,15 +66,39 @@ class FirstFragment : Fragment() {
         fos.close()
     }
 
-    private fun readInternalStorage() {
+    private fun readInternalStorage() : String {
         val fis = requireContext().openFileInput("my.txt")
         val sb = StringBuilder()
         while(true) {
             val ch = fis.read()
             if(ch == -1) break
-            else sb.append(ch)
+            else sb.append(ch.toChar())
         }
         Log.i("@ani", "File Data As Below")
         Log.i("@ani", sb.toString())
+
+        return sb.toString()
+    }
+
+    private fun writeExternalStorage(str : String) {
+        val file = File(requireContext().getExternalFilesDir(""), "ext-my.txt")
+        val fos = FileOutputStream(file)
+        fos.write(str.toByteArray())
+        fos.close()
+    }
+
+    private fun readExternalStorage(): String {
+        val file = File(requireContext().getExternalFilesDir(""), "ext-my.txt")
+        val fis = FileInputStream(file)
+        val sb = StringBuilder()
+        while(true) {
+            val ch = fis.read()
+            if(ch == -1) break
+            else sb.append(ch.toChar())
+        }
+        Log.i("@ani", "File Data As Below")
+        Log.i("@ani", sb.toString())
+
+        return sb.toString()
     }
 }

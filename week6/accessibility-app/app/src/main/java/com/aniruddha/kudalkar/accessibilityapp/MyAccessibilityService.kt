@@ -1,5 +1,6 @@
 package com.aniruddha.kudalkar.accessibilityapp
 
+import android.accessibilityservice.AccessibilityGestureEvent
 import android.accessibilityservice.AccessibilityService
 import android.speech.tts.TextToSpeech
 import android.util.Log
@@ -31,7 +32,6 @@ class MyAccessibilityService : AccessibilityService() {
     }
 
     override fun onAccessibilityEvent(event: AccessibilityEvent?) {
-
         Log.i("@ani", "Event Captured")
         event?.let {
             Log.i("@ani", "Package ${it.packageName}")
@@ -78,6 +78,10 @@ class MyAccessibilityService : AccessibilityService() {
             AccessibilityEvent.TYPE_VIEW_SCROLLED -> Log.i("@ani", "Scroll Happened")
             AccessibilityEvent.TYPE_GESTURE_DETECTION_START -> Log.i("@ani", "Gesture Detection Start")
             AccessibilityEvent.TYPE_GESTURE_DETECTION_END -> Log.i("@ani", "Gesture Detection End")
+            AccessibilityEvent.TYPE_TOUCH_EXPLORATION_GESTURE_START -> Log.i("@ani", "Touch Exploration Start")
+            AccessibilityEvent.TYPE_TOUCH_EXPLORATION_GESTURE_END -> Log.i("@ani", "Touch Exploration End")
+            AccessibilityEvent.TYPE_TOUCH_INTERACTION_START -> Log.i("@ani", "Touch Interaction Start")
+            AccessibilityEvent.TYPE_TOUCH_INTERACTION_END -> Log.i("@ani", "Touch Interaction End")
             AccessibilityEvent.TYPE_WINDOWS_CHANGED -> Log.i("@ani", "Window Changed")
             else -> Log.i("@ani", "Wrong Event")
         }

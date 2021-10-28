@@ -1,6 +1,7 @@
 package com.aniruddha.kudalkar.sqliteroombasics
 
 import android.os.Bundle
+import android.util.Log
 import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
@@ -16,6 +17,10 @@ import com.aniruddha.kudalkar.sqliteroombasics.databinding.ActivityMainBinding
 import com.aniruddha.kudalkar.sqliteroombasics.db.Dealer
 import com.aniruddha.kudalkar.sqliteroombasics.db.DealerDao
 import com.aniruddha.kudalkar.sqliteroombasics.db.DealerDatabase
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.Job
+import kotlinx.coroutines.launch
 
 class MainActivity : AppCompatActivity() {
 
@@ -46,16 +51,25 @@ class MainActivity : AppCompatActivity() {
 
         dealerDao = db.dealerDao()
 
+        val scp =   CoroutineScope(Job() + Dispatchers.IO)
+
         binding.fab.setOnClickListener { view ->
 
             val dlr = Dealer(
-                dlNm = "abc",
-                isActive = true,
-                mobile = "9678523231",
+                dlNm = "pqr",
+                isActive = false,
+                mobile = "274724425",
                 period = 10
             )
+            scp.launch {
+                dealerDao.createNewDealer(dlr)
+            }
 
-            dealerDao.createNewDealer(dlr)
+            scp.launch {
+                dealerDao.findAllDealers().forEach { dl ->
+                    Log.i("@ani", "${dl.id} ${dl.dlNm}, ${dl.mobile}, ${dl.isActive}, ${dl.period} ")
+                }
+            }
         }
     }
 

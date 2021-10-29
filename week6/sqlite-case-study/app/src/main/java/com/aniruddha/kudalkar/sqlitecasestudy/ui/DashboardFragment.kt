@@ -3,6 +3,10 @@ package com.aniruddha.kudalkar.sqlitecasestudy.ui
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.DividerItemDecoration
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.aniruddha.kudalkar.sqlitecasestudy.CaseStudyApplication
 import com.aniruddha.kudalkar.sqlitecasestudy.R
 
@@ -14,6 +18,23 @@ class DashboardFragment : Fragment(R.layout.fragment_dashboard) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        val rec = view.findViewById<RecyclerView>(R.id.recDash)
+
+        rec.layoutManager = GridLayoutManager(
+            requireContext(),
+            2
+        )
+
+        val adapter = DashAdapter(
+            requireContext(),
+            listOf(
+                DashItem(1, R.drawable.ic_and, "Expense"),
+                DashItem(2, R.drawable.ic_and, "Analysis")
+            )
+        )
+
+        rec.adapter = adapter
     }
 
     override fun onDestroy() {

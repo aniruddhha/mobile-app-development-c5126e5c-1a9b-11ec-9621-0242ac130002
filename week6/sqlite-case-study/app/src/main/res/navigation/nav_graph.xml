@@ -3,13 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/dashboardFragment">
+    app:startDestination="@id/expenseListFragment">
 
     <fragment
         android:id="@+id/dashboardFragment"
         android:name="com.aniruddha.kudalkar.sqlitecasestudy.ui.dashboard.DashboardFragment"
         android:label="fragment_dashboard"
-        tools:layout="@layout/fragment_dashboard" >
+        tools:layout="@layout/fragment_dashboard">
         <action
             android:id="@+id/action_dashboardFragment_to_expenseFragment"
             app:destination="@id/expenseFragment" />
@@ -17,5 +17,14 @@
     <fragment
         android:id="@+id/expenseFragment"
         android:name="com.aniruddha.kudalkar.sqlitecasestudy.ui.expense.ExpenseFragment"
-        android:label="ExpenseFragment" />
+        android:label="ExpenseFragment" >
+        <action
+            android:id="@+id/action_expenseFragment_to_expenseListFragment"
+            app:destination="@id/expenseListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/expenseListFragment"
+        android:name="com.aniruddha.kudalkar.sqlitecasestudy.ui.expense.ExpenseListFragment"
+        android:label="fragment_expense_list"
+        tools:layout="@layout/fragment_expense_list" />
 </navigation>

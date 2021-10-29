@@ -8,6 +8,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.aniruddha.kudalkar.sqlitecasestudy.R
+import com.aniruddha.kudalkar.sqlitecasestudy.ui.dashboard.DashViewModel
 
 data class DashItem(
     var id : Int = 0,
@@ -17,7 +18,8 @@ data class DashItem(
 
 class DashAdapter(
     private val context: Context,
-    private val dataSource : List<DashItem>
+    private val dataSource : List<DashItem>,
+    private val vm : DashViewModel
 ) : RecyclerView.Adapter<DashViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DashViewHolder {
@@ -30,6 +32,9 @@ class DashAdapter(
     }
 
     override fun onBindViewHolder(holder: DashViewHolder, position: Int) {
+        holder.infVw().setOnClickListener {
+            vm.performClick(dataSource[position])
+        }
         holder.ic().setImageResource(dataSource[position].ic)
         holder.lbl().setText(dataSource[position].lbl)
     }

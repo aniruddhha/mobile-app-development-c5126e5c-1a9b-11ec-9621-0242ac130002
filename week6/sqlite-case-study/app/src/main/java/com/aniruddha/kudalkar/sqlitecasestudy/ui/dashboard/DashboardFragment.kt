@@ -1,16 +1,19 @@
-package com.aniruddha.kudalkar.sqlitecasestudy.ui
+package com.aniruddha.kudalkar.sqlitecasestudy.ui.dashboard
 
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
-import androidx.recyclerview.widget.DividerItemDecoration
+import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.aniruddha.kudalkar.sqlitecasestudy.CaseStudyApplication
 import com.aniruddha.kudalkar.sqlitecasestudy.R
+import com.aniruddha.kudalkar.sqlitecasestudy.ui.DashAdapter
+import com.aniruddha.kudalkar.sqlitecasestudy.ui.DashItem
 
 class DashboardFragment : Fragment(R.layout.fragment_dashboard) {
+
+    private val vm : DashViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,8 +34,15 @@ class DashboardFragment : Fragment(R.layout.fragment_dashboard) {
             listOf(
                 DashItem(1, R.drawable.ic_and, "Expense"),
                 DashItem(2, R.drawable.ic_and, "Analysis")
-            )
+            ),
+            vm
         )
+
+        vm.itemClick.observe(viewLifecycleOwner) {
+            when(it.id) {
+
+            }
+        }
 
         rec.adapter = adapter
     }

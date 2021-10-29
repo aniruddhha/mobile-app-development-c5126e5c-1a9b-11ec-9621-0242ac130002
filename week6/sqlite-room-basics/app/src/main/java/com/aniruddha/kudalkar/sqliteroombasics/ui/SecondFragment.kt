@@ -15,10 +15,7 @@ import com.aniruddha.kudalkar.sqliteroombasics.databinding.FragmentSecondBinding
 import com.aniruddha.kudalkar.sqliteroombasics.db.Dealer
 import com.aniruddha.kudalkar.sqliteroombasics.db.DealerDao
 import com.aniruddha.kudalkar.sqliteroombasics.db.DealerDatabase
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
+import kotlinx.coroutines.*
 
 /**
  * A simple [Fragment] subclass as the second destination in the navigation.
@@ -74,6 +71,11 @@ class SecondFragment : Fragment() {
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+    }
+
+    override fun onDestroy() {
+        scp.cancel()
+        super.onDestroy()
     }
 
     private fun loadSampleData() {

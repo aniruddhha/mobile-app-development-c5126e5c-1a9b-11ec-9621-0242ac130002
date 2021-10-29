@@ -12,10 +12,7 @@ import com.aniruddha.kudalkar.sqliteroombasics.databinding.FragmentFirstBinding
 import com.aniruddha.kudalkar.sqliteroombasics.db.Dealer
 import com.aniruddha.kudalkar.sqliteroombasics.db.DealerDao
 import com.aniruddha.kudalkar.sqliteroombasics.db.DealerDatabase
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
+import kotlinx.coroutines.*
 
 /**
  * A simple [Fragment] subclass as the default destination in the navigation.
@@ -28,12 +25,12 @@ class FirstFragment : Fragment() {
 
     private lateinit var db: DealerDatabase
     private lateinit var dealerDao: DealerDao
-    private val scp = CoroutineScope(Dispatchers.IO)
+    private lateinit var scp : CoroutineScope
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+        scp = CoroutineScope(Dispatchers.IO)
 
         db = Room.databaseBuilder(
             requireContext(),
@@ -42,6 +39,12 @@ class FirstFragment : Fragment() {
         ).build()
 
         dealerDao = db.dealerDao()
+    }
+
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View {
 
         _binding = FragmentFirstBinding.inflate(inflater, container, false)
         return binding.root
@@ -70,5 +73,10 @@ class FirstFragment : Fragment() {
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+    }
+
+    override fun onDestroy() {
+        scp.cancel()
+        super.onDestroy()
     }
 }

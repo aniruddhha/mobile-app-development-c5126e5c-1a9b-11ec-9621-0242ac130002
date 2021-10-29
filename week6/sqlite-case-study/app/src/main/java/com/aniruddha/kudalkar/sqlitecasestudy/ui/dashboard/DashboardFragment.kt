@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.aniruddha.kudalkar.sqlitecasestudy.CaseStudyApplication
@@ -40,7 +41,7 @@ class DashboardFragment : Fragment(R.layout.fragment_dashboard) {
 
         vm.itemClick.observe(viewLifecycleOwner) {
             when(it.id) {
-
+                1 -> findNavController().navigate(R.id.action_dashboardFragment_to_expenseFragment)
             }
         }
 

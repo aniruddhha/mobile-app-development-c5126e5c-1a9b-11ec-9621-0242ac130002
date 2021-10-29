@@ -9,5 +9,13 @@
         android:id="@+id/dashboardFragment"
         android:name="com.aniruddha.kudalkar.sqlitecasestudy.ui.dashboard.DashboardFragment"
         android:label="fragment_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        tools:layout="@layout/fragment_dashboard" >
+        <action
+            android:id="@+id/action_dashboardFragment_to_expenseFragment"
+            app:destination="@id/expenseFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/expenseFragment"
+        android:name="com.aniruddha.kudalkar.sqlitecasestudy.ui.expense.ExpenseFragment"
+        android:label="ExpenseFragment" />
 </navigation>

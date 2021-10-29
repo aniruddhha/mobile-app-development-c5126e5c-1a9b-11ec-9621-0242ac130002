@@ -10,6 +10,7 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import android.view.Menu
 import android.view.MenuItem
 import androidx.navigation.fragment.NavHostFragment
+import com.aniruddha.kudalkar.sqlitecasestudy.CaseStudyApplication
 import com.aniruddha.kudalkar.sqlitecasestudy.R
 import com.aniruddha.kudalkar.sqlitecasestudy.databinding.ActivityMainBinding
 
@@ -58,5 +59,10 @@ class MainActivity : AppCompatActivity() {
         val navController = findNavController(R.id.nav_host_fragment_content_main)
         return navController.navigateUp(appBarConfiguration)
                 || super.onSupportNavigateUp()
+    }
+
+    fun accessAppInActivity() {
+        val app = application as CaseStudyApplication
+        app.db.expenseDao()
     }
 }

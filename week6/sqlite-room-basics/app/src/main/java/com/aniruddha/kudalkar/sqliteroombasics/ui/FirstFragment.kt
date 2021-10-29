@@ -53,6 +53,7 @@ class FirstFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+
         binding.btSv.setOnClickListener {
             val dlr = Dealer(
                 dlNm = binding.etDlNm.text.toString(),
@@ -62,9 +63,11 @@ class FirstFragment : Fragment() {
             )
 
             scp.launch {
-                dealerDao.createNewDealer(dlr)
+
+                dealerDao.createNewDealer(dlr) // run another thread
+
                 withContext(Dispatchers.Main) {
-                    binding.txtSt.text = "Dealer Saved Successfully"
+                    binding.txtSt.text = "Dealer Saved Successfully" // run in other thread
                 }
             }
         }

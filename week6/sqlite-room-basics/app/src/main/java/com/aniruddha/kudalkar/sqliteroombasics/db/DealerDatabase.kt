@@ -10,4 +10,5 @@ import androidx.room.RoomDatabase
 )
 abstract class DealerDatabase : RoomDatabase() {
     abstract fun dealerDao() : DealerDao
+    abstract fun asyncDealerDao() : AsyncDealerDao
 }

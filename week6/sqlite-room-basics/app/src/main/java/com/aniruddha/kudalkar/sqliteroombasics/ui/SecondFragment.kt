@@ -2,6 +2,7 @@ package com.aniruddha.kudalkar.sqliteroombasics.ui
 
 import android.os.Bundle
 import android.provider.DocumentsContract
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -12,6 +13,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.room.Room
 import com.aniruddha.kudalkar.sqliteroombasics.R
 import com.aniruddha.kudalkar.sqliteroombasics.databinding.FragmentSecondBinding
+import com.aniruddha.kudalkar.sqliteroombasics.db.AsyncDealerDao
 import com.aniruddha.kudalkar.sqliteroombasics.db.Dealer
 import com.aniruddha.kudalkar.sqliteroombasics.db.DealerDao
 import com.aniruddha.kudalkar.sqliteroombasics.db.DealerDatabase
@@ -25,13 +27,13 @@ class SecondFragment : Fragment() {
     private lateinit var scp : CoroutineScope
     private lateinit var db : DealerDatabase
     private lateinit var dealerDao : DealerDao
+    private lateinit var asyncDealerDao: AsyncDealerDao
 
     private var _binding: FragmentSecondBinding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
     private val binding get() = _binding!!
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -45,6 +47,8 @@ class SecondFragment : Fragment() {
         ).build()
 
         dealerDao = db.dealerDao()
+
+        asyncDealerDao = db.asyncDealerDao()
     }
 
     override fun onCreateView(
@@ -66,6 +70,8 @@ class SecondFragment : Fragment() {
         )
 
         loadFromDatabase()
+
+        loadActiveDealers()
     }
 
     override fun onDestroyView() {
@@ -111,6 +117,9 @@ class SecondFragment : Fragment() {
 
         scp.launch {
             val dealers = dealerDao.findAllDealers()
+            Log.i("@ani", "Normal Fetched All Users - ${System.currentTimeMillis()}")
+            dealerDao.findAllDealers()
+            Log.i("@ani", "Normal Fetching Users Whose name start from A - ${System.currentTimeMillis()}")
 
             withContext(Dispatchers.Main) {
                 binding.recDls.adapter = DealerAdapter(
@@ -118,6 +127,17 @@ class SecondFragment : Fragment() {
                     dealers
                 )
             }
+        }
+    }
+
+    private fun loadActiveDealers() {
+
+        scp.launch {
+           val dealers = asyncDealerDao.findAllActiveDealers()
+            Log.i("@ani", "Async Fetched All Users - ${System.currentTimeMillis()}")
+
+            asyncDealerDao.findAllActiveDealers()
+            Log.i("@ani", "Async Fetching Users Whose name start from A - ${System.currentTimeMillis()}")
         }
     }
 }

@@ -23,6 +23,10 @@ class DealerAdapter(
     }
 
     override fun onBindViewHolder(holder: DealerViewHolder, position: Int) {
+
+        holder.dlNm().text = dataSource[position].dlNm
+        holder.dlMb().text = dataSource[position].mobile
+        holder.chk().isChecked = dataSource[position].isActive
     }
 
     override fun getItemCount(): Int  = dataSource.size

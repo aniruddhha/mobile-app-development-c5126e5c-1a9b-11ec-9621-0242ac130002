@@ -17,20 +17,16 @@ import com.aniruddha.kudalkar.sqliteroombasics.databinding.ActivityMainBinding
 import com.aniruddha.kudalkar.sqliteroombasics.db.Dealer
 import com.aniruddha.kudalkar.sqliteroombasics.db.DealerDao
 import com.aniruddha.kudalkar.sqliteroombasics.db.DealerDatabase
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.Job
-import kotlinx.coroutines.launch
+import kotlinx.coroutines.*
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityMainBinding
 
+    private lateinit var scp :  CoroutineScope
     private lateinit var db : DealerDatabase
     private lateinit var dealerDao: DealerDao
-
-    private val scp = CoroutineScope(Dispatchers.IO)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -44,12 +40,12 @@ class MainActivity : AppCompatActivity() {
         appBarConfiguration = AppBarConfiguration(navController.graph)
         setupActionBarWithNavController(navController, appBarConfiguration)
 
+        scp = CoroutineScope(Dispatchers.IO)
         db = Room.databaseBuilder(
             this,
             DealerDatabase::class.java,
             "dealer-database"
         ).build()
-
         dealerDao = db.dealerDao()
 
         binding.fab.setOnClickListener { view ->
@@ -77,5 +73,10 @@ class MainActivity : AppCompatActivity() {
         val navController = findNavController(R.id.nav_host_fragment_content_main)
         return navController.navigateUp(appBarConfiguration)
                 || super.onSupportNavigateUp()
+    }
+
+    override fun onDestroy() {
+        scp.cancel()
+        super.onDestroy()
     }
 }

@@ -4,7 +4,6 @@ import android.content.Context
 import androidx.work.*
 import java.util.concurrent.TimeUnit
 
-
 internal fun scheduleOnce(context : Context) {
     val uploadRequest = OneTimeWorkRequestBuilder<FileUploadWork>().build()
     WorkManager.getInstance(context).enqueue(uploadRequest)

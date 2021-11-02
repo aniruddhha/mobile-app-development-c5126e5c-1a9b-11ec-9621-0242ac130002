@@ -1,4 +1,4 @@
-package com.aniruddha.kudalkar.wrkmgr
+package com.aniruddha.kudalkar.wrkmgr.ui
 
 import android.os.Bundle
 import com.google.android.material.snackbar.Snackbar
@@ -9,6 +9,7 @@ import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import android.view.Menu
 import android.view.MenuItem
+import com.aniruddha.kudalkar.wrkmgr.R
 import com.aniruddha.kudalkar.wrkmgr.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {

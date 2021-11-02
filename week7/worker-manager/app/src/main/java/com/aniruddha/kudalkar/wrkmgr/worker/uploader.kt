@@ -12,6 +12,9 @@ class FileUploadWork(
 
     override fun doWork(): Result {
         Log.i("@ani", "Doing File Upload")
+        val nm = inputData.getString("KEY_FILE_NAME")
+        val sz = inputData.getLong("KEY_FILE_SIZE", -1L)
+        Log.i("@ani", "Name: $nm, Size: $sz")
         return Result.retry()
     }
 }

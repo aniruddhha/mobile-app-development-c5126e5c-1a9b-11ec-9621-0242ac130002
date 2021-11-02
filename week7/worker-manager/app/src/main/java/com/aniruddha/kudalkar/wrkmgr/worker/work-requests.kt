@@ -23,3 +23,15 @@ internal fun scheduleRepeating(context : Context) {
 
     WorkManager.getInstance(context).enqueue(uploadRequest)
 }
+
+internal fun scheduleOnceWithData(context: Context) {
+    val uploadRequest = OneTimeWorkRequestBuilder<FileUploadWork>()
+        .setInputData(
+            workDataOf(
+                "KEY_FILE_NAME" to "abc.txt",
+                "KEY_FILE_SIZE" to 10L
+            )
+        )
+        .build()
+    WorkManager.getInstance(context).enqueue(uploadRequest)
+}

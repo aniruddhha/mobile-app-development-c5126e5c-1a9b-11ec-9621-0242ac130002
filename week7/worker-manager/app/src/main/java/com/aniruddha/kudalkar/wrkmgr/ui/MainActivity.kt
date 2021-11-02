@@ -15,6 +15,7 @@ import androidx.work.WorkRequest
 import com.aniruddha.kudalkar.wrkmgr.R
 import com.aniruddha.kudalkar.wrkmgr.databinding.ActivityMainBinding
 import com.aniruddha.kudalkar.wrkmgr.worker.FileUploadWork
+import com.aniruddha.kudalkar.wrkmgr.worker.scheduleRepeating
 
 class MainActivity : AppCompatActivity() {
 
@@ -34,9 +35,7 @@ class MainActivity : AppCompatActivity() {
         setupActionBarWithNavController(navController, appBarConfiguration)
 
         binding.fab.setOnClickListener { view ->
-
-            val uploadRequest = OneTimeWorkRequestBuilder<FileUploadWork>().build()
-            WorkManager.getInstance(this).enqueue(uploadRequest)
+            scheduleRepeating(this)
         }
     }
 

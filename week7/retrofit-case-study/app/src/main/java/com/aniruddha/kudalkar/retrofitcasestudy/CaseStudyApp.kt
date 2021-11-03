@@ -9,7 +9,7 @@ class CaseStudyApp : Application() {
 
     private val retrofit : Retrofit by lazy {
         Retrofit.Builder()
-            .baseUrl("https://api.openweathermap.org/data/2.5/weather")
+            .baseUrl("https://api.openweathermap.org/")
             .addConverterFactory(GsonConverterFactory.create())
             .build()
     }

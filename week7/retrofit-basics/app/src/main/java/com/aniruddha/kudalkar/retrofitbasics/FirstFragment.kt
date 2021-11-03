@@ -20,7 +20,7 @@ import retrofit2.Response
 class FirstFragment : Fragment() {
 
     private val reqResApi: ReqResApi by lazy {
-        (requireActivity().application as ReqResApp).retrofit.create(ReqResApi::class.java)
+        (requireActivity().application as ReqResApp).reqResApi
     }
 
     private var _binding: FragmentFirstBinding? = null

@@ -6,11 +6,14 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 class ReqResApp : Application() {
 
-    val retrofit : Retrofit by lazy {
+    private val retrofit : Retrofit by lazy {
         Retrofit.Builder()
             .baseUrl("https://reqres.in/")
             .addConverterFactory(GsonConverterFactory.create())
             .build()
     }
 
+    val reqResApi: ReqResApi by lazy {
+       retrofit.create(ReqResApi::class.java)
+    }
 }

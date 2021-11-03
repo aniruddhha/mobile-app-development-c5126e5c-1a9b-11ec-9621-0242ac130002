@@ -9,6 +9,7 @@ interface ReqResApi {
     @GET("api/users")
     fun users() : Call<ReqResMain>
 
+    @POST(value = "api/register")
     fun save(@Body user : RegUser): Call<RegResponse>
 }
 

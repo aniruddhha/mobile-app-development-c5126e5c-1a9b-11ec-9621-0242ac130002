@@ -5,6 +5,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.runtime.*
 import androidx.compose.runtime.saveable.rememberSaveable
+import com.aniruddha.kudalkar.retrofitcasestudy.adapter.RecAdapter
 import com.aniruddha.kudalkar.retrofitcasestudy.composable.GitHubUsers
 import com.aniruddha.kudalkar.retrofitcasestudy.domain.GithubUser
 import retrofit2.Call
@@ -34,6 +35,8 @@ class MainActivity : ComponentActivity() {
             } )
 
             GitHubUsers(users)
+
+            val adapter = RecAdapter(this, users)
         }
     }
 }

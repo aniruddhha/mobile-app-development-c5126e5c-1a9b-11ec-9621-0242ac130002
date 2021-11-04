@@ -58,7 +58,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
                             cityMarker.position = LatLng(it.coordinates.lat, it.coordinates.lon)
                             cityMarker.title = "${it.weather[0].description}"
 
-                            mMap.moveCamera(
+                            mMap.animateCamera(
                                 CameraUpdateFactory.newLatLngZoom(cityMarker.position, 8.0f)
                             )
                         }

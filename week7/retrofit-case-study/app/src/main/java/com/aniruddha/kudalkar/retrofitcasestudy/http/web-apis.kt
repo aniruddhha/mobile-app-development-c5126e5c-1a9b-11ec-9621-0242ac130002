@@ -1,5 +1,6 @@
 package com.aniruddha.kudalkar.retrofitcasestudy.http
 
+import com.aniruddha.kudalkar.retrofitcasestudy.domain.GithubUser
 import com.aniruddha.kudalkar.retrofitcasestudy.domain.MainResponse
 import retrofit2.Call
 import retrofit2.http.GET
@@ -11,4 +12,10 @@ interface WeatherApi {
         @Query("q") q : String,
         @Query("appid") appid : String = "e8adb83af69d087ce7ce7fdb6c975566"
     ) : Call<MainResponse>
+}
+
+interface GithubApi {
+
+    @GET("/users")
+    fun users() : Call<List<GithubUser>>
 }

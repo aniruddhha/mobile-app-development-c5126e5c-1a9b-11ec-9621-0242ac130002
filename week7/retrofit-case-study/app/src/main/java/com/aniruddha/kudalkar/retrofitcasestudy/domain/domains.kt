@@ -3,7 +3,7 @@ package com.aniruddha.kudalkar.retrofitcasestudy.domain
 import com.google.gson.annotations.SerializedName
 
 data class MainResponse (
-    @SerializedName("coord") var coord : Coord,
+    @SerializedName("coord") var coordinates : Coord,
     @SerializedName("weather") var weather : List<Weather>,
     @SerializedName("base") var base : String,
     @SerializedName("main") var main : Main,

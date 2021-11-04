@@ -2,6 +2,7 @@ package com.aniruddha.kudalkar.googlemapbasics
 
 import android.annotation.SuppressLint
 import android.graphics.Color
+import android.location.Location
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Looper
@@ -11,17 +12,15 @@ import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
-import com.google.android.gms.maps.model.LatLng
-import com.google.android.gms.maps.model.MarkerOptions
 import com.aniruddha.kudalkar.googlemapbasics.databinding.ActivityMapsBinding
 import com.google.android.gms.location.*
-import com.google.android.gms.maps.model.CircleOptions
-import com.google.android.gms.maps.model.PolylineOptions
+import com.google.android.gms.maps.model.*
 
 class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 
     private lateinit var mMap: GoogleMap
     private lateinit var binding: ActivityMapsBinding
+    private lateinit var myLoc : Marker
 
     private lateinit var locCl : FusedLocationProviderClient
 
@@ -65,6 +64,8 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
                 .title("Japan")
         )
 
+
+
         mMap.addPolyline(
             PolylineOptions()
                 .color(Color.RED)
@@ -79,6 +80,13 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
                 .fillColor(Color.RED)
                 .strokeWidth(5.0f)
         )
+
+        myLoc = mMap.addMarker(
+            MarkerOptions()
+                .position(LatLng(0.0, 0.0))
+                .title("Bengaluru")
+        )
+
 
         mMap.moveCamera(CameraUpdateFactory.zoomTo(12.0f))
     }
@@ -101,6 +109,9 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
                     val ltstLoc = it.locations.last()
                     Log.i("@ani", "Latest Lat ${ltstLoc.latitude}")
                     Log.i("@ani", "Latest Lmg ${ltstLoc.longitude}")
+
+                    myLoc.position = LatLng(ltstLoc.latitude, ltstLoc.longitude)
+
                 }
             }
         }, Looper.myLooper())

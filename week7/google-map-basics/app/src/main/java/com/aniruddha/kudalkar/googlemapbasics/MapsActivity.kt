@@ -1,8 +1,11 @@
 package com.aniruddha.kudalkar.googlemapbasics
 
+import android.annotation.SuppressLint
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Looper
+import android.util.Log
 
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
@@ -11,6 +14,7 @@ import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
 import com.aniruddha.kudalkar.googlemapbasics.databinding.ActivityMapsBinding
+import com.google.android.gms.location.*
 import com.google.android.gms.maps.model.CircleOptions
 import com.google.android.gms.maps.model.PolylineOptions
 
@@ -18,6 +22,8 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 
     private lateinit var mMap: GoogleMap
     private lateinit var binding: ActivityMapsBinding
+
+    private lateinit var locCl : FusedLocationProviderClient
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,17 +35,10 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         val mapFragment = supportFragmentManager
             .findFragmentById(R.id.map) as SupportMapFragment
         mapFragment.getMapAsync(this)
+
+        initLocationProvider()
     }
 
-    /**
-     * Manipulates the map once available.
-     * This callback is triggered when the map is ready to be used.
-     * This is where we can add markers or lines, add listeners or move the camera. In this case,
-     * we just add a marker near Sydney, Australia.
-     * If Google Play services is not installed on the device, the user will be prompted to install
-     * it inside the SupportMapFragment. This method will only be triggered once the user has
-     * installed Google Play services and returned to the app.
-     */
     override fun onMapReady(googleMap: GoogleMap) {
         mMap = googleMap
         mMap.mapType = GoogleMap.MAP_TYPE_HYBRID
@@ -82,5 +81,28 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         )
 
         mMap.moveCamera(CameraUpdateFactory.zoomTo(12.0f))
+    }
+
+    @SuppressLint("MissingPermission")
+    private fun initLocationProvider() {
+
+        val locReq = LocationRequest()
+        locReq.setInterval(1000)
+        locReq.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY)
+
+        locCl = LocationServices.getFusedLocationProviderClient(this)
+        locCl.requestLocationUpdates(locReq, object : LocationCallback(){
+            override fun onLocationResult(result: LocationResult?) {
+                super.onLocationResult(result)
+
+                result?.let {
+                    Log.i("@ani", "last Lat ${it.lastLocation.latitude}")
+                    Log.i("@ani", "last Lng ${it.lastLocation.longitude}")
+                    val ltstLoc = it.locations.last()
+                    Log.i("@ani", "Latest Lat ${ltstLoc.latitude}")
+                    Log.i("@ani", "Latest Lmg ${ltstLoc.longitude}")
+                }
+            }
+        }, Looper.myLooper())
     }
 }

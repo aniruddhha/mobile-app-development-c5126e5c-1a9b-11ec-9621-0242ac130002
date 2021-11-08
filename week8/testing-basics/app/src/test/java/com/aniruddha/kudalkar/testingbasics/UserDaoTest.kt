@@ -33,9 +33,11 @@ class UserDaoTest {
     fun test_findUserById_Negative() {
         Mockito.`when`(
             dao.findUserById(-1)
-        ).thenThrow(RuntimeException("Bad User Id"))
+        ).thenThrow(
+            RuntimeException("Bad User Id")
+        )
 
-        Assert.assertThrows("Bad User Id",Exception::class.java) {
+        Assert.assertThrows("Bad User Id", RuntimeException::class.java) {
             dao.findUserById(-1)
         }
     }

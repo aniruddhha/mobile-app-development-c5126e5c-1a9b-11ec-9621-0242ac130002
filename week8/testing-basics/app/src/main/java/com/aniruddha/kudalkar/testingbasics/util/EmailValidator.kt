@@ -13,5 +13,11 @@ class EmailValidator {
                     "[a-zA-Z0-9][a-zA-Z0-9\\-]{0,25}" +
                     ")+"
         ).matcher(email).matches()
+
+
+        // minimum age should be 12
+        // maximum age should be 52
+        // age is 12, 52, 30 is invalid
+        fun isAgeValid(age : Int) = 0
     }
 }

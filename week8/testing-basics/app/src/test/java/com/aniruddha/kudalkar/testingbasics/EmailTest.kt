@@ -30,4 +30,9 @@ class EmailTest {
     fun check_isEmailValid_Only_Name() {
         assertFalse(EmailValidator.isValid("aaa@bb"))
     }
+
+    @Test
+    fun check_isEmailValid_Only_Numbers() {
+        assertFalse(EmailValidator.isValid("1111@111.111"))
+    }
 }

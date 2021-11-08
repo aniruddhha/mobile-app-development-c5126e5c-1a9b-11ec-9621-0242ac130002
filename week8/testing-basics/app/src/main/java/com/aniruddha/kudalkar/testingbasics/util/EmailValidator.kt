@@ -1,5 +1,6 @@
 package com.aniruddha.kudalkar.testingbasics.util
 
+import android.text.TextUtils
 import java.util.regex.Pattern
 
 class EmailValidator {
@@ -15,9 +16,7 @@ class EmailValidator {
         ).matcher(email).matches()
 
 
-        // minimum age should be 12
-        // maximum age should be 52
-        // age is 12, 52, 30 is invalid
-        fun isAgeValid(age : Int) = 0
+        fun isEmailValid(email : String) = !TextUtils.isEmpty(email) &&
+                android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches();
     }
 }

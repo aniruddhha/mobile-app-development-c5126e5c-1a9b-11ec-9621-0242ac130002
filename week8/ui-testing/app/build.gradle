@@ -42,6 +42,7 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:2.1.1'
     implementation 'androidx.navigation:navigation-fragment-ktx:2.3.5'
     implementation 'androidx.navigation:navigation-ui-ktx:2.3.5'
+    implementation 'androidx.test.espresso:espresso-contrib:3.4.0'
 
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'com.google.truth:truth:1.1.3'

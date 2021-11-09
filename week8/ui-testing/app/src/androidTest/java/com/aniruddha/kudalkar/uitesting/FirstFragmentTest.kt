@@ -1,6 +1,7 @@
 package com.aniruddha.kudalkar.uitesting
 
 import androidx.test.espresso.Espresso.onView
+import androidx.test.espresso.action.ViewActions.*
 import androidx.test.espresso.assertion.ViewAssertions.matches
 import androidx.test.espresso.matcher.ViewMatchers.*
 import androidx.test.ext.junit.rules.ActivityScenarioRule
@@ -31,5 +32,49 @@ class FirstFragmentTest {
             .check(
                 matches(isDisplayed())
             )
+    }
+
+    @Test
+    fun test_EditText_Input() {
+
+        val text = "abc"
+
+        onView(
+            withId(R.id.etDt)
+        ).perform(
+            clearText(),
+            typeText(text)
+        )
+
+        onView(
+            withId(R.id.etDt)
+        ).check(
+            matches(withText("abc"))
+        )
+    }
+
+    @Test
+    fun test_Perform_Click() {
+
+        val text = "abc"
+
+        onView(
+            withId(R.id.etDt)
+        ).perform(
+            clearText(),
+            typeText(text)
+        )
+
+        onView(
+            withId(R.id.button_first)
+        ).perform(
+            click()
+        )
+
+        onView(
+            withId(R.id.etDt)
+        ).check(
+            matches(withText("ABC"))
+        )
     }
 }

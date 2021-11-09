@@ -8,5 +8,9 @@ class LoginValidations {
         if(usNm.contains("#")) return false
         return true
     }
-    fun isPasswordValid(pass : String): Boolean = true
+    fun isPasswordValid(pass : String): Boolean {
+        if(pass.isEmpty()) return false
+        if(pass.contains("[a-zA-Z0-9\\-#\\.\\(\\)\\/%&\\s]{0,19}")) return true
+        return false
+    }
 }

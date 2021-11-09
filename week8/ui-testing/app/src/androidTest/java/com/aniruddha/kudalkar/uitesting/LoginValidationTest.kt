@@ -13,6 +13,7 @@ class LoginValidationTest {
     // read User Stories very carefully
 
     // pass - max 8 char, can contain #$% , can numbers and alphabets
+    // aaa, gggg#gggg, cc$rrr, a%tttt, #fff$www%
 
     lateinit var validation : LoginValidations
 
@@ -57,5 +58,10 @@ class LoginValidationTest {
         Truth.assertThat(
             validation.isUserNameValid("#ddd")
         ).isFalse()
+    }
+
+    @Test
+    fun check_Password_Validation() {
+
     }
 }

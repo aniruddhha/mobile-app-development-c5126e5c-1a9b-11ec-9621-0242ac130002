@@ -6,6 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.DividerItemDecoration
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.aniruddha.kudalkar.uitesting.databinding.FragmentSecondBinding
 
 /**
@@ -32,9 +34,25 @@ class SecondFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.buttonSecond.setOnClickListener {
-            findNavController().navigate(R.id.action_SecondFragment_to_FirstFragment)
+        binding.checkBox.setOnCheckedChangeListener { buttonView, isChecked ->
+
+            binding.rec.visibility = if(isChecked) View.VISIBLE else View.GONE
         }
+
+        val lm = LinearLayoutManager(requireContext())
+        binding.rec.layoutManager = lm
+        binding.rec.adapter = RecAdapter(
+            requireContext(),
+            listOf(
+                RecItm(1, "abc"),
+                RecItm(2, "pqr"),
+                RecItm(3, "lmn"),
+                RecItm(4, "xyz"),
+            )
+        )
+        binding.rec.addItemDecoration(
+            DividerItemDecoration(requireContext(), lm.orientation)
+        )
     }
 
     override fun onDestroyView() {

@@ -12,6 +12,8 @@ class LoginValidationTest {
     // read SRS very very carefully
     // read User Stories very carefully
 
+    // pass - max 8 char, can contain #$% , can numbers and alphabets
+
     lateinit var validation : LoginValidations
 
     @Before

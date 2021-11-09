@@ -1,5 +1,9 @@
 package com.aniruddha.kudalkar.uitesting
 
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
+import android.view.View
+import android.widget.Button
 import androidx.test.espresso.Espresso.onView
 import androidx.test.espresso.action.ViewActions.*
 import androidx.test.espresso.assertion.ViewAssertions.matches
@@ -10,6 +14,13 @@ import androidx.test.filters.LargeTest
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
+import android.widget.EditText
+
+import androidx.test.espresso.matcher.BoundedMatcher
+import androidx.test.internal.util.Checks
+import org.hamcrest.Description
+import org.hamcrest.Matcher
+
 
 @RunWith(AndroidJUnit4::class)
 @LargeTest
@@ -17,6 +28,17 @@ class FirstFragmentTest {
 
     @get:Rule
     val activityRule = ActivityScenarioRule(MainActivity::class.java)
+
+    val customMatcher = object : BoundedMatcher<View?, Button>(Button::class.java) {
+        override fun matchesSafely(btn: Button): Boolean {
+            val bgCl = btn.background as ColorDrawable
+            return bgCl.color == Color.RED
+        }
+
+        override fun describeTo(description: Description) {
+            description.appendText("with text color: ")
+        }
+    }
 
     @Test
     fun test_Next_Button_Loaded() {
@@ -74,7 +96,20 @@ class FirstFragmentTest {
         onView(
             withId(R.id.etDt)
         ).check(
-            matches(withText("ABC"))
+            matches(
+                withText("ABC")
+            )
+        )
+    }
+
+    @Test
+    fun check_color() {
+        onView(
+            withId(R.id.button_first)
+        ).check(
+            matches(
+                customMatcher
+            )
         )
     }
 }

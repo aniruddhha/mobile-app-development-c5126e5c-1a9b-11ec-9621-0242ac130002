@@ -10,7 +10,7 @@ class LoginValidations {
     }
     fun isPasswordValid(pass : String): Boolean {
         if(pass.isEmpty()) return false
-        if(pass.contains("[a-zA-Z0-9\\-#\\.\\(\\)\\/%&\\s]{0,19}")) return true
+        if(pass.contains(Regex("[a-zA-Z0-9\\#\\%\\$\\s]{0,19}"))) return true
         return false
     }
 }

@@ -61,7 +61,37 @@ class LoginValidationTest {
     }
 
     @Test
-    fun check_Password_Validation() {
+    fun check_Password_Validation1() {
+        Truth.assertThat(
+            validation.isPasswordValid("aaa")
+        ).isTrue()
+    }
 
+    @Test
+    fun check_Password_Validation2() {
+        Truth.assertThat(
+            validation.isPasswordValid("a#aa")
+        ).isTrue()
+    }
+
+    @Test
+    fun check_Password_Validation3() {
+        Truth.assertThat(
+            validation.isPasswordValid("a\$aa")
+        ).isTrue()
+    }
+
+    @Test
+    fun check_Password_Validation4() {
+        Truth.assertThat(
+            validation.isPasswordValid("a#aa")
+        ).isTrue()
+    }
+
+    @Test
+    fun check_Password_Validation5() {
+        Truth.assertThat(
+            validation.isPasswordValid("a@aa")
+        ).isFalse()
     }
 }

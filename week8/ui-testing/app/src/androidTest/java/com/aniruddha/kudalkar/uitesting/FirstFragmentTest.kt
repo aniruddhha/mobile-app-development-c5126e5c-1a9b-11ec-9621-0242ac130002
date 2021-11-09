@@ -14,13 +14,9 @@ import androidx.test.filters.LargeTest
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
-import android.widget.EditText
 
 import androidx.test.espresso.matcher.BoundedMatcher
-import androidx.test.internal.util.Checks
 import org.hamcrest.Description
-import org.hamcrest.Matcher
-
 
 @RunWith(AndroidJUnit4::class)
 @LargeTest
@@ -29,12 +25,11 @@ class FirstFragmentTest {
     @get:Rule
     val activityRule = ActivityScenarioRule(MainActivity::class.java)
 
-    val customMatcher = object : BoundedMatcher<View?, Button>(Button::class.java) {
+    private val customMatcher = object : BoundedMatcher<View?, Button>(Button::class.java) {
         override fun matchesSafely(btn: Button): Boolean {
             val bgCl = btn.background as ColorDrawable
             return bgCl.color == Color.RED
         }
-
         override fun describeTo(description: Description) {
             description.appendText("with text color: ")
         }
@@ -42,8 +37,9 @@ class FirstFragmentTest {
 
     @Test
     fun test_Next_Button_Loaded() {
-        onView(withText("NEXT"))
-            .check(
+        onView(
+            withText("NEXT")
+        ).check(
                 matches(isDisplayed())
             )
     }

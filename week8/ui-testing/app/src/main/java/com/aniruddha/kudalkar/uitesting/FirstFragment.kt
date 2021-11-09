@@ -13,6 +13,10 @@ import com.aniruddha.kudalkar.uitesting.databinding.FragmentFirstBinding
  */
 class FirstFragment : Fragment() {
 
+    private val validations: LoginValidations by lazy {
+        LoginValidations()
+    }
+
     private var _binding: FragmentFirstBinding? = null
 
     // This property is only valid between onCreateView and
@@ -36,6 +40,19 @@ class FirstFragment : Fragment() {
             binding.etDt.setText(
                 binding.etDt.text.toString().uppercase()
             )
+        }
+
+        binding.btNx.setOnClickListener {
+            if (
+                validations.isPasswordValid(
+                    binding.etPass.text.toString()
+                ) &&
+                validations.isUserNameValid(
+                    binding.etUsNm.text.toString()
+                )
+            ) {
+                findNavController().navigate(R.id.SecondFragment)
+            }
         }
     }
 

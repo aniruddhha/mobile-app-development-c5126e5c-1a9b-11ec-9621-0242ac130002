@@ -59,7 +59,7 @@ class FirstFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        val locReq = LocationRequest()
+        val locReq = LocationRequest.create()
         locReq.setInterval(1000)
         locReq.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY)
 

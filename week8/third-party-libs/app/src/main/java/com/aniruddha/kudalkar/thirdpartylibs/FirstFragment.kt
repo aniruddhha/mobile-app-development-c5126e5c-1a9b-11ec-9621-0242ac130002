@@ -3,6 +3,8 @@ package com.aniruddha.kudalkar.thirdpartylibs
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.os.Bundle
+import android.os.Looper
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -21,8 +23,7 @@ import java.net.URL
 import java.net.URLClassLoader
 import java.net.URLConnection
 import com.bumptech.glide.request.transition.DrawableCrossFadeFactory
-
-
+import com.google.android.gms.location.*
 
 
 /**
@@ -38,12 +39,38 @@ import com.bumptech.glide.request.transition.DrawableCrossFadeFactory
 class FirstFragment : Fragment() {
 
     private val scp  = CoroutineScope(Dispatchers.IO)
+    private lateinit var locationClient: FusedLocationProviderClient
+    private val locationCallback = object : LocationCallback() {
+        override fun onLocationResult(loc: LocationResult?) {
+            super.onLocationResult(loc)
+            binding.textView.setText(
+                "${loc?.lastLocation?.latitude}, ${loc?.lastLocation?.longitude}"
+            )
+        }
+    }
 
     private var _binding: FragmentFirstBinding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
     private val binding get() = _binding!!
+
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+        val locReq = LocationRequest()
+        locReq.setInterval(1000)
+        locReq.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY)
+
+        locationClient = LocationServices.getFusedLocationProviderClient(requireContext())
+
+        locationClient.requestLocationUpdates(
+            locReq,
+            locationCallback,
+            Looper.myLooper()
+        )
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -56,6 +83,7 @@ class FirstFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         loadWithGlide(binding.imageView)
+
     }
 
     override fun onDestroyView() {

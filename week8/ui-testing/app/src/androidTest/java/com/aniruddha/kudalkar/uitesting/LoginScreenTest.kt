@@ -3,6 +3,7 @@ package com.aniruddha.kudalkar.uitesting
 import androidx.test.espresso.Espresso.*
 import androidx.test.espresso.action.ViewActions.*
 import androidx.test.espresso.assertion.ViewAssertions.*
+import androidx.test.espresso.contrib.RecyclerViewActions
 //import androidx.test.espresso.contrib.RecyclerViewActions
 import androidx.test.espresso.matcher.ViewMatchers.*
 import androidx.test.ext.junit.rules.ActivityScenarioRule
@@ -18,6 +19,9 @@ import org.junit.runner.RunWith
 @RunWith(AndroidJUnit4::class)
 @LargeTest
 class LoginScreenTest {
+
+
+    // https://upload.wikimedia.org/wikipedia/commons/3/3e/Android_logo_2019.png
 
     @get:Rule
     val activityRule = ActivityScenarioRule(MainActivity::class.java)
@@ -91,11 +95,11 @@ class LoginScreenTest {
             click()
         )
 
-        onView(
-            withId(R.id.checkBox)
-        ).perform(
-            click()
-        )
+//        onView(
+//            withId(R.id.checkBox)
+//        ).perform(
+//            click()
+//        )
 
         /*onData(
             AllOf.allOf(
@@ -106,13 +110,19 @@ class LoginScreenTest {
             click()
         )*/
 
-//        onView(
-//            withId(R.id.rec)
-//        ).perform(
-//            RecyclerViewActions.actionOnItemAtPosition<RecVh>(
-//                0,
-//                click()
-//            )
-//        )
+        onView(
+            withId(R.id.rec)
+        ).perform(
+            RecyclerViewActions.scrollToPosition<RecVh>(4)
+        )
+
+        onView(
+            withId(R.id.rec)
+        ).perform(
+            RecyclerViewActions.actionOnItemAtPosition<RecVh>(
+                4,
+                click()
+            )
+        )
     }
 }

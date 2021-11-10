@@ -1,5 +1,6 @@
 package com.aniruddha.kudalkar.thirdpartylibs
 
+import android.Manifest
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.os.Bundle
@@ -24,6 +25,8 @@ import java.net.URLClassLoader
 import java.net.URLConnection
 import com.bumptech.glide.request.transition.DrawableCrossFadeFactory
 import com.google.android.gms.location.*
+import permissions.dispatcher.NeedsPermission
+import permissions.dispatcher.RuntimePermissions
 
 
 /**
@@ -36,18 +39,11 @@ import com.google.android.gms.location.*
 // - imageview how do i set the content
 // - is there any readymade code
 
+
 class FirstFragment : Fragment() {
 
     private val scp  = CoroutineScope(Dispatchers.IO)
-    private lateinit var locationClient: FusedLocationProviderClient
-    private val locationCallback = object : LocationCallback() {
-        override fun onLocationResult(loc: LocationResult?) {
-            super.onLocationResult(loc)
-            binding.textView.setText(
-                "${loc?.lastLocation?.latitude}, ${loc?.lastLocation?.longitude}"
-            )
-        }
-    }
+
 
     private var _binding: FragmentFirstBinding? = null
 
@@ -59,17 +55,6 @@ class FirstFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        val locReq = LocationRequest.create()
-        locReq.setInterval(1000)
-        locReq.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY)
-
-        locationClient = LocationServices.getFusedLocationProviderClient(requireContext())
-
-        locationClient.requestLocationUpdates(
-            locReq,
-            locationCallback,
-            Looper.myLooper()
-        )
     }
 
     override fun onCreateView(
@@ -114,4 +99,6 @@ class FirstFragment : Fragment() {
             }
         }
     }
+
+
 }

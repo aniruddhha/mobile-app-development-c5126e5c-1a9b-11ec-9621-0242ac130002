@@ -13,6 +13,7 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import com.aniruddha.kudalkar.thirdpartylibs.databinding.ActivityMainBinding
 import com.google.android.gms.location.*
 import permissions.dispatcher.*
@@ -48,7 +49,7 @@ class MainActivity : AppCompatActivity() {
                 .setAction("Action", null).show()
         }
 
-        initLocations()
+        showLocationsWithPermissionCheck()
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -77,7 +78,7 @@ class MainActivity : AppCompatActivity() {
         Manifest.permission.ACCESS_FINE_LOCATION,
         Manifest.permission.ACCESS_COARSE_LOCATION
     )
-    fun initLocations() {
+    fun showLocations() {
 
         locationClient = LocationServices.getFusedLocationProviderClient(this)
 
@@ -93,18 +94,30 @@ class MainActivity : AppCompatActivity() {
     }
 
     @OnShowRationale(Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.ACCESS_COARSE_LOCATION)
-    fun showRationaleForCamera(request: PermissionRequest) {
+    fun showRationaleForLocation(request: PermissionRequest) {
         Toast.makeText(this, "Need Permissions", Toast.LENGTH_SHORT).show()
         Log.i("@ani", "it is working")
+
+        val builder = AlertDialog.Builder(this)
+        builder.setTitle("Need Permission")
+        builder.setMessage("Allow Permission to Access Location")
+        builder.setPositiveButton("okay") { di, wh ->
+            request.proceed()
+        }
+        builder.setNegativeButton("cancel") { di, wh ->
+            request.cancel()
+        }
+
+        builder.create().show()
     }
 
     @OnPermissionDenied(Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.ACCESS_COARSE_LOCATION)
-    fun onCameraDenied() {
+    fun onLocationDenied() {
         Toast.makeText(this, "Permission Denied", Toast.LENGTH_SHORT).show()
     }
 
     @OnNeverAskAgain(Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.ACCESS_COARSE_LOCATION)
-    fun onCameraNeverAskAgain() {
+    fun onLocationNeverAskAgain() {
         Toast.makeText(this,"Never Ask Again", Toast.LENGTH_SHORT).show()
     }
 

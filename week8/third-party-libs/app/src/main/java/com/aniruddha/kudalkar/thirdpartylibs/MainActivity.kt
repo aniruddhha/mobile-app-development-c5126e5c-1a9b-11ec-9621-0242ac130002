@@ -101,12 +101,8 @@ class MainActivity : AppCompatActivity() {
         val builder = AlertDialog.Builder(this)
         builder.setTitle("Need Permission")
         builder.setMessage("Allow Permission to Access Location")
-        builder.setPositiveButton("okay") { di, wh ->
-            request.proceed()
-        }
-        builder.setNegativeButton("cancel") { di, wh ->
-            request.cancel()
-        }
+        builder.setPositiveButton("okay") { _, _ -> request.proceed()  }
+        builder.setNegativeButton("cancel") { _, _ ->  request.cancel() }
 
         builder.create().show()
     }
@@ -123,7 +119,6 @@ class MainActivity : AppCompatActivity() {
 
     override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<String>, grantResults: IntArray) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
-        // NOTE: delegate the permission handling to generated function
         onRequestPermissionsResult(requestCode, grantResults)
     }
 }

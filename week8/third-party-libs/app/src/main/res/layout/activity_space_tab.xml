@@ -17,8 +17,11 @@
         android:layout_height="wrap_content"
         app:layout_behavior="eu.long1.spacetablayout.SpaceTabLayoutBehavior"
         app:number_of_tabs="three_IconOnly"
-        app:tab_color="#fbc8d4"
-        app:button_color="#fbc8d4"
-        app:starting_position="two" />
+        app:tab_color="#ff0000"
+        app:button_color="#ff00ff"
+        app:starting_position="two"
+
+        app:icon_one="@drawable/ic_android_black_24dp"
+        />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -8,10 +8,10 @@ import retrofit2.http.Query
 interface TrelloOrganizationApi {
 
     @GET("members/me/organizations")
-    fun organizations(
+    suspend fun organizations(
         @Query("key") key : String = "",
         @Query("token") token: String = ""
-    ) :  Call<List<Organization>>
+    ) :  List<Organization>
 }
 
 interface TrelloBoardApi {

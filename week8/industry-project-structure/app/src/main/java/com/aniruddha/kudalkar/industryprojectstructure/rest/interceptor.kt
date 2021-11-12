@@ -6,14 +6,18 @@ import okhttp3.Response
 class TrelloInterceptor : Interceptor {
     override fun intercept(chain: Interceptor.Chain): Response {
 
-        var request = chain.request()
+        val request = chain.request()
 
-        val url = request.url()
+        val newUrl = request.url()
             .newBuilder()
             .addQueryParameter("key", "")
             .addQueryParameter("token", "")
             .build()
-        request = request.newBuilder().url(url).build()
-        return chain.proceed(request)
+
+        val newRequest = request.newBuilder()
+            .url(newUrl)
+            .build()
+
+        return chain.proceed(newRequest)
     }
 }

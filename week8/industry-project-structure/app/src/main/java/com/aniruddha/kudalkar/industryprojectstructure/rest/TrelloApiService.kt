@@ -1,14 +1,12 @@
 package com.aniruddha.kudalkar.industryprojectstructure.rest
 
-import com.aniruddha.kudalkar.industryprojectstructure.domain.Organization
-import retrofit2.Call
+import com.aniruddha.kudalkar.industryprojectstructure.dto.OrganizationDto
 import retrofit2.http.GET
-import retrofit2.http.Query
 
 interface TrelloOrganizationApi {
 
     @GET("members/me/organizations")
-    suspend fun organizations() :  List<Organization>
+    suspend fun organizations() :  List<OrganizationDto>
 }
 
 interface TrelloBoardApi {

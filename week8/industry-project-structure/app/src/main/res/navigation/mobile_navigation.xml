@@ -10,4 +10,8 @@
         android:name="com.aniruddha.kudalkar.industryprojectstructure.fragment.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/createOrganizationFragment"
+        android:name="com.aniruddha.kudalkar.industryprojectstructure.fragment.CreateOrganizationFragment"
+        android:label="CreateOrganizationFragment" />
 </navigation>

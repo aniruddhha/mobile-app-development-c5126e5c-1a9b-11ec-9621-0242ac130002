@@ -20,7 +20,9 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
-    <include layout="@layout/content_main" />
+    <include
+        android:id="@+id/content_main"
+        layout="@layout/content_main" />
 
     <com.nambimobile.widgets.efab.ExpandableFabLayout
         android:layout_width="match_parent"
@@ -43,6 +45,15 @@
             android:contentDescription="Fab"/>
 
         <com.nambimobile.widgets.efab.FabOption
+            android:id="@+id/btnWorkspace"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_orientation="portrait"
+            app:label_text="@string/fab_text_workspace"
+            app:fab_icon="@drawable/ic_menu_camera"/>
+
+        <com.nambimobile.widgets.efab.FabOption
+            android:id="@+id/btnBoard"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:fab_orientation="portrait"
@@ -50,6 +61,7 @@
             app:fab_icon="@drawable/ic_menu_camera"/>
 
         <com.nambimobile.widgets.efab.FabOption
+            android:id="@+id/btnCard"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:fab_orientation="portrait"

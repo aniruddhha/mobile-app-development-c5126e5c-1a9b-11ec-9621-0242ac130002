@@ -48,6 +48,10 @@ class MainActivity : AppCompatActivity() {
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
+
+        binding.appBarMain.btnWorkspace.setOnClickListener {
+            navController.navigate(R.id.createOrganizationFragment)
+        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {

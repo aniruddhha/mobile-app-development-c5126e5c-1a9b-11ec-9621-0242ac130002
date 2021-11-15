@@ -22,7 +22,6 @@
 
     <include layout="@layout/content_main" />
 
-
     <com.nambimobile.widgets.efab.ExpandableFabLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -33,13 +32,15 @@
             app:overlay_orientation="portrait" />
 
         <com.nambimobile.widgets.efab.ExpandableFab
+            android:id="@+id/btnFab"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|end"
             android:layout_marginEnd="@dimen/ui_margin_medium"
             android:layout_marginRight="@dimen/ui_margin_medium"
             android:layout_marginBottom="@dimen/ui_margin_high"
-            app:efab_orientation="portrait" />
+            app:efab_orientation="portrait"
+            android:contentDescription="Fab"/>
 
         <com.nambimobile.widgets.efab.FabOption
             android:layout_width="wrap_content"

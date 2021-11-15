@@ -1,5 +1,6 @@
 package com.aniruddha.kudalkar.industryprojectstructure.fragment
 
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -8,10 +9,8 @@ import com.aniruddha.kudalkar.industryprojectstructure.domain.Organization
 import com.aniruddha.kudalkar.industryprojectstructure.repository.LocalOrganizationRepository
 import com.aniruddha.kudalkar.industryprojectstructure.repository.RemoteOrganizationRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
-import dagger.hilt.android.scopes.ViewModelScoped
 import kotlinx.coroutines.launch
 import javax.inject.Inject
-import javax.inject.Singleton
 
 @HiltViewModel
 class CreateOrganizationViewModel
@@ -21,23 +20,33 @@ constructor(
     private val remoteOrganizationRepository: RemoteOrganizationRepository
 ) : ViewModel() {
 
-    private val _organization : MutableLiveData<Organization> = MutableLiveData(
+    private val _isProcessing : MutableLiveData<Boolean> = MutableLiveData(false)
+    val isProcessing: LiveData<Boolean> = _isProcessing
+
+    private val organization: MutableLiveData<Organization> = MutableLiveData(
         Organization(0, "", "")
     )
-    private val organization: LiveData<Organization> = _organization
 
-    fun onNameChanged(str : String) {
+    fun onNameChanged(str: String) {
         organization.value?.displayName = str
     }
 
-    fun onDescChanged(desc : String) {
+    fun onDescChanged(desc: String) {
         organization.value?.desc = desc
     }
 
     fun onCreateClicked() {
-        organization.value?.let {
-            viewModelScope.launch {
-                remoteOrganizationRepository.createOrganization(it)
+        _isProcessing.value = true
+        viewModelScope.launch {
+            organization.value?.let {
+                val result = remoteOrganizationRepository.createOrganization(it)
+                if (result.isSuccess) {
+                    Log.i("@ani", "Operation Is Successful")
+                    _isProcessing.value = false
+                } else {
+                    Log.i("@ani", "Operation Failed")
+                    _isProcessing.value = false
+                }
             }
         }
     }

@@ -1,5 +1,6 @@
 package com.aniruddha.kudalkar.industryprojectstructure.fragment
 
+import android.app.AlertDialog
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -30,6 +31,19 @@ class CreateOrganizationFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        val dialog = AlertDialog.Builder(requireContext())
+            .setMessage("Creating Workspace")
+            .setView(R.layout.progress_dialog_layout)
+            .create()
+        dialog.show()
+
+        viewModel.isProcessing.observe(viewLifecycleOwner){
+            if(it) {
+                dialog.show()
+            }else {
+                dialog.dismiss()
+            }
+        }
     }
 
     override fun onDestroyView() {

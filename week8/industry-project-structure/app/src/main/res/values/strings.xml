@@ -24,4 +24,7 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="fab_text_workspace">Workspace</string>
+    <string name="hint_workspace_name">Name</string>
+    <string name="hint_workspace_description">Description</string>
+    <string name="btn_create">Create</string>
 </resources>

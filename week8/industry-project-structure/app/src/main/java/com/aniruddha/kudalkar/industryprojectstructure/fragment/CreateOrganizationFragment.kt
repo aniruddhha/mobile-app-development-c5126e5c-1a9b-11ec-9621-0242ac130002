@@ -13,7 +13,6 @@ import dagger.hilt.android.AndroidEntryPoint
 @AndroidEntryPoint
 class CreateOrganizationFragment : Fragment() {
 
-
     private var _binding : CreateOrganizationFragmentBinding? = null
 
     val binding get() = _binding!!
@@ -25,6 +24,7 @@ class CreateOrganizationFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         _binding = CreateOrganizationFragmentBinding.inflate(inflater, container, false)
+        binding.vm = viewModel
         return binding.root
     }
 

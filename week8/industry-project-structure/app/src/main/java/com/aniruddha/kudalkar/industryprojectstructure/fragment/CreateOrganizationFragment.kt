@@ -24,6 +24,9 @@ class CreateOrganizationFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
+
+        (activity as MainActivity).supportActionBar?.title = "Create Workspace"
+
         _binding = CreateOrganizationFragmentBinding.inflate(inflater, container, false)
         binding.vm = viewModel
         return binding.root
@@ -31,8 +34,6 @@ class CreateOrganizationFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        (activity as MainActivity).supportActionBar?.title = "Create Workspace"
 
         val dialog = DialogMaker.createProgressDialog(requireContext(), "Creating Workspace")
 

@@ -6,13 +6,20 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.lifecycle.ViewModel
 import androidx.recyclerview.widget.RecyclerView
 import com.aniruddha.kudalkar.industryprojectstructure.R
 import com.aniruddha.kudalkar.industryprojectstructure.domain.Organization
+import com.aniruddha.kudalkar.industryprojectstructure.fragment.HomeViewModel
 
+data class RecyclerItemOperation(
+    val operation: String,
+    val organization: Organization,
+    val position: Int
+)
 
 class HomeViewHolder(
-    private val infVw : View
+    private val infVw: View
 ) : RecyclerView.ViewHolder(infVw) {
 
     fun name() = infVw.findViewById<TextView>(R.id.txtOrgNm)
@@ -25,8 +32,9 @@ class HomeViewHolder(
 }
 
 class HomeAdapter(
-    private val context : Context,
-    private val organizations : List<Organization>
+    private val context: Context,
+    private val organizations: List<Organization>,
+    private val vm: HomeViewModel
 ) : RecyclerView.Adapter<HomeViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HomeViewHolder {
 
@@ -40,6 +48,21 @@ class HomeAdapter(
     }
 
     override fun onBindViewHolder(holder: HomeViewHolder, position: Int) {
+
+        holder.delete().setOnClickListener {
+            val item = RecyclerItemOperation(
+                "delete", organizations[position], position
+            )
+            vm.onItemClick(item)
+        }
+
+        holder.edit().setOnClickListener {
+            val item = RecyclerItemOperation(
+                "edit", organizations[position], position
+            )
+            vm.onItemClick(item)
+        }
+
         holder.name().text = organizations[position].displayName
     }
 

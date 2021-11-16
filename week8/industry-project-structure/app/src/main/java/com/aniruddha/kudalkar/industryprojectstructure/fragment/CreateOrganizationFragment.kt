@@ -1,14 +1,14 @@
 package com.aniruddha.kudalkar.industryprojectstructure.fragment
 
-import android.app.AlertDialog
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
-import com.aniruddha.kudalkar.industryprojectstructure.R
+import com.aniruddha.kudalkar.industryprojectstructure.MainActivity
 import com.aniruddha.kudalkar.industryprojectstructure.databinding.CreateOrganizationFragmentBinding
+import com.aniruddha.kudalkar.industryprojectstructure.dialog.DialogMaker
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -31,13 +31,10 @@ class CreateOrganizationFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val dialog = AlertDialog.Builder(requireContext())
-            .setMessage("Creating Workspace")
-            .setView(R.layout.progress_dialog_layout)
-            .create()
 
-        dialog.setCanceledOnTouchOutside(false)
-        dialog.show()
+        (activity as MainActivity).supportActionBar?.title = "Create Workspace"
+
+        val dialog = DialogMaker.createProgressDialog(requireContext(), "Creating Workspace")
 
         viewModel.isProcessing.observe(viewLifecycleOwner){
             if(it) {

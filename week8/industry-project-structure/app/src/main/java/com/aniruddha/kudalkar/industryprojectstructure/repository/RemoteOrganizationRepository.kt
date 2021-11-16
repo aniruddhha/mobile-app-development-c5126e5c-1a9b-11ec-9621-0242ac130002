@@ -6,8 +6,9 @@ import com.aniruddha.kudalkar.industryprojectstructure.rest.TrelloOrganizationAp
 import com.aniruddha.kudalkar.industryprojectstructure.rest.handleRequest
 import dagger.hilt.android.scopes.ViewModelScoped
 import javax.inject.Inject
+import javax.inject.Singleton
 
-@ViewModelScoped
+@Singleton
 class RemoteOrganizationRepository
 @Inject
 constructor(
@@ -15,5 +16,11 @@ constructor(
 ) {
     suspend fun createOrganization(organization : Organization): Result<OrganizationDto> = handleRequest {
         trelloOrganizationApi.createOrganization(organization.displayName, organization.desc)
+    }
+
+    suspend fun organizations() : Result<List<Organization>> = handleRequest {
+        trelloOrganizationApi.organizations().map {
+            Organization(displayName = it.displayName, organizationId = it.id, desc = it.desc, id = 0 )
+        }
     }
 }

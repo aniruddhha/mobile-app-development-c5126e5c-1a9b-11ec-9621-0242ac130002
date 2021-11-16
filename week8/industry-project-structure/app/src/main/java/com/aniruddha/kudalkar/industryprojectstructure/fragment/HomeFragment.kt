@@ -52,9 +52,9 @@ class HomeFragment : Fragment() {
             when(it.operation) {
                 "edit" -> {
                     Log.i("@ani", "Edit Clicked")
-                    YesNoDialogMaker.createSimpleYesNoDialog(
+                    YesNoDialogMaker.createInputYesNoDialog(
                         requireContext(),
-                        "Do you want to update Workspace Name ?"
+                        "Do you want to update Workspace ?",
                     ) { di, wh ->
                         when(wh) {
                             DialogInterface.BUTTON_POSITIVE -> onUpdateWorkspace()
@@ -68,7 +68,7 @@ class HomeFragment : Fragment() {
 
                     YesNoDialogMaker.createSimpleYesNoDialog(
                         requireContext(),
-                        "Do you want to delete Workspace ?"
+                        "Do you want to delete Workspace ?",
                     ) { di, wh ->
                         when(wh) {
                             DialogInterface.BUTTON_POSITIVE -> onDeleteWorkspace(it.organization.organizationId ?: "")

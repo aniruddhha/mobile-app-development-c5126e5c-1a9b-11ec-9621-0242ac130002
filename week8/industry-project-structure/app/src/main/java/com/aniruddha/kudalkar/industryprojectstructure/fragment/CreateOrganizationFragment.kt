@@ -35,6 +35,8 @@ class CreateOrganizationFragment : Fragment() {
             .setMessage("Creating Workspace")
             .setView(R.layout.progress_dialog_layout)
             .create()
+
+        dialog.setCanceledOnTouchOutside(false)
         dialog.show()
 
         viewModel.isProcessing.observe(viewLifecycleOwner){

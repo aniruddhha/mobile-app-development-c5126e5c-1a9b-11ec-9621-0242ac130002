@@ -12,5 +12,5 @@ class LocalOrganizationRepository
 constructor(
     private val daoOrganization : OrganizationDao
 ) {
-    suspend fun createOrganization(organization: Organization) = daoOrganization.createOrganization(organization)
+    fun createOrganization(organization: Organization) = daoOrganization.createOrganization(organization)
 }

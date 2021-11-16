@@ -4,10 +4,9 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 
 @Entity
-data class Organization(
+data class Board(
     @PrimaryKey(autoGenerate = true)
-    var id : Long,
-    var organizationId: String?,
-    var displayName : String,
-    var desc : String
+    val id : Long,
+    val idOrganization : String,
+    val name : String
 )

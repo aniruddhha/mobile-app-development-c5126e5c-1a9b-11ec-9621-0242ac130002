@@ -16,4 +16,11 @@ interface TrelloOrganizationApi {
 
     @DELETE("organizations/{id}")
     suspend fun delete(@Path("id") organizationId : String)
+
+    @PUT("organizations/{id}")
+    suspend fun update(
+        @Path("id") organizationId : String,
+        @Query("displayName") name : String,
+        @Query("desc") description : String,
+    )
 }

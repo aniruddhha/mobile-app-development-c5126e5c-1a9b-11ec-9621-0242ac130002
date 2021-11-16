@@ -6,6 +6,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.DividerItemDecoration
@@ -15,6 +16,7 @@ import com.aniruddha.kudalkar.industryprojectstructure.adapter.HomeAdapter
 import com.aniruddha.kudalkar.industryprojectstructure.databinding.FragmentHomeBinding
 import com.aniruddha.kudalkar.industryprojectstructure.dialog.YesNoDialogMaker
 import com.aniruddha.kudalkar.industryprojectstructure.repository.RemoteOrganizationRepository
+import com.aniruddha.kudalkar.industryprojectstructure.toast.ToastUtil
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -49,33 +51,10 @@ class HomeFragment : Fragment() {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
 
         vm.item.observe(viewLifecycleOwner) {
+            val id = it.organization.organizationId ?: ""
             when(it.operation) {
-                "edit" -> {
-                    Log.i("@ani", "Edit Clicked")
-                    YesNoDialogMaker.createInputYesNoDialog(
-                        requireContext(),
-                        "Do you want to update Workspace ?",
-                    ) { di, wh ->
-                        when(wh) {
-                            DialogInterface.BUTTON_POSITIVE -> onUpdateWorkspace()
-                            DialogInterface.BUTTON_NEGATIVE -> di.dismiss()
-                        }
-                    }.show()
-                }
-                "delete" -> {
-                    Log.i("@ani", "Delete Clicked")
-                    Log.i("@ani", it.organization.toString())
-
-                    YesNoDialogMaker.createSimpleYesNoDialog(
-                        requireContext(),
-                        "Do you want to delete Workspace ?",
-                    ) { di, wh ->
-                        when(wh) {
-                            DialogInterface.BUTTON_POSITIVE -> onDeleteWorkspace(it.organization.organizationId ?: "")
-                            DialogInterface.BUTTON_NEGATIVE -> di.dismiss()
-                        }
-                    }.show()
-                }
+                "edit" ->  performUpdateOperation(id)
+                "delete" -> performDeleteOperation(id)
             }
         }
         return binding.root
@@ -123,14 +102,46 @@ class HomeFragment : Fragment() {
             val result = repository.deleteOrganization(id)
             result.onSuccess {
                 Log.i("@ani", "Workspace Deleted Successfully")
+                ToastUtil.coroutineToast(requireContext(), "Deleted Successfully")
             }
             result.onFailure {
                 Log.i("@ani", it.toString())
+                ToastUtil.coroutineToast(requireContext(), "Problem In Deleting")
             }
         }
     }
 
-    private fun onUpdateWorkspace() {
+    private fun onUpdateWorkspace(id : String, nm : String, desc : String) {
+        Log.i("@ani", "id - $id, nm - $nm, desc - $desc")
+        scp.launch {
+            val result = repository.updateOrganization(id, nm, desc)
+            result.onSuccess {
+                ToastUtil.coroutineToast(requireContext(), "Updated Successfully")
+            }
+            result.onFailure {
+                ToastUtil.coroutineToast(requireContext(), "Problem In Updating")
+            }
+        }
+    }
 
+    private fun performDeleteOperation(id : String) {
+        YesNoDialogMaker.createSimpleYesNoDialog(
+            requireContext(),
+            "Do you want to delete Workspace ?",
+        ) { di, wh ->
+            when(wh) {
+                DialogInterface.BUTTON_POSITIVE -> onDeleteWorkspace(id)
+                DialogInterface.BUTTON_NEGATIVE -> di.dismiss()
+            }
+        }.show()
+    }
+
+    private fun performUpdateOperation(id : String) {
+        YesNoDialogMaker.createInputYesNoDialog(
+            requireContext(),
+            "Do you want to update Workspace ?",
+        ) { nm, desc ->
+            onUpdateWorkspace(id, nm, desc)
+        }.show()
     }
 }

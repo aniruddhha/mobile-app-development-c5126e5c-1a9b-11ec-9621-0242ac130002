@@ -27,4 +27,8 @@ constructor(
     suspend fun deleteOrganization(id : String) : Result<Any> = handleRequest {
         trelloOrganizationApi.delete(id)
     }
+
+    suspend fun updateOrganization(id : String, name : String, desc : String) = handleRequest {
+        trelloOrganizationApi.update(id , name, desc)
+    }
 }

@@ -1,9 +1,7 @@
 package com.aniruddha.kudalkar.industryprojectstructure.rest
 
 import com.aniruddha.kudalkar.industryprojectstructure.dto.OrganizationDto
-import retrofit2.http.GET
-import retrofit2.http.POST
-import retrofit2.http.Query
+import retrofit2.http.*
 
 interface TrelloOrganizationApi {
 
@@ -11,8 +9,11 @@ interface TrelloOrganizationApi {
     suspend fun organizations() :  List<OrganizationDto>
 
     @POST("organizations")
-    suspend fun createOrganization(
+    suspend fun create(
         @Query("displayName") displayName : String,
         @Query("desc") description : String,
     ) : OrganizationDto
+
+    @DELETE("organizations/{id}")
+    suspend fun delete(@Path("id") organizationId : String)
 }

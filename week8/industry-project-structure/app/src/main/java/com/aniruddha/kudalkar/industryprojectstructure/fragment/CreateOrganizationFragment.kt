@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import com.aniruddha.kudalkar.industryprojectstructure.MainActivity
 import com.aniruddha.kudalkar.industryprojectstructure.databinding.CreateOrganizationFragmentBinding
-import com.aniruddha.kudalkar.industryprojectstructure.dialog.DialogMaker
+import com.aniruddha.kudalkar.industryprojectstructure.dialog.ProgressDialogMaker
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -35,7 +35,7 @@ class CreateOrganizationFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val dialog = DialogMaker.createProgressDialog(requireContext(), "Creating Workspace")
+        val dialog = ProgressDialogMaker.createProgressDialog(requireContext(), "Creating Workspace")
 
         viewModel.isProcessing.observe(viewLifecycleOwner){
             if(it) {

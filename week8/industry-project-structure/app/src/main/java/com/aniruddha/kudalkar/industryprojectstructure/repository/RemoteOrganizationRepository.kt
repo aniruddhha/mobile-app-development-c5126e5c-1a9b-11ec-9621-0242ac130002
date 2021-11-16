@@ -15,12 +15,16 @@ constructor(
     private val trelloOrganizationApi: TrelloOrganizationApi
 ) {
     suspend fun createOrganization(organization : Organization): Result<OrganizationDto> = handleRequest {
-        trelloOrganizationApi.createOrganization(organization.displayName, organization.desc)
+        trelloOrganizationApi.create(organization.displayName, organization.desc)
     }
 
     suspend fun organizations() : Result<List<Organization>> = handleRequest {
         trelloOrganizationApi.organizations().map {
             Organization(displayName = it.displayName, organizationId = it.id, desc = it.desc, id = 0 )
         }
+    }
+
+    suspend fun deleteOrganization(id : String) : Result<Any> = handleRequest {
+        trelloOrganizationApi.delete(id)
     }
 }

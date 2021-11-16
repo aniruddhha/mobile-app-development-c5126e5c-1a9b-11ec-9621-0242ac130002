@@ -1,5 +1,6 @@
 package com.aniruddha.kudalkar.industryprojectstructure.fragment
 
+import android.content.DialogInterface
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -12,6 +13,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.aniruddha.kudalkar.industryprojectstructure.MainActivity
 import com.aniruddha.kudalkar.industryprojectstructure.adapter.HomeAdapter
 import com.aniruddha.kudalkar.industryprojectstructure.databinding.FragmentHomeBinding
+import com.aniruddha.kudalkar.industryprojectstructure.dialog.YesNoDialogMaker
 import com.aniruddha.kudalkar.industryprojectstructure.repository.RemoteOrganizationRepository
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.CoroutineScope
@@ -50,13 +52,32 @@ class HomeFragment : Fragment() {
             when(it.operation) {
                 "edit" -> {
                     Log.i("@ani", "Edit Clicked")
+                    YesNoDialogMaker.createSimpleYesNoDialog(
+                        requireContext(),
+                        "Do you want to update Workspace Name ?"
+                    ) { di, wh ->
+                        when(wh) {
+                            DialogInterface.BUTTON_POSITIVE -> onUpdateWorkspace()
+                            DialogInterface.BUTTON_NEGATIVE -> di.dismiss()
+                        }
+                    }.show()
                 }
                 "delete" -> {
                     Log.i("@ani", "Delete Clicked")
+                    Log.i("@ani", it.organization.toString())
+
+                    YesNoDialogMaker.createSimpleYesNoDialog(
+                        requireContext(),
+                        "Do you want to delete Workspace ?"
+                    ) { di, wh ->
+                        when(wh) {
+                            DialogInterface.BUTTON_POSITIVE -> onDeleteWorkspace(it.organization.organizationId ?: "")
+                            DialogInterface.BUTTON_NEGATIVE -> di.dismiss()
+                        }
+                    }.show()
                 }
             }
         }
-
         return binding.root
     }
 
@@ -94,5 +115,22 @@ class HomeFragment : Fragment() {
                 }
             }
         }
+    }
+
+    private fun onDeleteWorkspace(id : String) {
+        Log.i("@ani", "Id - ${id}")
+        scp.launch {
+            val result = repository.deleteOrganization(id)
+            result.onSuccess {
+                Log.i("@ani", "Workspace Deleted Successfully")
+            }
+            result.onFailure {
+                Log.i("@ani", it.toString())
+            }
+        }
+    }
+
+    private fun onUpdateWorkspace() {
+
     }
 }
